@@ -1,0 +1,2228 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<meta name="color-scheme" content="light dark"><meta name="theme-color" content="#102d3c">
+<meta name="description" content="داشبورد تعاملی مدل مالی و امکان‌سنجی سه سناریوی توسعه گردشگری چابکسر؛ محاسبات پویا بر پایه فایل اکسل پروژه.">
+<title>داشبورد هوشمند امکان‌سنجی پروژه گردشگری ثمین چابکسر</title>
+<style>/* CHABOKSAR — Executive Investment Cockpit · offline, Persian RTL */
+:root{color-scheme:light;--bg:#f3f6f8;--surface:#fff;--surface-2:#f6f9fb;--surface-3:#edf3f7;--ink:#142936;--ink-2:#526779;--muted:#718495;--border:#dae5eb;--line:#dfe8ee;--navy:#102d3c;--teal:#087e76;--blue:#3568b8;--bronze:#a06c3f;--positive:#118269;--negative:#c25158;--warn:#a66b22;--shadow:0 13px 38px rgba(22,52,69,.055);--radius:21px;--ease:cubic-bezier(.2,.8,.2,1);font-family:Vazirmatn,'B Nazanin',Tahoma,'Segoe UI',sans-serif;font-synthesis:none}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-size:14px;line-height:1.75;font-feature-settings:'tnum' 1;transition:background .25s,color .25s}button,input,select{font:inherit}button{cursor:pointer}button:disabled{opacity:.45;cursor:not-allowed}button:focus-visible,input:focus-visible,[tabindex]:focus-visible{outline:3px solid #44b8a9;outline-offset:3px}a{color:inherit}svg{max-width:100%;display:block}.num,.kpi-value,.control-value,.axis-label{font-variant-numeric:tabular-nums;direction:ltr;unicode-bidi:isolate}body[data-theme=dark]{color-scheme:dark;--bg:#0c1721;--surface:#142532;--surface-2:#192e3c;--surface-3:#203746;--ink:#e8f1f6;--ink-2:#b6cbd6;--muted:#88a5b3;--border:#2d4757;--line:#29404e;--navy:#071923;--teal:#48cbb6;--blue:#8aaff5;--bronze:#d8aa74;--positive:#58d6b2;--negative:#ff8890;--warn:#f1c278;--shadow:0 15px 50px rgba(0,0,0,.18)}
+.shell{max-width:1780px;margin:auto;padding:0 clamp(14px,2.65vw,46px) 65px}.topbar{position:sticky;top:0;z-index:50;backdrop-filter:blur(18px);background:color-mix(in srgb,var(--surface) 93%,transparent);border-bottom:1px solid var(--border)}.topbar-content{max-width:1780px;padding:10px clamp(14px,2.65vw,46px);margin:auto;display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:74px}.brand{display:flex;align-items:center;gap:11px;min-width:0;text-decoration:none}.brand-mark{width:46px;height:46px;border-radius:16px;display:grid;place-items:center;background:linear-gradient(145deg,#056c70,#103d58);color:#90eee0;flex:none;box-shadow:0 8px 19px rgba(2,76,87,.17)}.brand-title{font-size:16px;font-weight:900;white-space:nowrap}.brand-caption{font-size:10px;color:var(--muted);letter-spacing:.25px;white-space:nowrap}.header-actions{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.btn,.icon-btn{border:1px solid var(--border);background:var(--surface);color:var(--ink);border-radius:12px;min-height:40px;padding:8px 13px;font-weight:700;display:inline-flex;justify-content:center;align-items:center;gap:7px;transition:transform .17s,border-color .17s,background .17s}.btn:hover,.icon-btn:hover{transform:translateY(-1px);border-color:#62adab}.btn.primary{background:#087e76;color:#fff;border-color:#087e76}.icon-btn{width:43px;padding:0}.btn svg,.icon-btn svg,.section-kicker svg{width:17px;height:17px}.topbar .mobile-hide{display:inline}.skip{position:absolute;right:10px;top:-100px;background:var(--surface);padding:8px;z-index:90}.skip:focus{top:0}
+.hero{margin-top:23px;border-radius:27px;overflow:hidden;background:linear-gradient(115deg,#102e3b 2%,#154353 55%,#0d736a 140%);position:relative;color:#fff;display:grid;grid-template-columns:minmax(0,1.18fr) minmax(270px,.82fr);min-height:215px;border:1px solid rgba(255,255,255,.12);box-shadow:0 23px 50px rgba(11,65,73,.12)}.hero::after{content:'';position:absolute;width:380px;height:380px;border:1px solid rgba(118,231,215,.13);border-radius:50%;left:-170px;top:-135px;pointer-events:none}.hero-text{padding:28px 36px 29px;z-index:2}.eyebrow{font-size:11px;font-weight:800;color:#81e2d1;letter-spacing:1.1px;display:flex;align-items:center;gap:9px}.dot{width:7px;height:7px;background:#66dfb1;border-radius:50%;box-shadow:0 0 0 4px #66dfb12a;display:inline-block}.hero h1{font-size:clamp(21px,2.45vw,35px);line-height:1.5;margin:12px 0 5px;font-weight:900}.hero p{margin:0;color:#c4d9df;font-size:13px}.hero-badges{display:flex;gap:8px;flex-wrap:wrap;margin-top:24px}.hero-badges span{border:1px solid #ffffff3b;border-radius:100px;padding:3px 12px;background:#ffffff0e;color:#e2f4f2;font-size:11px;font-weight:700}.hero-art{position:relative;overflow:hidden;display:flex;align-items:end;justify-content:end;background:radial-gradient(ellipse at center,#1ca9991d 0,transparent 72%)}.hero-art svg{width:100%;height:100%;min-height:210px;max-height:280px;object-fit:contain}.hero-art:after{content:'';height:12px;width:100%;position:absolute;bottom:0;background:linear-gradient(90deg,transparent,#5ccbbb35,transparent)}
+.intro-strip{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:13px 3px 0;color:var(--muted);font-size:11px}.intro-strip span{display:inline-flex;align-items:center;gap:5px}.intro-strip svg{width:13px;height:13px}.intro-strip strong{color:var(--ink-2)}
+.panel{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow)}.panel-title{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}.panel-title h2,.section-heading h2{margin:0;font-size:19px;font-weight:900;line-height:1.45}.panel-title p,.section-heading p{margin:4px 0 0;font-size:11px;color:var(--muted)}.panel-head{padding:20px 23px 0}.mini-label{color:var(--muted);font-size:10px;font-weight:800}.pill{border:1px solid var(--border);border-radius:40px;padding:3px 10px;font-size:10px;font-weight:800;color:var(--ink-2);background:var(--surface-2);white-space:nowrap}.pill.live{background:#e2f4ec;border-color:#b3e6d5;color:#127b65}.pill.warning{background:#fff2df;border-color:#efd9b6;color:#8f651e}body[data-theme=dark] .pill.live{background:#144b43;color:#8be0c4;border-color:#24645a}body[data-theme=dark] .pill.warning{background:#493922;color:#f4d397;border-color:#725632}
+.controls-panel{margin-top:17px;padding-bottom:17px}.control-header{display:flex;align-items:center;gap:9px}.control-header svg{width:21px;height:21px;color:var(--teal)}.controls-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:11px;padding:19px 20px 5px}.control-card{border-radius:15px;background:var(--surface-2);border:1px solid var(--border);padding:13px 13px 12px;min-width:0}.control-top{display:flex;align-items:center;justify-content:space-between;gap:7px}.control-top label{font-size:12px;font-weight:800}.control-value{font-weight:900;color:var(--teal);font-size:17px;white-space:nowrap}.range{width:100%;height:7px;appearance:none;-webkit-appearance:none;border-radius:99px;margin:20px 0 15px;background:linear-gradient(to left,#159b91 var(--pct),var(--line) var(--pct));cursor:pointer}.range::-webkit-slider-thumb{appearance:none;width:19px;height:19px;border-radius:50%;background:#fff;border:4px solid #078a80;box-shadow:0 2px 8px #0b4b5350}.range::-moz-range-thumb{width:14px;height:14px;border-radius:50%;background:#fff;border:4px solid #078a80;box-shadow:0 2px 8px #0b4b5350}.control-bottom{display:flex;align-items:center;justify-content:space-between;gap:4px;color:var(--muted);font-size:10px}.control-number{max-width:78px;width:54%;height:29px;padding:3px 6px;border:1px solid var(--border);border-radius:8px;background:var(--surface);text-align:center;color:var(--ink);direction:ltr}.controls-foot{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;margin:10px 21px 0;padding-top:13px;border-top:1px solid var(--border);font-size:11px;color:var(--muted)}.change-badge{display:inline-flex;align-items:center;gap:6px;color:var(--positive);font-weight:800}.change-badge.is-changed{color:var(--warn)}.toolbar{display:flex;gap:8px;flex-wrap:wrap}
+.scenarios{margin-top:25px}.section-heading{margin:0 2px 15px;display:flex;align-items:end;justify-content:space-between;gap:10px;flex-wrap:wrap}.section-kicker{color:var(--teal);font-size:10px;font-weight:900;display:flex;align-items:center;gap:6px;letter-spacing:.5px}.scenario-row{--sc:#087e76;--sc-bg:#edf8f4;border:1px solid var(--border);background:var(--surface);border-radius:21px;overflow:hidden;margin:0 0 12px;box-shadow:var(--shadow);position:relative}.scenario-row[data-sc=08]{--sc:#3568b8;--sc-bg:#edf3ff}.scenario-row[data-sc=10]{--sc:#a06c3f;--sc-bg:#fbf3e8}body[data-theme=dark] .scenario-row[data-sc=06]{--sc:#5dd5bb;--sc-bg:#153e3b}body[data-theme=dark] .scenario-row[data-sc=08]{--sc:#92b7ff;--sc-bg:#213954}body[data-theme=dark] .scenario-row[data-sc=10]{--sc:#e0b582;--sc-bg:#473728}.scenario-row.is-selected{border-color:var(--sc);box-shadow:0 3px 30px color-mix(in srgb,var(--sc) 12%,transparent)}.scenario-stripe{position:absolute;right:0;top:0;bottom:0;width:4px;background:var(--sc)}.scenario-header{background:linear-gradient(90deg,var(--surface),var(--sc-bg));display:flex;align-items:center;justify-content:space-between;gap:10px;padding:13px 18px 11px 20px;border-bottom:1px solid var(--border);flex-wrap:wrap}.sc-name{display:flex;align-items:center;gap:11px}.sc-bubble{border-radius:12px;background:var(--sc);color:#fff;width:42px;height:42px;display:grid;place-items:center;font-family:Arial,sans-serif;font-weight:900;font-size:13px;direction:ltr}body[data-theme=dark] .sc-bubble{color:#112733}.sc-name h3{font-size:16px;margin:0;font-weight:900}.sc-name p{font-size:11px;color:var(--muted);margin:0}.sc-right{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.select-scenario{border:1px solid var(--sc);background:transparent;color:var(--sc);font-size:11px;border-radius:10px;padding:6px 12px;font-weight:900}.select-scenario[aria-pressed=true]{background:var(--sc);color:white}body[data-theme=dark] .select-scenario[aria-pressed=true]{color:#122631}.kpi-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:9px;padding:13px 14px 15px}.kpi-card{position:relative;border-radius:13px;padding:14px 10px 12px;border:1px solid var(--border);background:var(--surface);min-width:0;overflow:hidden;transition:transform .18s,border-color .18s}.kpi-card:after{content:'';position:absolute;width:46px;height:3px;background:var(--sc);right:12px;top:0;border-radius:0 0 5px 5px}.kpi-card:hover{transform:translateY(-2px);border-color:var(--sc)}.kpi-label{font-size:10px;color:var(--ink-2);min-height:31px;font-weight:750;display:flex;align-items:start;line-height:1.5}.kpi-value{font-size:clamp(15px,1.4vw,24px);line-height:1.55;font-weight:900;color:var(--sc);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin:6px 0 4px;text-align:right}.kpi-value.negative{color:var(--negative)}.kpi-unit{font-size:9px;color:var(--muted);min-height:17px}.kpi-meta{padding-top:8px;margin-top:8px;border-top:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:4px;min-height:21px;font-size:9px;color:var(--muted)}.delta{font-weight:900;direction:ltr;unicode-bidi:isolate}.delta.positive{color:var(--positive)}.delta.negative{color:var(--negative)}.sc-extra{padding:0 17px 13px;display:flex;gap:9px;flex-wrap:wrap;color:var(--muted);font-size:10px}.sc-extra strong{color:var(--ink-2)}
+.visual-section{margin-top:27px}.viz-grid{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(300px,.82fr);gap:14px;align-items:stretch}.viz-card{padding-bottom:17px;min-width:0}.chart-toolbar{display:flex;align-items:center;gap:5px;flex-wrap:wrap}.tab{border:1px solid var(--border);border-radius:9px;padding:5px 11px;background:var(--surface-2);color:var(--ink-2);font-size:10px;font-weight:800}.tab[aria-pressed=true]{background:#0d706a;border-color:#0d706a;color:#fff}.chart-wrap{position:relative;padding:12px 15px 0;min-height:310px}.main-chart{height:auto;width:100%;overflow:visible;touch-action:pan-y}.gridline{stroke:var(--line);stroke-dasharray:4 5}.zero-line{stroke:var(--muted);stroke-dasharray:7 4;stroke-width:1.6}.axis-text{fill:var(--muted);font-size:11px;direction:ltr;font-family:Tahoma,Arial,sans-serif}.chart-line{fill:none;stroke-width:3.3;stroke-linejoin:round;stroke-linecap:round;transition:opacity .15s}.chart-line.dim{opacity:.26}.chart-area{opacity:.075;stroke:none}.chart-tooltip{position:absolute;pointer-events:none;display:none;z-index:8;background:var(--navy);color:#fff;border-radius:12px;padding:11px 14px;box-shadow:0 8px 30px #061a2c45;min-width:165px;font-size:11px;white-space:nowrap;line-height:2}.chart-tooltip.show{display:block}.legend{display:flex;gap:14px;flex-wrap:wrap;align-items:center;justify-content:center;padding:0 15px 4px}.legend-btn{display:flex;gap:7px;align-items:center;padding:4px 9px;border:1px solid transparent;border-radius:7px;background:transparent;color:var(--ink-2);font-size:10px;font-weight:800}.legend-btn[aria-pressed=false]{opacity:.4}.legend-btn:focus-visible{outline-offset:0}.legend-dot{width:10px;height:10px;border-radius:3px;flex:none}.chart-note{font-size:10px;color:var(--muted);padding:6px 20px 0}.donut-split{padding:17px 20px 10px}.income-row{margin-bottom:18px}.income-top{display:flex;justify-content:space-between;gap:5px;align-items:center;font-weight:800;font-size:11px;margin-bottom:7px}.stack-bar{display:flex;height:18px;border-radius:6px;overflow:hidden;background:var(--surface-3);direction:ltr}.stack-seg{height:100%;transition:width .3s var(--ease);min-width:0}.stack-seg:hover{filter:brightness(1.14)}.source-legend{display:flex;gap:9px 16px;flex-wrap:wrap;padding:2px 20px 10px;font-size:10px;color:var(--ink-2)}.source-legend span{display:flex;gap:5px;align-items:center}.foot-callout{margin:0 18px;padding:10px 12px;border-radius:10px;border:1px solid var(--border);background:var(--surface-2);font-size:10px;color:var(--ink-2)}
+.comparison-panel{margin-top:14px}.comparisons{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;padding:18px 24px 20px}.metric-strip h3{font-size:12px;font-weight:900;margin:0 0 13px}.metric-bar-item{display:grid;grid-template-columns:72px 1fr 95px;gap:8px;align-items:center;margin:10px 0;font-size:10px;color:var(--ink-2)}.metric-track{background:var(--surface-3);height:10px;border-radius:20px;overflow:hidden;direction:ltr}.metric-fill{height:100%;border-radius:20px;transition:width .35s}.metric-val{text-align:left;font-weight:900;color:var(--ink);direction:ltr;unicode-bidi:isolate}
+.sensitivity-panel{margin-top:16px;overflow:hidden}.sensitivity-head{align-items:center}.sensitivity-buttons{display:flex;gap:5px;align-items:center;flex-wrap:wrap}.scenario-picker{border-radius:9px;border:1px solid var(--border);padding:5px 9px;background:var(--surface-2);font-size:11px;font-weight:900;color:var(--ink-2)}.scenario-picker[data-current=true]{border-color:var(--accent);background:var(--sc-bg);color:var(--accent)}.sensitivity-layout{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(265px,.6fr);gap:18px;padding:19px 22px 20px}.heatmap-wrap{min-width:0;overflow-x:auto;padding:3px 1px 13px;scrollbar-width:thin}.heatmap{display:grid;grid-template-columns:78px repeat(9,minmax(62px,1fr));gap:5px;min-width:725px;direction:rtl}.heat-cell{border:1px solid transparent;border-radius:8px;min-height:46px;display:grid;place-items:center;align-content:center;padding:3px 2px;font-size:11px;font-weight:900;direction:ltr;unicode-bidi:isolate;transition:transform .15s}.heat-cell[role=button]{cursor:pointer}.heat-cell[role=button]:hover,.heat-cell:focus-visible{transform:scale(1.055);z-index:1;outline:2px solid var(--ink)}.heat-cell.center{box-shadow:inset 0 0 0 2px #3267dc;position:relative}.heat-cell.center:after{content:'●';position:absolute;top:0;right:4px;font-size:8px;color:#3267dc}.heat-axis{background:var(--surface-2);border:1px solid var(--border);color:var(--ink-2);font-size:10px;white-space:normal;text-align:center}.heat-axis small{font-size:8px;color:var(--muted);display:block}.sens-aside{background:var(--surface-2);border:1px solid var(--border);border-radius:15px;padding:16px 15px;align-self:start}.sens-aside h3{margin:0 0 9px;font-size:15px}.sens-aside p{font-size:11px;color:var(--muted);margin:0 0 13px}.sens-big{font-size:25px;font-weight:900;direction:ltr;text-align:right;line-height:1.5}.sens-aside dl{display:grid;grid-template-columns:1fr auto;gap:8px;font-size:11px;margin:14px 0}.sens-aside dt{color:var(--muted)}.sens-aside dd{margin:0;text-align:left;font-weight:800;direction:ltr}.heat-key{display:flex;align-items:center;gap:7px;flex-wrap:wrap;font-size:10px;color:var(--ink-2);margin-top:12px}.heat-key i{width:12px;height:12px;border-radius:3px;display:inline-block}
+.details-panel{margin-top:14px;overflow:hidden}.details-panel summary{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:19px 22px;cursor:pointer;font-weight:900;font-size:15px;list-style:none}.details-panel summary::-webkit-details-marker{display:none}.details-panel summary:after{content:'＋';font-size:21px;color:var(--teal)}.details-panel[open] summary:after{content:'−'}.table-scroll{overflow:auto;max-height:510px;padding:0 18px 19px}.data-table{border-collapse:separate;border-spacing:0;width:100%;font-size:11px;min-width:750px;white-space:nowrap}.data-table th{background:var(--surface-2);padding:11px 9px;border-bottom:1px solid var(--border);position:sticky;top:0;text-align:right;z-index:1}.data-table td{padding:9px;border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums;text-align:right}.data-table tbody tr:hover{background:var(--surface-2)}.positive-text{color:var(--positive);font-weight:800}.negative-text{color:var(--negative);font-weight:800}.foot-panel{margin-top:16px;padding:15px 21px;color:var(--muted);font-size:11px;display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between;align-items:center}.foot-panel strong{color:var(--ink-2)}.audit-text{font-size:11px;line-height:2.2;color:var(--ink-2);padding:0 22px 20px}.audit-text code{font:11px Consolas,monospace;direction:ltr;display:inline-block;color:var(--teal)}.method-list{margin:0;padding:0 18px 0 0}
+#toast{position:fixed;bottom:24px;left:24px;z-index:100;color:#fff;background:#143747;padding:11px 16px;border-radius:11px;box-shadow:0 8px 34px #0018;display:none;font-size:12px}#toast.show{display:block}.sr-only{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}::selection{background:#62c5b94d}
+@media(max-width:1360px){.kpi-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.controls-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.kpi-value{font-size:22px}.hero h1{font-size:27px}}
+@media(max-width:1020px){.viz-grid,.sensitivity-layout{grid-template-columns:1fr}.controls-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.heatmap{min-width:710px}.hero{grid-template-columns:1fr minmax(210px,.45fr)}.hero-text{padding:24px}.comparisons{gap:15px}.brand-caption{display:none}}
+@media(max-width:690px){.shell{padding-left:13px;padding-right:13px}.topbar-content{min-height:63px;padding:8px 12px}.brand-title{font-size:12px}.brand-mark{width:38px;height:38px;border-radius:12px}.header-actions .mobile-hide{display:none}.header-actions .btn{min-height:36px;padding:6px}.topbar .icon-btn{height:37px;width:37px;min-height:37px}.hero{grid-template-columns:1fr;margin-top:12px;min-height:0}.hero-art{display:none}.hero h1{font-size:24px}.hero-text{padding:25px 21px}.hero-badges{margin-top:17px}.controls-panel{padding-bottom:10px}.controls-grid{gap:8px;padding:13px 12px 3px}.control-card{padding:9px}.control-top{display:block}.control-top label{display:block;font-size:11px}.control-value{font-size:16px}.control-bottom{font-size:9px}.controls-foot{margin:8px 13px 0}.panel-head{padding:16px 15px 0}.panel-title h2,.section-heading h2{font-size:16px}.kpi-grid{grid-template-columns:repeat(2,minmax(0,1fr));padding:9px;gap:7px}.kpi-card{padding:12px 10px 8px}.kpi-value{font-size:clamp(18px,4.5vw,23px)}.scenario-header{padding:11px}.sc-name h3{font-size:14px}.sc-bubble{width:37px;height:37px}.sc-right .pill{font-size:9px}.sc-extra{font-size:9px;padding:0 11px 10px}.visual-section{margin-top:21px}.chart-wrap{min-height:220px;padding:10px 7px 0}.comparisons{grid-template-columns:1fr;padding:14px}.sensitivity-layout{padding:13px 11px}.sensitivity-buttons{justify-content:flex-start}.sens-aside{padding:14px}.foot-panel{padding:13px}.intro-strip{font-size:10px}}
+@media(max-width:370px){.controls-grid{grid-template-columns:1fr}.control-top{display:flex}.kpi-value{font-size:16px}.metric-bar-item{grid-template-columns:58px 1fr 81px}.hero h1{font-size:20px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+@media print{body{--bg:#fff;--surface:#fff;--ink:#152c37;--ink-2:#435669;--muted:#637588;--border:#ccd5dd;color:#111;background:white!important}.topbar,.controls-panel,.select-scenario,.header-actions,.toolbar,.chart-toolbar,.tab,.sensitivity-buttons,#toast{display:none!important}.shell{padding:0 5mm;max-width:none}.hero{margin:0 0 8mm;box-shadow:none;break-inside:avoid}.scenario-row,.viz-card,.comparison-panel,.sensitivity-panel{break-inside:avoid;box-shadow:none}.kpi-grid{grid-template-columns:repeat(6,minmax(0,1fr))}.kpi-value{font-size:16px}.sensitivity-layout{display:block}.sens-aside{margin-top:12px}.heatmap{min-width:0;grid-template-columns:65px repeat(9,1fr)}.heat-cell{font-size:8px;min-height:30px}.details-panel{display:none}}
+
+/* ──────────────────────────────────────────────────────────────────────────
+   CHABOKSAR V2 · COASTAL FINANCIAL INTELLIGENCE DESIGN SYSTEM
+   Distinct scenario identity, dense executive UI, accessible and responsive.
+   ────────────────────────────────────────────────────────────────────────── */
+:root {
+ --bg:#edf2f8; --surface:#ffffff; --surface-2:#f5f7fc; --surface-3:#eaf0f8;
+ --ink:#122439;--ink-2:#51647c;--muted:#718099;--border:#dbe4ef;--line:#e6edf6;
+ --navy:#081b33;--teal:#088d83;--blue:#386edc;--bronze:#a96e3a;
+ --positive:#0d9677;--negative:#db536a;--warn:#ba7b32;
+ --shadow:0 14px 38px rgba(28,52,91,.075);--radius:22px;
+ font-family:'Vazirmatn',Tahoma,'Segoe UI',sans-serif;
+}
+body {background:radial-gradient(ellipse 900px 700px at 7% 4%,#d7eef7 0%,transparent 72%),radial-gradient(ellipse 750px 500px at 100% 15%,#e6eafa 0%,transparent 75%),var(--bg);background-attachment:fixed;font-family:'Vazirmatn',Tahoma,'Segoe UI',sans-serif;font-size:13px;line-height:1.65;letter-spacing:0}
+body[data-theme=dark]{--bg:#091526;--surface:#122237;--surface-2:#192b42;--surface-3:#213650;--ink:#eff6ff;--ink-2:#c0d2ea;--muted:#90a8c1;--border:#2b415b;--line:#293d55;--navy:#071528;--teal:#6ae2cd;--blue:#9fbeff;--bronze:#f2bf8b;--shadow:0 18px 40px #0004;background:radial-gradient(ellipse 700px 650px at 7% 4%,#0d383c80,transparent 72%),radial-gradient(ellipse 750px 680px at 100% 15%,#192b5a85,transparent 75%),var(--bg)}
+body,button,input,select {font-family:'Vazirmatn',Tahoma,'Segoe UI',sans-serif}
+.shell{max-width:1790px;padding-inline:clamp(16px,3.2vw,56px)}
+.topbar{background:color-mix(in srgb,var(--surface) 90%,transparent);box-shadow:0 2px 22px #233c6110}
+.topbar-content{min-height:69px}
+.brand-mark{background:linear-gradient(145deg,#13baab,#0b3659);border:1px solid #8ff7db40;box-shadow:0 8px 24px #079d9a46}
+.brand-title{font-size:18px;letter-spacing:.4px;font-family:'Vazirmatn',Tahoma,sans-serif}
+.btn,.icon-btn{border-radius:13px;box-shadow:0 3px 12px #193d6510}
+.btn:hover,.icon-btn:hover{box-shadow:0 8px 20px #193d651e}
+/* The visual hero is a short but cinematic project identity ribbon. */
+.hero{margin-top:23px;min-height:210px;border-radius:27px;background:radial-gradient(circle at 84% 15%,#0fa49f77 0%,transparent 34%),linear-gradient(105deg,#0c223b 0%,#113452 53%,#0a766d 125%);box-shadow:0 25px 54px #102f4f2a;border:1px solid #ffffff30}
+.hero::before{content:'';position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(120deg,transparent 0px,transparent 61px,#ffffff05 62px,#ffffff05 63px)}
+.hero::after{width:590px;height:590px;left:-260px;top:-335px;border:1px solid #6bede636;box-shadow:0 0 0 60px #ffffff05,0 0 0 120px #ffffff04}
+.hero-text{padding:31px 41px 22px}
+.eyebrow{letter-spacing:2px;font-size:10px;color:#71e5d8}
+.hero h1{font-size:clamp(25px,2.5vw,40px);margin:10px 0 2px;letter-spacing:-.6px;line-height:1.55}
+.hero p{color:#c8e5ea;font-size:12px}
+.hero-badges{margin-top:19px;gap:8px}
+.hero-badges span{background:#ffffff18;color:#f1fffe;border:1px solid #a1fcf248;border-radius:9px;padding:5px 11px}
+.hero-bottom{display:flex;gap:19px;flex-wrap:wrap;align-items:center;margin-top:18px;font-size:10px;font-weight:800;color:#bfe8e7;letter-spacing:.4px}
+.hero-bottom strong{font-size:13px;color:#fff}
+.hero-led{display:inline-block;vertical-align:middle;width:7px;height:7px;background:#64f2bf;border-radius:50%;box-shadow:0 0 0 4px #75f7c522;margin-left:6px}
+.hero-art{background:radial-gradient(circle at 50% 48%,#19bdac40,transparent 60%)}
+.hero-art svg{filter:drop-shadow(0 3px 15px #4dfff43b)}
+.intro-strip{margin:13px 5px 1px;font-size:10px;color:var(--ink-2);gap:11px}
+.intro-strip .dot{width:5px;height:5px}
+/* Assumptions lab: 5 horizontal micro-controls, no giant blocks. */
+.controls-panel{margin-top:15px;padding-bottom:10px;overflow:hidden;border-color:#a8d7d5;background:linear-gradient(120deg,color-mix(in srgb,var(--surface) 95%,#71ddd5),var(--surface));box-shadow:0 11px 36px #126f7e10}
+.controls-panel .panel-head{padding:12px 19px 0}
+.controls-panel .panel-title h2{font-size:15px}
+.controls-panel .panel-title p{font-size:10px;margin:0}
+.controls-subhead{font-family:'Segoe UI',sans-serif;font-size:10px;color:var(--muted);font-weight:700;letter-spacing:.75px}
+.controls-panel .pill.live{font-size:9px;border:1px solid #8acac0;background:#d9f9ed;color:#087c66;box-shadow:0 0 0 3px #0fb79b0d}
+body[data-theme=dark] .controls-panel .pill.live{background:#164d45;color:#8aeccf}
+.controls-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:9px;padding:11px 15px 4px}
+.control-card{background:var(--surface);border-color:var(--border);padding:9px 11px 8px;border-radius:14px;box-shadow:0 3px 9px #213b5b08}
+.control-top{gap:5px}
+.control-top label{font-size:10px;font-weight:800;color:var(--ink-2)}
+.control-value{font-size:14px;font-weight:900;color:var(--teal)}
+.range{height:5px;margin:11px 0 10px;background:linear-gradient(to left,#11aa9d var(--pct),var(--line) var(--pct))}
+.range::-webkit-slider-thumb{width:16px;height:16px;border:3px solid #098d80;box-shadow:0 2px 8px #087e764a}
+.range::-moz-range-thumb{width:13px;height:13px;border-width:3px}
+.control-bottom{font-size:9px;min-height:26px}
+.control-bottom span{max-width:65%;line-height:1.4}
+.control-number{height:25px;max-width:67px;border-radius:7px;font-size:11px;font-weight:800;color:var(--ink);background:var(--surface-2)}
+.controls-foot{padding-top:7px;margin:5px 18px 0;font-size:9px}
+.controls-foot .btn{min-height:30px;padding:4px 11px;font-size:10px;border-radius:8px}
+.control-disclosure>summary{list-style:none;display:none;cursor:pointer}
+.control-disclosure>summary::-webkit-details-marker{display:none}
+/* Strong rhythm and hierarchy. */
+.section-divider{display:flex;align-items:center;gap:10px;margin:28px 3px 10px;color:var(--teal);font:800 9px 'Segoe UI',sans-serif;letter-spacing:1.6px;direction:ltr}
+.divider-flare{height:10px;width:10px;border-radius:3px;background:linear-gradient(135deg,#15a898,#397be6);transform:rotate(45deg)}
+.divider-line{height:1px;flex:1;background:linear-gradient(90deg,#20afae63,transparent)}
+.scenarios{margin-top:0}
+.section-heading{margin-bottom:14px}
+.section-heading h2{font-size:22px;letter-spacing:-.3px}
+.section-heading p{font-size:11px}
+.section-kicker{color:var(--teal)!important;letter-spacing:1.45px;font-weight:900;font-size:10px}
+.heading-em{font-weight:500;color:var(--muted);font-size:16px}
+.kpi-count{background:linear-gradient(110deg,#d9f9ec,#e5eefe);border-color:#a2cbd2;color:#22576f;font-size:10px;padding:7px 13px}
+/* Each scenario is a different full-width coloured surface, not merely an accent line. */
+.scenario-row[data-sc="06"]{--sc:#0a9f92;--sc-strong:#086e6a;--sc-soft:#e6faf5;--sc-glow:#a6eee0;--sc-dark:#064e55;--sc-bg:#ecfdf7}
+.scenario-row[data-sc="08"]{--sc:#4b7cf0;--sc-strong:#285bc1;--sc-soft:#ebf1ff;--sc-glow:#acc5ff;--sc-dark:#183c91;--sc-bg:#edf3ff}
+.scenario-row[data-sc="10"]{--sc:#c98548;--sc-strong:#9c5c2c;--sc-soft:#fff2e5;--sc-glow:#f0c99d;--sc-dark:#885022;--sc-bg:#fff5e9}
+.scenario-row{isolation:isolate;margin-bottom:14px;border:1px solid color-mix(in srgb,var(--sc) 40%,var(--border));border-radius:23px;background:var(--surface);box-shadow:0 15px 35px #2b456b10;overflow:hidden;transition:transform .2s,border-color .2s,box-shadow .2s}
+.scenario-row:hover{border-color:var(--sc);box-shadow:0 16px 45px color-mix(in srgb,var(--sc) 21%,transparent)}
+.scenario-row.is-selected{box-shadow:0 14px 42px color-mix(in srgb,var(--sc) 24%,transparent);border-color:var(--sc)}
+.scenario-top{background:linear-gradient(105deg,var(--sc-dark),var(--sc-strong) 58%,var(--sc));color:white;padding:15px 20px 15px 18px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;position:relative}
+.scenario-top:after{content:'';position:absolute;width:220px;height:220px;border-radius:50%;border:1px solid #ffffff20;top:-160px;left:22%;box-shadow:0 0 0 25px #ffffff07,0 0 0 50px #ffffff05;pointer-events:none}
+.scenario-top .sc-name{gap:13px;position:relative;z-index:1}
+.sc-bubble{display:flex;flex-direction:column;gap:0;justify-content:center;align-items:center;height:52px;width:52px;border-radius:16px;background:#ffffff26;color:#fff;border:1px solid #ffffff3f;box-shadow:inset 0 1px 0 #ffffff44;line-height:1.1}
+.sc-bubble svg{height:20px;width:20px}
+.sc-bubble b{font-size:9px;letter-spacing:1px;font-family:'Segoe UI',sans-serif;margin-top:2px}
+.sc-heading h3{margin:1px 0 1px;color:#fff;font-size:19px;font-weight:900;line-height:1.6}
+.sc-heading p{margin:0;color:#edf7ffdf;font-size:10px;font-weight:600;display:flex;gap:8px;flex-wrap:wrap}
+.sc-overline{font-size:9px;letter-spacing:.3px;color:#f1ffffbb}
+.sc-right{position:relative;z-index:1;gap:10px}
+.threshold-badge{display:flex;align-items:center;gap:7px;min-height:33px;border:1px solid #ffffff55;padding:4px 10px;border-radius:10px;font-size:10px;font-weight:800;background:#ffffff24;color:white}
+.threshold-badge.waiting{background:#783d4270}
+.state-pulse{width:7px;height:7px;border-radius:50%;background:#a5ffe0;box-shadow:0 0 0 4px #a5ffe02a}
+.scenario-top .select-scenario{border:1px solid #ffffff7c;background:#ffffff;color:var(--sc-strong);font-size:10px;font-weight:900;border-radius:10px;min-height:33px;padding:6px 13px;box-shadow:0 3px 12px #0002}
+.scenario-top .select-scenario:hover{background:#fff5ea;transform:translateY(-1px)}
+.scenario-main{background:linear-gradient(150deg,var(--sc-soft),color-mix(in srgb,var(--sc-soft) 55%,var(--surface)));padding:13px 14px 7px}
+.kpi-grid{padding:0;gap:11px;grid-template-columns:repeat(6,minmax(0,1fr))}
+.kpi-card{min-height:178px;display:flex;flex-direction:column;padding:12px 13px 10px;border:1px solid color-mix(in srgb,var(--sc) 24%,var(--border));border-radius:15px;background:linear-gradient(155deg,var(--surface),color-mix(in srgb,var(--sc-soft) 43%,var(--surface)));box-shadow:0 4px 14px #12284209;overflow:hidden;position:relative;transition:transform .18s,border-color .18s,box-shadow .18s}
+.kpi-card:after{width:55px;height:3px;background:var(--sc);right:13px;top:0}
+.kpi-card:before{content:'';position:absolute;top:-32px;left:-32px;width:110px;height:110px;background:radial-gradient(circle,color-mix(in srgb,var(--sc) 15%,transparent),transparent 74%);pointer-events:none}
+.kpi-card:hover{transform:translateY(-4px);border-color:var(--sc);box-shadow:0 14px 23px color-mix(in srgb,var(--sc) 21%,transparent)}
+.kpi-card-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
+.kpi-icon{width:32px;height:32px;border-radius:10px;display:grid;place-items:center;color:var(--sc-strong);background:var(--sc-soft);border:1px solid color-mix(in srgb,var(--sc) 23%,var(--border))}
+.kpi-icon svg{width:18px;height:18px}
+.kpi-index{font:700 8px 'Segoe UI',sans-serif;letter-spacing:.8px;color:var(--muted);background:var(--surface-2);border-radius:5px;padding:2px 5px}
+.kpi-label{font-size:10px;min-height:27px;color:var(--ink-2);font-weight:800;line-height:1.55}
+.kpi-value{margin:2px 0 0;color:var(--sc-strong);font-size:clamp(19px,1.65vw,28px);line-height:1.4;font-weight:900;text-align:right;white-space:nowrap;overflow:visible;text-overflow:clip;letter-spacing:-.35px}
+.kpi-value.negative{color:var(--negative)}
+.kpi-unit{min-height:19px;font-size:9px;color:var(--muted);font-weight:600}
+.kpi-bottom{display:grid;grid-template-columns:57px minmax(0,1fr);gap:8px;margin-top:auto;align-items:center;border-top:1px solid var(--line);padding-top:7px;min-width:0}
+.kpi-spark{width:57px;height:28px;color:var(--sc)}
+.kpi-meta{font-size:9px;padding:0;margin:0;min-height:0;border:0;text-align:left;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:0;line-height:1.35;min-width:0}
+.kpi-meta .delta{font-weight:900}
+.sc-extra{padding:8px 19px 10px;background:var(--sc-soft);border-top:1px solid color-mix(in srgb,var(--sc) 13%,var(--border));font-size:9px;color:var(--sc-dark);gap:18px}
+.sc-extra strong{color:var(--sc-strong)}
+/* Dark mode keeps scenario uniqueness, including tinted surfaces and chart legends. */
+body[data-theme=dark] .scenario-row[data-sc="06"]{--sc:#5ce2ca;--sc-strong:#a7f9e5;--sc-soft:#143e40;--sc-dark:#0b353b;--sc-bg:#10373a}
+body[data-theme=dark] .scenario-row[data-sc="08"]{--sc:#92b5ff;--sc-strong:#d3e2ff;--sc-soft:#1a3050;--sc-dark:#142c51;--sc-bg:#192e51}
+body[data-theme=dark] .scenario-row[data-sc="10"]{--sc:#f0ba83;--sc-strong:#ffe1b5;--sc-soft:#423125;--sc-dark:#553923;--sc-bg:#432d24}
+body[data-theme=dark] .scenario-top .select-scenario{background:#fff;color:#19374e}
+body[data-theme=dark] .sc-extra{color:var(--ink-2)}
+/* Visual analytics cards: differentiated canvases + clearer data marks. */
+.visual-section{margin-top:0}
+.viz-grid{gap:15px}
+.viz-card,.comparison-panel,.sensitivity-panel{box-shadow:0 13px 32px #24426712;border:1px solid var(--border);overflow:hidden}
+.viz-card .panel-head,.comparison-panel .panel-head,.sensitivity-panel .panel-head{padding-top:19px}
+.panel-title h2{font-size:17px}
+.chart-wrap{padding:14px 20px 0;background:linear-gradient(to bottom,color-mix(in srgb,#dbf4f1 17%,var(--surface)),var(--surface))}
+.main-chart{filter:drop-shadow(0 2px 4px #438ba818)}
+.chart-line{stroke-width:4.3}
+.legend-btn{border:1px solid var(--border);background:var(--surface-2);border-radius:10px;font-size:10px;padding:6px 11px}
+.legend-btn[aria-pressed=true]{box-shadow:0 2px 10px #36567d14}
+.chart-tooltip{border-radius:15px;background:#112a42;box-shadow:0 13px 39px #122c4f50;font-size:11px}
+.income-row{background:var(--surface-2);padding:10px 12px;border-radius:12px;border:1px solid var(--border);margin-bottom:10px}
+.stack-bar{height:21px;border-radius:7px}
+.metric-track{height:13px;box-shadow:inset 0 1px 3px #142c4513}
+.metric-bar-item{font-size:11px;margin:14px 0}
+.heat-cell{min-height:47px;border-radius:10px;font-size:11px}
+.heat-cell.center{box-shadow:inset 0 0 0 2px #638dff,0 0 0 2px #ffffffa1}
+.sens-aside{border-radius:17px}
+.sens-big{color:var(--teal)}
+.foot-panel{border-radius:16px}
+/* Device adaptations follow usable typography before preserving six columns. */
+@media(max-width:1580px){.kpi-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.kpi-card{min-height:148px}.kpi-card-top{margin-bottom:6px}}
+@media(min-width:1581px){.kpi-grid{grid-template-columns:repeat(6,minmax(0,1fr))}}
+@media(max-width:1100px){.controls-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.hero{grid-template-columns:minmax(0,1fr) minmax(240px,.6fr)}.kpi-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.scenario-top{padding:13px 16px}}
+@media(max-width:780px){.hero{grid-template-columns:1fr}.hero-art{display:none}.hero-text{padding:24px}.controls-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.kpi-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.kpi-value{font-size:clamp(19px,4vw,25px)}.scenario-top{padding:12px 15px}.sc-heading h3{font-size:16px}.sc-right{width:100%;justify-content:space-between}.threshold-badge{font-size:9px}.scenario-main{padding:10px}.kpi-card{min-height:157px}.section-heading h2{font-size:18px}}
+@media(max-width:690px){
+ .shell{padding-inline:12px}.hero{margin-top:12px}.hero-text{padding:24px 19px}.hero h1{font-size:23px}.hero-bottom{gap:8px;margin-top:13px}.intro-strip{font-size:9px;gap:5px}
+ .controls-panel .panel-head{padding:11px 12px 0}.controls-panel .panel-title h2{font-size:13px}.controls-panel .panel-title p{display:none}
+ .control-disclosure>summary{display:flex;align-items:center;justify-content:space-between;gap:7px;margin:8px 12px 0;padding:8px 10px;background:var(--surface-2);border-radius:9px;font-weight:800;font-size:10px;color:var(--ink-2)}
+ .control-disclosure>summary:after{content:'▾';font-size:14px;color:var(--teal)}.control-disclosure[open]>summary:after{content:'▴'}
+ .controls-grid{padding:9px 10px 2px;gap:7px;grid-template-columns:repeat(2,minmax(0,1fr))}
+ .control-card{padding:9px 8px}.control-top{display:flex}.control-top label{font-size:9px}.control-value{font-size:12px}.control-bottom span{font-size:8px}.control-number{width:48px}
+ .controls-foot{margin:5px 11px 0}.controls-foot .btn{font-size:9px}
+ .section-divider{margin-top:22px}.section-heading{align-items:start}.section-heading h2{font-size:17px}.heading-em{font-size:12px}.section-heading p{font-size:10px}
+ .scenario-top .sc-name{gap:9px}.sc-bubble{width:42px;height:42px}.sc-bubble svg{width:16px}.sc-overline{font-size:8px}.sc-heading h3{font-size:15px}.sc-heading p{font-size:9px;gap:4px}.scenario-top{gap:8px}
+ .kpi-grid{gap:8px;padding:0;grid-template-columns:repeat(2,minmax(0,1fr))}.kpi-card{padding:10px;min-height:160px}.kpi-label{font-size:9px;min-height:26px}.kpi-value{font-size:clamp(17px,4.5vw,24px)}.kpi-unit{font-size:8px}.kpi-icon{width:28px;height:28px}.kpi-spark{width:46px}.kpi-bottom{grid-template-columns:46px minmax(0,1fr);gap:4px}.kpi-meta{font-size:8px}.sc-extra{font-size:9px;padding:8px 11px;gap:5px 10px}
+ .chart-wrap{padding:8px 5px}.panel-title h2{font-size:15px}.sensitivity-layout{padding:12px 9px}.heat-cell{min-height:39px}.foot-panel{font-size:10px}
+}
+@media(max-width:360px){.controls-grid{grid-template-columns:1fr}.kpi-value{font-size:17px}.kpi-spark{width:36px}.kpi-bottom{grid-template-columns:36px 1fr}}
+@media(prefers-reduced-motion:reduce){.scenario-row,.kpi-card,.btn{transition:none!important}}
+@media print{body{background:#fff!important}.hero,.scenario-top{-webkit-print-color-adjust:exact;print-color-adjust:exact}.kpi-grid{grid-template-columns:repeat(6,minmax(0,1fr))}.kpi-card{min-height:130px}.scenario-row,.kpi-card{box-shadow:none!important}.controls-panel{display:none!important}}
+
+.chart-line.dim{opacity:.72}
+
+/* ── CHABOKSAR V3 | disciplined executive UI, dual-period KPIs ─────────── */
+:root{--v3-salmon:#e96f80;--v3-mint:#23b789;--v3-gold:#e9b34b}
+body{font-family:'Vazirmatn',Tahoma,sans-serif}
+.hero{background:radial-gradient(ellipse 670px 350px at 89% 0%,#1cc3b46c,transparent 75%),linear-gradient(115deg,#081d35,#123e58 60%,#0c786b 160%)}
+.hero h1{max-width:850px;font-size:clamp(22px,2.5vw,38px)}
+.controls-panel{background:linear-gradient(115deg,color-mix(in srgb,var(--surface) 94%,#8bcde0),color-mix(in srgb,var(--surface) 95%,#74caba));border:1px solid color-mix(in srgb,var(--teal) 30%,var(--border));box-shadow:0 16px 42px #134d6320}
+.controls-grid{gap:8px;padding:10px 15px 3px}
+.control-card{min-width:0;background:color-mix(in srgb,var(--surface) 94%,var(--surface-2));border:1px solid var(--border);box-shadow:0 4px 18px #1749630b;transition:border-color .2s,transform .2s}
+.control-card:hover{border-color:var(--teal);transform:translateY(-1px)}
+.control-top label{display:flex;align-items:center;gap:6px;white-space:nowrap}
+.control-symbol{height:25px;width:25px;display:inline-grid;place-items:center;background:var(--surface-3);color:var(--teal);border-radius:8px;font-size:16px}
+.range{width:100%;--thumb-color:var(--teal);height:6px;border-radius:999px;cursor:pointer}
+.range::-webkit-slider-thumb{border-color:var(--thumb-color);box-shadow:0 0 0 4px color-mix(in srgb,var(--thumb-color) 15%,transparent),0 2px 7px #081f3025}
+.range::-moz-range-thumb{border-color:var(--thumb-color);box-shadow:0 0 0 4px color-mix(in srgb,var(--thumb-color) 15%,transparent)}
+.control-card[data-polarity="positive"] .control-value{color:var(--v3-mint)}
+.control-card[data-polarity="negative"] .control-value{color:var(--v3-salmon)}
+.control-card[data-polarity="neutral"] .control-value{color:var(--ink-2)}
+body[data-theme="dark"] .controls-panel{border-color:#32677d}
+body[data-theme="dark"] .control-card{background:#152b41}
+/* A muted financial dashboard card with strong, disciplined typography. */
+.kpi-card{overflow:visible;min-width:0;isolation:isolate;border-color:color-mix(in srgb,var(--sc) 21%,var(--border));background:linear-gradient(155deg,var(--surface),color-mix(in srgb,var(--sc-soft) 47%,var(--surface)));min-height:165px;padding:13px 14px 12px}
+.kpi-card::after{height:4px;width:44px;border-radius:0 0 7px 7px}
+.kpi-card:focus-visible{outline:3px solid var(--sc);outline-offset:2px}
+.kpi-card:hover,.kpi-card:focus{z-index:15}
+.kpi-card .kpi-index{display:flex;align-items:center;gap:5px;padding:3px 7px}
+.hint-symbol{font:800 13px 'Vazirmatn',sans-serif;color:var(--sc-strong)}
+.kpi-value{font-size:clamp(19px,1.65vw,29px);font-variant-numeric:tabular-nums;overflow-wrap:anywhere;white-space:normal;direction:ltr;unicode-bidi:isolate;text-align:right}
+.kpi-unit{line-height:1.6;min-height:16px}
+.kpi-bottom{grid-template-columns:1fr;gap:0;border-top:1px solid var(--line);margin-top:auto;padding-top:7px}
+.kpi-meta{font-size:9px;text-align:right;align-items:flex-start}
+.kpi-secondary{margin:9px 0 10px;padding:10px 10px 8px;border-radius:11px;background:color-mix(in srgb,var(--sc-soft) 65%,var(--surface));border:1px solid color-mix(in srgb,var(--sc) 25%,var(--border));display:flex;gap:6px;align-items:flex-start;justify-content:space-between;flex-wrap:wrap}
+.kpi-secondary span{color:var(--ink-2);font-size:9px;max-width:65%;line-height:1.7}
+.kpi-secondary strong{font-size:clamp(12px,1.05vw,16px);font-weight:900;color:var(--sc-strong);font-variant-numeric:tabular-nums;line-height:1.45}
+.kpi-secondary .negative-text{color:var(--negative)}
+.dual-kpi{min-height:207px}
+.dual-kpi .kpi-value{font-size:clamp(22px,1.8vw,31px)}
+.kpi-tooltip{position:absolute;z-index:30;inset:auto 4px calc(100% + 9px) 4px;border-radius:15px;padding:14px 15px;background:var(--navy);color:#f4fbff;border:1px solid color-mix(in srgb,var(--sc) 60%,#8fa4be);box-shadow:0 18px 38px #061b3166;text-align:right;opacity:0;visibility:hidden;transform:translateY(6px);pointer-events:none;transition:opacity .18s,transform .18s,visibility .18s;direction:rtl}
+.kpi-tooltip::after{content:'';position:absolute;bottom:-6px;right:25px;background:var(--navy);width:11px;height:11px;transform:rotate(45deg);border-right:1px solid var(--sc);border-bottom:1px solid var(--sc)}
+.kpi-tooltip .tooltip-kicker{display:block;color:#7fe3d3;font-weight:900;font-size:10px;letter-spacing:.4px}
+.kpi-tooltip p{color:#f4fbff;font-size:11px;line-height:1.85;margin:8px 0}
+.kpi-tooltip small{display:block;color:#bad8e6;font-size:9px;line-height:1.7;border-top:1px solid #ffffff27;padding-top:7px}
+.kpi-card:hover .kpi-tooltip,.kpi-card:focus .kpi-tooltip,.kpi-card:focus-within .kpi-tooltip{visibility:visible;opacity:1;transform:translateY(0)}
+/* Sensitivity: all 100 cells visible on every viewport, never a horizontally scrolling grid. */
+.sensitivity-layout{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(250px,.7fr);gap:14px;align-items:start;min-width:0}
+.heatmap-wrap{overflow:visible!important;max-width:100%;width:100%;min-width:0;padding:0}
+.heatmap{display:grid;grid-template-columns:minmax(43px,.95fr) repeat(9,minmax(0,1fr));min-width:0!important;width:100%;max-width:100%;gap:4px}
+.heat-cell{min-width:0;min-height:clamp(30px,3.3vw,48px);padding:3px 1px;display:flex;align-items:center;justify-content:center;text-align:center;border:1px solid #ffffff96;border-radius:8px;font-size:clamp(7px,.72vw,11px);line-height:1.3;font-weight:900;color:#223a40;white-space:nowrap;font-variant-numeric:tabular-nums;transition:transform .12s,filter .12s}
+.heat-cell span{min-width:0;display:block;overflow:hidden;text-overflow:clip}
+.heat-cell:hover,.heat-cell:focus{z-index:3;transform:scale(1.065);filter:saturate(1.25);outline:2px solid #376fa4;outline-offset:0}
+.heat-cell.heat-axis{background:var(--surface-3);color:var(--ink-2);font-size:clamp(7px,.72vw,10px);white-space:normal;overflow-wrap:anywhere;display:flex;flex-direction:column;line-height:1.25}
+.heat-cell.heat-axis small{font-size:8px}
+.heat-cell.center{box-shadow:inset 0 0 0 2px #366cc4,0 0 0 2px #ffffffb8;position:relative}
+.heat-cell.center::after{content:'◆';font-size:7px;color:#21518d;position:absolute;top:1px;left:3px}
+.sens-aside{min-width:0}
+.heat-key{gap:9px}
+body[data-theme="dark"] .heat-cell{color:#173342;border-color:#203c4b77}
+body[data-theme="dark"] .heat-cell.heat-axis{color:var(--ink-2)}
+/* Author credit with accessible focus and pointer reveal */
+.designer-credit{position:relative;display:inline-flex;align-items:center;gap:7px;font-weight:900;color:var(--ink);border:1px solid var(--border);background:var(--surface-2);border-radius:11px;padding:9px 13px;cursor:help}
+.designer-credit::before{content:'✎';color:var(--teal);font-size:17px}
+.designer-credit:focus-visible{outline:2px solid var(--teal)}
+.designer-tooltip{position:absolute;bottom:calc(100% + 8px);right:0;background:#102d3c;color:white;border-radius:9px;padding:8px 12px;box-shadow:0 8px 22px #0004;font:700 12px 'Vazirmatn',sans-serif;direction:ltr;white-space:nowrap;opacity:0;visibility:hidden;transition:opacity .15s}
+.designer-credit:hover .designer-tooltip,.designer-credit:focus .designer-tooltip{opacity:1;visibility:visible}
+@media(max-width:1100px){.sensitivity-layout{grid-template-columns:1fr}.heatmap{grid-template-columns:minmax(42px,.9fr) repeat(9,minmax(0,1fr))}.heat-cell{font-size:clamp(8px,1.05vw,12px)}}
+@media(max-width:690px){
+ .kpi-card{min-height:160px;padding:11px 9px}.dual-kpi{min-height:211px}
+ .kpi-secondary{padding:7px 6px;display:block}.kpi-secondary span{display:block;max-width:none;font-size:8px}.kpi-secondary strong{font-size:13px;display:block;text-align:right;margin-top:3px}
+ .kpi-tooltip{padding:11px;inset:auto -4px calc(100% + 7px) -4px}.kpi-tooltip p{font-size:10px}
+ .sensitivity-layout{padding:11px 5px;grid-template-columns:minmax(0,1fr)}
+ .heatmap-wrap{width:100%;padding:0;overflow:visible!important}
+ .heatmap{width:100%;min-width:0!important;gap:2px;grid-template-columns:minmax(29px,.95fr) repeat(9,minmax(0,1fr))}
+ .heat-cell{height:29px;min-height:29px;padding:0;border-radius:4px;font-size:clamp(5.5px,1.5vw,8px);font-weight:800;border-width:0;letter-spacing:-.3px}
+ .heat-cell.heat-axis{font-size:clamp(6px,1.6vw,8px);border-radius:4px}.heat-cell.heat-axis small{font-size:6px}
+ .heat-cell.center::after{font-size:6px;top:0;left:0}
+ .controls-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.control-symbol{height:21px;width:21px;font-size:13px}.control-top label{font-size:9px}
+ .designer-credit{font-size:10px}
+}
+@media(max-width:390px){.heatmap{gap:1px;grid-template-columns:minmax(26px,.9fr) repeat(9,minmax(0,1fr))}.heat-cell{font-size:5.8px;letter-spacing:-.4px}.dual-kpi .kpi-value{font-size:21px}}
+@media print{.kpi-tooltip,.designer-tooltip{display:none!important}.heatmap{min-width:0!important;width:100%}.heat-cell{min-height:26px}.dual-kpi{min-height:145px}}
+/* Keep help panels fully visible inside clipped scenario containers. */
+.kpi-tooltip{inset:4px!important;overflow:auto;transform:translateY(4px);border-radius:12px}
+.kpi-tooltip::after{display:none}
+.kpi-card:hover .kpi-tooltip,.kpi-card:focus .kpi-tooltip,.kpi-card:focus-within .kpi-tooltip{transform:translateY(0)}
+
+/* CHABOKSAR V4 — compact, stable KPI composition and genuine zero-centered sliders */
+.control-header h2{letter-spacing:0;font-weight:900}
+.controls-panel{box-shadow:0 8px 28px rgba(21,65,74,.08)}
+.control-top{min-height:31px}
+.control-card{padding:12px 13px 10px}
+.control-bipolar .range{direction:ltr!important;unicode-bidi:isolate;touch-action:pan-y;accent-color:var(--teal)}
+.range{direction:ltr!important;unicode-bidi:isolate;height:8px;min-height:8px;margin:16px 0 12px;outline-offset:9px}
+.range::-webkit-slider-runnable-track{height:8px;background:transparent;border-radius:99px}
+.range::-moz-range-track{height:8px;background:transparent;border-radius:99px}
+.range::-webkit-slider-thumb{width:20px;height:20px;margin-top:-6px;border:4px solid var(--thumb-color,var(--teal));background:var(--surface);box-shadow:0 0 0 4px color-mix(in srgb,var(--thumb-color,var(--teal)) 14%,transparent),0 2px 7px #18344825}
+.range::-moz-range-thumb{height:13px;width:13px;border:4px solid var(--thumb-color,var(--teal));background:var(--surface);box-shadow:0 0 0 4px color-mix(in srgb,var(--thumb-color,var(--teal)) 14%,transparent)}
+.range-scale{display:flex;align-items:center;justify-content:space-between;flex:1;min-width:0;max-width:148px;direction:ltr!important;unicode-bidi:isolate;font-size:10px;color:var(--muted);gap:2px}
+.range-scale b{font-weight:600;white-space:nowrap}
+.range-scale b:nth-child(2){color:var(--ink-2);font-weight:900}
+.control-bipolar .control-number{flex:none;width:53px;max-width:53px}
+.control-bipolar .control-bottom{gap:9px}
+.control-bipolar .control-top .control-value{direction:ltr;unicode-bidi:isolate}
+/* Per-scenario metric cards. All six share a consistent baseline and 2-level hierarchy. */
+.kpi-grid{align-items:stretch;gap:10px}
+.kpi-card,.dual-kpi{min-height:218px;height:100%;padding:14px 13px 11px;display:flex;flex-direction:column;overflow:hidden;gap:0;isolation:auto;transition:border-color .17s,box-shadow .17s,transform .17s}
+.kpi-card:hover{transform:translateY(-2px);box-shadow:0 12px 24px color-mix(in srgb,var(--sc) 11%,transparent)}
+.kpi-heading{display:flex;align-items:center;gap:8px;min-height:37px;min-width:0;position:relative;z-index:1}
+.kpi-heading .kpi-icon{width:30px;height:30px;border-radius:10px;flex:none}
+.kpi-heading .kpi-icon svg{width:17px;height:17px}
+.kpi-heading-text{flex:1;min-width:0;display:flex;flex-direction:column;gap:0;align-items:flex-start;justify-content:center;line-height:1.35}
+.kpi-heading .kpi-label{display:block;min-height:0;line-height:1.4;font-size:10.3px;color:var(--ink-2);font-weight:850;overflow-wrap:anywhere}
+.kpi-acronym{font:800 9px/1.2 'Segoe UI',Arial,sans-serif;color:var(--sc);letter-spacing:.45px;direction:ltr}
+.kpi-info{width:27px;height:27px;min-width:27px;border-radius:9px;border:1px solid color-mix(in srgb,var(--sc) 26%,var(--border));display:grid;place-items:center;color:var(--sc-strong);background:var(--surface);transition:background .15s,border-color .15s;cursor:help;padding:4px}
+.kpi-info:hover,.kpi-info:focus-visible{background:var(--sc-soft);border-color:var(--sc)}
+.kpi-info svg{width:16px;height:16px}
+.kpi-primary{display:flex;flex-direction:column;align-items:flex-start;gap:2px;margin:12px 0 7px;min-width:0;flex:1;justify-content:center}
+.kpi-primary .kpi-value{display:block;max-width:100%;min-height:34px;margin:0;font-size:clamp(19px,1.42vw,26px);line-height:1.45;font-weight:900;overflow:visible;white-space:nowrap;direction:ltr;unicode-bidi:isolate;letter-spacing:-.45px}
+.kpi-card[data-key="capex"] .kpi-value,.kpi-card[data-key="npv"] .kpi-value{font-size:clamp(17px,1.28vw,23px);letter-spacing:-.7px}
+.kpi-primary .kpi-unit{display:block;min-height:17px;font-size:9.2px;line-height:1.55;color:var(--muted);font-weight:600;text-align:right}
+.kpi-secondary{display:flex;align-items:center;justify-content:space-between;flex-wrap:nowrap;gap:5px;min-height:39px;margin:0 0 8px;padding:6px 9px 6px 7px;border-radius:9px;background:color-mix(in srgb,var(--sc-soft) 52%,var(--surface));border:1px solid color-mix(in srgb,var(--sc) 17%,var(--border));}
+.kpi-secondary span{font-size:9px;line-height:1.45;max-width:55%;white-space:normal;overflow-wrap:anywhere;flex:1;min-width:0;color:var(--ink-2)}
+.kpi-secondary span b{font-weight:900;color:var(--ink)}
+.kpi-secondary strong{flex:none;font-size:clamp(12px,1.01vw,16px);font-weight:900;line-height:1.35;color:var(--sc-strong);font-variant-numeric:tabular-nums;white-space:nowrap}
+.kpi-card[data-key="npv"] .kpi-secondary strong{font-size:clamp(11px,.88vw,14px)}
+.kpi-bottom{display:flex!important;align-items:center;border-top:1px solid var(--line);padding-top:8px;min-height:30px;margin-top:auto;flex:none}
+.kpi-meta{font-size:9px!important;line-height:1.45;min-height:0;gap:5px;flex-direction:row;align-items:center;text-align:right;justify-content:flex-start}
+.kpi-card:not(.dual-kpi) .kpi-primary{margin-top:22px;margin-bottom:19px}
+/* One portal, outside the card and outside the scenario clipping context. */
+.kpi-tooltip{display:none!important}
+.help-popover{position:fixed;z-index:9999;width:max-content;max-width:min(265px,calc(100vw - 20px));min-width:180px;box-shadow:0 13px 35px rgba(6,28,42,.24);background:var(--navy);color:#f6fbff;border:1px solid rgba(100,213,195,.35);border-radius:12px;padding:10px 12px 11px;line-height:1.8;font-size:11px;text-align:right;direction:rtl;pointer-events:none;visibility:hidden;opacity:0;transform:translateY(3px);transition:opacity .12s ease,transform .12s ease,visibility .12s}
+.help-popover.visible{opacity:1;visibility:visible;transform:translateY(0)}
+.help-popover .help-title{display:flex;align-items:center;gap:7px;font-size:11px;font-weight:900;color:#91f3d9}
+.help-popover .help-dot{display:block;flex:none;width:6px;height:6px;border-radius:50%;background:#64dcc0}
+.help-popover p{font-size:10.5px;line-height:1.85;color:#e0eff6;margin:5px 0 0;font-weight:500}
+body[data-theme=dark] .help-popover{background:#243c4b;border-color:#426579;box-shadow:0 14px 30px #0009}
+@media(max-width:1580px){.kpi-card,.dual-kpi{min-height:195px}.kpi-primary .kpi-value{font-size:clamp(20px,2.2vw,28px)}.kpi-card[data-key="capex"] .kpi-value,.kpi-card[data-key="npv"] .kpi-value{font-size:clamp(18px,2vw,25px)}}
+@media(max-width:780px){.kpi-grid{gap:9px}.kpi-card,.dual-kpi{min-height:213px;padding:11px}.kpi-primary .kpi-value{font-size:clamp(18px,3.3vw,26px)}.kpi-card[data-key="capex"] .kpi-value,.kpi-card[data-key="npv"] .kpi-value{font-size:clamp(16px,3vw,22px)}.kpi-heading .kpi-label{font-size:10px}}
+@media(max-width:690px){
+ .controls-panel .panel-title h2{font-size:14px}
+ .controls-grid{gap:8px}
+ .control-card{padding:11px 9px 9px}
+ .control-top label{font-size:10px;white-space:normal;line-height:1.4}
+ .control-top .control-value{font-size:12px}
+ .control-bipolar .control-bottom{gap:4px}
+ .range-scale{font-size:8px;gap:0}
+ .control-bipolar .control-number{width:44px;max-width:44px;font-size:10px}
+ .kpi-grid{gap:8px}
+ .kpi-card,.dual-kpi{min-height:205px;padding:10px 9px 9px}
+ .kpi-heading{gap:5px;min-height:37px}
+ .kpi-heading .kpi-icon{width:25px;height:25px;border-radius:8px}
+ .kpi-heading .kpi-icon svg{width:15px;height:15px}
+ .kpi-heading .kpi-label{font-size:9px}
+ .kpi-acronym{font-size:8px}
+ .kpi-info{height:23px;width:23px;min-width:23px;border-radius:7px;padding:3px}
+ .kpi-primary{margin-top:11px;margin-bottom:7px}
+ .kpi-primary .kpi-value{font-size:clamp(16px,4.5vw,21px)}
+ .kpi-card[data-key="capex"] .kpi-value,.kpi-card[data-key="npv"] .kpi-value{font-size:clamp(14px,4.1vw,19px)}
+ .kpi-primary .kpi-unit{font-size:8.3px;line-height:1.55}
+ .kpi-secondary{display:flex;gap:4px;min-height:35px;margin:0 0 6px;padding:5px 6px}
+ .kpi-secondary span{max-width:50%;font-size:8.2px}
+ .kpi-secondary strong,.kpi-card[data-key="npv"] .kpi-secondary strong{font-size:clamp(10px,3vw,13px);margin:0;text-align:left}
+ .kpi-meta{font-size:8px!important}
+ .kpi-card:not(.dual-kpi) .kpi-primary{margin-top:20px;margin-bottom:22px}
+ .help-popover{max-width:min(236px,calc(100vw - 20px));min-width:165px;font-size:10px}
+}
+@media(max-width:390px){.kpi-card,.dual-kpi{padding:9px 7px;min-height:216px}.kpi-heading .kpi-label{font-size:8.2px}.kpi-heading .kpi-icon{width:23px;height:23px}.kpi-info{width:22px;min-width:22px}.kpi-primary .kpi-value{font-size:17px}.kpi-card[data-key="capex"] .kpi-value,.kpi-card[data-key="npv"] .kpi-value{font-size:14px}.kpi-secondary span{font-size:7.8px}.kpi-secondary strong,.kpi-card[data-key="npv"] .kpi-secondary strong{font-size:10px}}
+@media print{.help-popover{display:none!important}.kpi-card,.dual-kpi{min-height:180px!important}.kpi-primary .kpi-value{font-size:17px!important}}
+
+/* V5 — disciplined financial glassmorphism. Glass is restricted to navigation,
+   controls, executive KPIs and popover; data-dense heat cells stay opaque. */
+:root{
+ --bg:#edf3f7;--surface:#ffffff;--surface-2:#f6f9fc;--surface-3:#e8f0f6;
+ --ink:#142737;--ink-2:#41586a;--muted:#587185;--border:#cbdae5;--line:#d9e5ec;
+ --navy:#112d44;--teal:#087f74;--positive:#087b59;--negative:#bb4054;
+ --glass-panel:rgba(255,255,255,.83);--glass-card:rgba(255,255,255,.82);
+ --glass-line:rgba(255,255,255,.96);--glass-shadow:0 14px 34px rgba(29,62,83,.095),inset 0 1px 0 rgba(255,255,255,.96);
+ --glass-backdrop:blur(10px) saturate(115%);
+ --shadow:0 14px 36px rgba(23,53,82,.085)
+}
+body{background:linear-gradient(155deg,#eaf1f7 0%,#f6f9fc 36%,#edf4f3 100%) fixed;letter-spacing:0}
+body[data-theme=dark]{
+ --bg:#091725;--surface:#15283a;--surface-2:#1a3144;--surface-3:#254052;
+ --ink:#f4f8fc;--ink-2:#d2e2eb;--muted:#a4bfce;--border:#3c576a;--line:#355064;
+ --navy:#061b2b;--teal:#69e1cb;--positive:#7de3bb;--negative:#ff9baa;
+ --glass-panel:rgba(23,42,59,.85);--glass-card:rgba(25,47,64,.83);
+ --glass-line:rgba(194,232,245,.14);
+ --glass-shadow:0 18px 40px rgba(0,6,18,.31),inset 0 1px 0 rgba(235,252,255,.13);
+ background:linear-gradient(145deg,#081723,#10243a 44%,#0d252b 100%) fixed
+}
+.shell{max-width:1760px;padding-inline:clamp(14px,3vw,48px)}
+.topbar{background:rgba(246,250,252,.83);border-bottom:1px solid rgba(255,255,255,.85);backdrop-filter:var(--glass-backdrop);-webkit-backdrop-filter:var(--glass-backdrop);box-shadow:0 5px 21px #193a4910}
+body[data-theme=dark] .topbar{background:rgba(13,31,45,.84);border-bottom-color:#294455}
+.topbar-content{min-height:70px}.brand-mark{border:1px solid #b0eee164;box-shadow:0 7px 22px #0a7f7d40}
+.brand-caption{color:var(--muted)}
+.btn,.icon-btn{background:var(--glass-panel);border:1px solid var(--glass-line);box-shadow:0 4px 14px #13374b11}
+.btn:focus-visible,.icon-btn:focus-visible{outline:3px solid var(--teal)}
+.hero{border-radius:28px;margin-top:19px;min-height:206px;
+ background:linear-gradient(115deg,#0b283d,#124962 62%,#13685f 135%);border:1px solid rgba(220,255,251,.39);
+ box-shadow:0 22px 52px rgba(12,50,68,.18),inset 0 1px 0 rgba(255,255,255,.24)}
+.hero::before{background:linear-gradient(100deg,rgba(255,255,255,.04),transparent 65%)}
+.hero::after{display:none}.hero-text{padding:29px 36px 26px}.hero-art{background:linear-gradient(90deg,transparent,rgba(177,249,232,.045))}
+.hero-art svg{filter:none}.hero h1{font-size:clamp(23px,2.35vw,35px);letter-spacing:-.35px}
+.hero .hero-badges span{background:rgba(244,255,255,.105);border:1px solid rgba(230,255,255,.26);box-shadow:inset 0 1px 0 rgba(255,255,255,.13)}
+.hero-bottom{border-top:1px solid rgba(226,255,247,.17);padding-top:10px}
+.intro-strip{margin-block:15px 2px;color:var(--ink-2);font-weight:650}
+.panel{border-color:var(--border);box-shadow:var(--shadow)}
+.controls-panel{position:relative;isolation:isolate;background:var(--glass-panel);border:1px solid var(--glass-line);border-radius:24px;box-shadow:var(--glass-shadow);
+ backdrop-filter:var(--glass-backdrop);-webkit-backdrop-filter:var(--glass-backdrop);margin-top:16px;padding-bottom:14px}
+.controls-panel::before{content:'';pointer-events:none;position:absolute;inset:0 0 auto;height:3px;border-radius:24px 24px 0 0;background:linear-gradient(90deg,#0c8c80,#508ee9,#bf8b5b)}
+.controls-panel .panel-head{padding-top:17px}.controls-panel .panel-title h2{font-weight:900;font-size:17px}
+.controls-panel .panel-title p{font-size:11px;color:var(--ink-2)}
+.controls-grid{padding:12px 16px 2px;gap:9px}
+.control-card{border-radius:15px;padding:10px 12px 9px;background:color-mix(in srgb,var(--glass-panel) 89%,var(--surface-3));
+ border:1px solid var(--glass-line);box-shadow:inset 0 1px 0 #ffffff6b,0 2px 10px #173d5410;transition:border-color .18s,box-shadow .18s}
+.control-card:hover{box-shadow:0 5px 16px #174a6120;border-color:color-mix(in srgb,var(--teal) 45%,var(--border));transform:none}
+.control-top label{font-size:11px;color:var(--ink-2)}.control-value{font-weight:900;color:var(--teal)}
+.control-symbol{background:color-mix(in srgb,var(--surface-3) 78%,white);border:1px solid var(--glass-line)}
+.control-number{color:var(--ink);border-color:var(--border);background:var(--surface);font-size:12px;font-weight:850}
+.control-bipolar .range{direction:ltr!important}
+.controls-foot{margin-top:9px;padding-top:10px}
+.section-heading h2{color:var(--ink);font-size:clamp(19px,1.7vw,24px)}
+.section-divider{margin-top:27px;margin-bottom:12px;opacity:.87}.section-kicker{color:var(--teal)!important}
+/* Distinct scenario hue stays on identity header; KPI surfaces remain neutral glass. */
+.scenario-row{background:var(--glass-panel);border-color:color-mix(in srgb,var(--sc) 36%,var(--border));
+ box-shadow:0 14px 34px rgba(18,54,79,.075);border-radius:24px;overflow:hidden}
+.scenario-row:hover{box-shadow:0 15px 41px rgba(18,54,79,.12)}
+.scenario-row.is-selected{box-shadow:0 0 0 1px var(--sc),0 18px 42px color-mix(in srgb,var(--sc) 14%,transparent)}
+.scenario-top{padding:15px 19px;background:linear-gradient(105deg,var(--sc-dark),var(--sc-strong) 68%,var(--sc));border-bottom:1px solid rgba(255,255,255,.22)}
+.scenario-top::after{display:none}.sc-bubble{border:1px solid rgba(255,255,255,.38);background:rgba(255,255,255,.13);backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px)}
+.sc-heading h3{font-weight:900}.sc-overline{color:#f0fcffde}.threshold-badge{background:rgba(255,255,255,.13);border-color:rgba(255,255,255,.36)}
+.scenario-main{background:linear-gradient(115deg,color-mix(in srgb,var(--sc-soft) 74%,var(--surface)),color-mix(in srgb,var(--sc-soft) 40%,var(--surface)));padding:14px 13px 10px}
+.kpi-grid{gap:10px}
+.kpi-card,.dual-kpi{background:var(--glass-card);border:1px solid var(--glass-line);border-radius:16px;
+ box-shadow:0 7px 17px rgba(23,58,77,.085),inset 0 1px 0 rgba(255,255,255,.96);
+ backdrop-filter:blur(7px) saturate(114%);-webkit-backdrop-filter:blur(7px) saturate(114%);
+ min-height:214px;transition:transform .18s,border-color .18s,box-shadow .18s}
+.kpi-card::before{display:none}.kpi-card::after{right:13px;width:40px;background:var(--sc);height:3px}
+.kpi-card:hover{transform:translateY(-2px);border-color:color-mix(in srgb,var(--sc) 45%,var(--glass-line));box-shadow:0 13px 26px color-mix(in srgb,var(--sc) 13%,transparent),inset 0 1px 0 var(--glass-line)}
+.kpi-heading .kpi-label{color:var(--ink-2);font-size:10.5px}.kpi-icon{background:var(--sc-soft);border-color:color-mix(in srgb,var(--sc) 23%,var(--border))}
+.kpi-primary .kpi-value{color:var(--sc-strong);font-variant-numeric:tabular-nums}
+.kpi-card[data-key='capex'] .kpi-value,.kpi-card[data-key='npv'] .kpi-value{letter-spacing:-.55px}
+.kpi-secondary{background:color-mix(in srgb,var(--sc-soft) 32%,var(--glass-card));border:1px solid color-mix(in srgb,var(--sc) 15%,var(--border));border-radius:10px}
+.kpi-bottom{border-top-color:var(--line)}.kpi-meta{color:var(--ink-2)}.sc-extra{background:color-mix(in srgb,var(--sc-soft) 66%,var(--surface));border-top-color:color-mix(in srgb,var(--sc) 24%,var(--border));font-size:10px}
+/* Only chart-frame gets subtle translucency; interior SVG and heatmap remain solid. */
+.viz-card,.comparison-panel,.sensitivity-panel{background:var(--surface);border:1px solid var(--border);border-radius:23px;box-shadow:0 12px 33px #1c496413}
+.viz-card .panel-head,.comparison-panel .panel-head,.sensitivity-panel .panel-head{background:var(--surface);padding-bottom:12px}
+.chart-wrap{background:var(--surface)}.income-row,.sens-aside{background:var(--surface-2)}
+.heat-cell{border:1px solid #334b5715;box-shadow:inset 0 1px 0 #fff7}
+.heat-cell.center{box-shadow:inset 0 0 0 2px #244d91,0 0 0 2px #ffffffb5}
+/* Floating help is translucent, but uses near-opaque dark tint for contrast. */
+.help-popover{background:rgba(13,39,56,.94);border:1px solid rgba(202,242,243,.30);
+ backdrop-filter:blur(9px);-webkit-backdrop-filter:blur(9px);box-shadow:0 18px 36px #0b233854}
+.help-popover p{color:#edf8fb}.help-popover .help-title{color:#a2f4df}
+body[data-theme=dark] .help-popover{background:rgba(21,43,59,.96);border-color:rgba(176,236,240,.30)}
+body[data-theme=dark] .kpi-card{box-shadow:0 9px 26px #00132145,inset 0 1px 0 #ffffff21}
+body[data-theme=dark] .control-card{box-shadow:inset 0 1px 0 #ffffff12,0 3px 15px #0003}
+body[data-theme=dark] .controls-panel{border-color:#7ab1c337}
+body[data-theme=dark] .topbar{box-shadow:0 7px 25px #0005}
+body[data-theme=dark] .hero{background:linear-gradient(112deg,#071a2a,#103650 64%,#115549 135%)}
+/* Keep data and touch interactions responsive; mobile disables backdrop work on 18 cards. */
+@media(max-width:1360px){.kpi-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:700px){
+ .shell{padding-inline:12px}.hero{min-height:unset;border-radius:19px}.hero-text{padding:23px 19px}.hero h1{font-size:clamp(19px,5.5vw,25px)}
+ .hero .hero-badges{gap:5px}.hero-badges span{font-size:9px;padding:4px 8px}
+ .topbar{backdrop-filter:none;-webkit-backdrop-filter:none;background:var(--surface)}
+ .controls-panel{backdrop-filter:none;-webkit-backdrop-filter:none;border-radius:18px}
+ .controls-grid{padding:10px 11px 2px;gap:8px}.control-card{padding:10px 9px}
+ .scenario-top{padding:12px 11px}.scenario-main{padding:10px 8px 7px}
+ .scenario-row{border-radius:19px}.kpi-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+ .kpi-card,.dual-kpi{min-height:206px;background:var(--glass-card);backdrop-filter:none;-webkit-backdrop-filter:none;padding:10px 9px;box-shadow:inset 0 1px 0 var(--glass-line),0 4px 13px #16365012}
+ .kpi-secondary{background:color-mix(in srgb,var(--sc-soft) 20%,var(--surface))}
+ .kpi-card[data-key='capex'] .kpi-value,.kpi-card[data-key='npv'] .kpi-value{font-size:clamp(14px,3.6vw,20px)}
+ .help-popover{backdrop-filter:none;-webkit-backdrop-filter:none}
+ .heat-cell{border-radius:6px}
+}
+@media(max-width:375px){.kpi-grid{gap:6px}.kpi-card,.dual-kpi{padding:8px;min-height:215px}.kpi-heading .kpi-label{font-size:8.5px}}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
+ .topbar,.controls-panel,.kpi-card,.help-popover{backdrop-filter:none;-webkit-backdrop-filter:none}
+ .controls-panel,.kpi-card{background:var(--surface)}.topbar{background:var(--surface)}.help-popover{background:#112f42}
+}
+@media(prefers-reduced-transparency:reduce){.controls-panel,.kpi-card,.topbar{backdrop-filter:none;-webkit-backdrop-filter:none;background:var(--surface)}.help-popover{backdrop-filter:none;-webkit-backdrop-filter:none;background:#112f42}}
+@media print{body,body[data-theme=dark]{background:#fff!important}.kpi-card,.controls-panel{backdrop-filter:none!important;-webkit-backdrop-filter:none!important;background:#fff!important;box-shadow:none!important}.hero{box-shadow:none!important}}
+</style>
+</head>
+<body data-theme="light">
+<a class="skip" href="#scenarios">پرش به شاخص‌های مالی</a>
+<header class="topbar"><div class="topbar-content">
+  <a class="brand" href="#home" aria-label="داشبورد مالی چابکسر ـ ابتدای صفحه">
+    <span class="brand-mark" aria-hidden="true"><svg width="31" height="31" viewBox="0 0 32 32" fill="none"><path d="M3 19c4-5 9-5 13 0s9 5 13 0M3 26c4-5 9-5 13 0s9 5 13 0M8 11l4-5h8l4 5v5H8z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+    <span><span class="brand-title">CHABOKSAR <span style="color:var(--teal)">/</span> FS</span><br><span class="brand-caption">مدل به‌روزشده · طراحی شیشه‌ای</span></span>
+  </a>
+  <nav class="header-actions" aria-label="ابزارهای داشبورد">
+    <button class="btn mobile-hide" type="button" id="csvBtn" title="خروجی داده‌های محاسبه‌شده CSV"><span aria-hidden="true">⇩</span> خروجی CSV</button>
+    <button class="btn mobile-hide" type="button" id="printBtn" title="چاپ یا ذخیره PDF">▤ چاپ / PDF</button>
+    <button class="icon-btn" type="button" id="themeBtn" aria-label="تغییر حالت روشن و تاریک" aria-pressed="false" title="تغییر حالت روشن/تاریک"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20.9 13.1A9 9 0 0110.9 3.1 9 9 0 1020.9 13.1Z"/></svg></button>
+  </nav>
+</div></header>
+<main id="home" class="shell">
+  <section class="hero" aria-labelledby="mainTitle">
+    <div class="hero-text"><div class="eyebrow"><span class="dot"></span> CHABOKSAR / FINANCIAL STUDY</div>
+      <h1 id="mainTitle">داشبورد هوشمند امکان‌سنجی پروژه گردشگری ثمین چابکسر</h1>
+      <p>مقایسه زنده امکان‌سنجی سه سناریو، با محاسبه مستقل شاخص‌ها و تحلیل حساسیت</p>
+      <div class="hero-badges"><span>✦ هزینه سرمایه‌گذاری مطابق سند اولیه</span><span>◈ مقایسه سه سناریو</span><span>◎ نرخ تنزیل پویا</span></div><div class="hero-bottom"><span><i class="hero-led"></i> LIVE FINANCIAL MODEL</span><span>بهره‌برداری پیش‌فرض: <strong id="activeHorizon">۲۰</strong> سال</span></div>
+    </div>
+    <div class="hero-art" aria-hidden="true"><svg viewBox="0 0 440 225" fill="none" preserveAspectRatio="xMidYMid meet">
+      <defs><linearGradient id="tower" x1="0" x2="1"><stop stop-color="#6dd4c3" stop-opacity=".38"/><stop offset="1" stop-color="#8cbcdf" stop-opacity=".04"/></linearGradient></defs>
+      <circle cx="368" cy="51" r="36" stroke="#9de5da" opacity=".2"/>
+      <path d="M15 194C85 180 126 207 192 194S316 181 426 196M1 210c87-20 141-1 213-5s134-14 224 0" stroke="#8de1d2" stroke-width="1.3" opacity=".45"/>
+      <path d="M45 185V76h84v109M159 185V45h97v140M289 185V21h104v164" fill="url(#tower)" stroke="#87d6d0" stroke-width="1.4" opacity=".72"/>
+      <path d="M45 98h84M45 119h84M45 140h84M45 161h84M159 65h97M159 85h97M159 105h97M159 125h97M159 145h97M159 165h97M289 39h104M289 56h104M289 73h104M289 90h104M289 107h104M289 124h104M289 141h104M289 158h104" stroke="#8de7d6" opacity=".32"/>
+      <path d="M72 76V58h30v18M193 45V27h27v18M326 21V9h28v12" stroke="#88d9d3" stroke-width="1.4"/><path d="M40 184h366" stroke="#bbebdd" opacity=".5"/>
+      <text x="87" y="214" fill="#96ebd8" opacity=".8" text-anchor="middle" font-size="10" font-family="Arial">S06</text><text x="207" y="214" fill="#96ebd8" opacity=".8" text-anchor="middle" font-size="10" font-family="Arial">S08</text><text x="341" y="214" fill="#96ebd8" opacity=".8" text-anchor="middle" font-size="10" font-family="Arial">S10</text>
+    </svg></div>
+  </section>
+  <div class="intro-strip" role="status"><span><span class="dot" aria-hidden="true"></span> محاسبات مالی در مرورگر انجام می‌شود</span><span>•</span><span id="horizonBadge">بهره‌برداری: ۲۰ سال + ۲ سال ساخت</span><span>•</span><span>سال تصمیم‌گیری هر سناریو مستقل است</span></div>
+  <section class="controls-panel panel" aria-labelledby="controlsTitle"><div class="panel-head panel-title">
+    <div><div class="control-header"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 7h16M4 17h16M9 4v6M15 14v6"/></svg><h2 id="controlsTitle">پنل کنترل سناریوها</h2></div><p>مفروضات اقتصادی را تنظیم و نتایج سه سناریو را هم‌زمان بررسی کنید.</p></div>
+    <span class="pill live" id="runStatus">● مدل زنده</span>
+  </div><details class="control-disclosure" open><summary aria-label="بازکردن کنترل‌های مفروضات">نمایش یا پنهان‌سازی تنظیمات</summary><div id="controlsGrid" class="controls-grid"></div></details>
+  <div class="controls-foot"><span class="change-badge" id="changeStatus">● مفروضات اولیه فایل اکسل</span><div class="toolbar"><button class="btn" id="restoreBtn" type="button">↺ بازگشت به مبنا</button><button class="btn" id="mobileCsvBtn" type="button">⇩ خروجی داده‌ها</button></div></div>
+  </section>
+  <div class="section-divider"><span class="divider-flare"></span><span>01 / LIVE SCENARIO INTELLIGENCE</span><span class="divider-line"></span></div>
+  <section class="scenarios" id="scenarios" aria-labelledby="scenariosTitle"><div class="section-heading"><div><div class="section-kicker">◈ EXECUTIVE OVERVIEW</div><h2 id="scenariosTitle">نمای مقایسه سرمایه‌گذاری <span class="heading-em">/ سه سناریو</span></h2><p>سه ردیف مستقل، شش کارت در هر ردیف و مقایسه با مبنای اولیه</p></div><span class="pill kpi-count">✦ ۱۸ کارت پویا · سه سناریو</span></div><div id="scenarioRows"></div></section>
+  <div class="section-divider"><span class="divider-flare"></span><span>02 / FINANCIAL VISUALIZATION</span><span class="divider-line"></span></div>
+  <section class="visual-section" aria-labelledby="visualTitle"><div class="section-heading"><div><div class="section-kicker">⌁ INTERACTIVE ANALYTICS</div><h2 id="visualTitle">تحلیل مالی و مقایسه سناریوها</h2><p>روند جریان نقدی، ساختار درآمد و مقایسه سرمایه‌گذاری</p></div></div>
+    <div class="viz-grid">
+      <article class="panel viz-card" aria-labelledby="chartTitle"><div class="panel-head panel-title"><div><h2 id="chartTitle">جریان نقدی تجمعی سه سناریو</h2><p id="chartSubtitle">منحنی جریان نقدی تجمعی؛ بازه از آغاز ساخت تا پایان افق انتخابی</p></div><div class="chart-toolbar" role="group" aria-label="انتخاب نوع نمودار"><button class="tab" type="button" data-chart="cumulative" aria-pressed="true">نقدی تجمعی</button><button class="tab" type="button" data-chart="cumulativePV" aria-pressed="false">ارزش فعلی تجمعی</button></div></div>
+        <div class="chart-wrap" id="mainChartContainer"><svg id="mainChart" class="main-chart" role="img" aria-label="نمودار تجمعی سه سناریو" viewBox="0 0 1000 365" preserveAspectRatio="xMidYMid meet"></svg><div id="chartTooltip" class="chart-tooltip" role="status"></div></div>
+        <div class="legend" id="chartLegend"></div><p class="chart-note">با انتخاب سناریو یا تغییر مفروضات، نمودار و سال عبور از صفر به‌روزرسانی می‌شود.</p>
+      </article>
+      <article class="panel viz-card" aria-labelledby="incomeTitle"><div class="panel-head panel-title"><div><h2 id="incomeTitle">ترکیب درآمدهای مدل</h2><p>ترکیب درآمد در نخستین سال بهره‌برداری؛ اقامت با اشغال ۴۰٪</p></div><span class="pill">داده‌محور</span></div><div class="donut-split" id="revenueBars"></div><div class="source-legend" id="revenueLegend"></div><div class="foot-callout">فعالیت‌های ناموجود در هر سناریو وارد محاسبات آن نمی‌شوند. سهم هر منبع براساس مقادیر همان فایل اکسل محاسبه می‌شود.</div></article>
+    </div>
+    <article class="panel comparison-panel" aria-labelledby="compareTitle"><div class="panel-head panel-title"><div><h2 id="compareTitle">مقایسه مستقیم ارزش و بازده</h2><p>تغییرات سه سناریو در اولین سال عبور از آستانه؛ بدون تحمیل نتیجه مثبت</p></div><span class="pill">پویای سه‌سناریویی</span></div><div id="comparisonBars" class="comparisons"></div></article>
+  </section>
+  <div class="section-divider"><span class="divider-flare"></span><span>03 / DYNAMIC RISK LAB</span><span class="divider-line"></span></div>
+  <section class="panel sensitivity-panel" id="sensitivity" aria-labelledby="sensitivityTitle"><div class="panel-head panel-title sensitivity-head"><div><div class="section-kicker">⊞ RISK & SENSITIVITY</div><h2 id="sensitivityTitle">تحلیل حساسیت تعاملی</h2><p>۸۱ حالت تغییر درآمد و هزینه، با افق ثابت سال تصمیم‌گیری سناریوی انتخابی</p></div><div class="sensitivity-buttons"><button class="scenario-picker" data-pick="06" type="button">۶ طبقه</button><button class="scenario-picker" data-pick="08" type="button">۸ طبقه</button><button class="scenario-picker" data-pick="10" type="button">۱۰ طبقه</button><span aria-hidden="true">│</span><button class="tab" data-sens="irr" type="button" aria-pressed="true">IRR</button><button class="tab" data-sens="npv" type="button" aria-pressed="false">NPV</button></div></div>
+    <div class="sensitivity-layout"><div class="heatmap-wrap"><div class="heatmap" role="grid" id="heatmap" aria-label="تحلیل حساسیت درآمد و هزینه"></div></div><aside class="sens-aside" id="sensitivityAside" aria-live="polite"></aside></div>
+  </section>
+  <details class="panel details-panel" id="cashDetails"><summary>جدول تفصیلی جریان نقدی و شاخص‌های سالانه <span class="mini-label">مشاهده جزئیات ←</span></summary><div class="table-scroll"><table class="data-table" id="cashTable"><thead></thead><tbody></tbody></table></div></details>
+  <details class="panel details-panel" id="methodDetails"><summary>روش محاسبات، تطبیق با اکسل و درجه اتکای مفروضات <span class="mini-label">مشاهده توضیحات ←</span></summary><div class="audit-text" id="methodBody"></div></details>
+  <footer class="panel foot-panel"><span class="designer-credit" tabindex="0">تحلیل و طراحی: حمیدرضا ترابی<span class="designer-tooltip" role="tooltip">hr.torabii@gmail.com</span></span><span>CHABOKSAR / FS • مبنای مالی: آخرین فایل اصلاح محاسبات ارسالی · بدون افزودن هزینه سرمایه‌گذاری</span><span><strong>واحد پایه:</strong> میلیون ریال | <strong>مالیات مدل:</strong> صفر | <strong>ساخت:</strong> ۲ سال با تقسیم ۴۰ / ۶۰</span></footer>
+</main>
+<div id="kpiHelp" class="help-popover" role="tooltip" aria-hidden="true"></div>
+<div id="toast" role="status" aria-live="polite"></div>
+<script type="application/json" id="modelData">{
+  "project": "پروژه گردشگری ثمین چابکسر",
+  "source": "FS__کلاود_ثمین_چابکسر_سه_سناریو_رفع_ایراد_محاسبات.xlsx",
+  "currency": "میلیون ریال",
+  "baseline": {
+    "discount": 43.49999999999999,
+    "inflation": 43.49999999999999,
+    "operatingYears": 20,
+    "revenueChange": 0,
+    "costChange": 0
+  },
+  "scenarios": [
+    {
+      "code": "06",
+      "name": "سناریوی 6 طبقه",
+      "hotelKeys": 52,
+      "villaCount": 10,
+      "cabins": 0,
+      "capex": 10817616.4,
+      "costBreakdown": [
+        {
+          "name": "زمین",
+          "value": 0.0
+        },
+        {
+          "name": "مانده ابنیه پس از سرشکن هزینه‌های داخل سقف سند",
+          "value": 8496595.775489805
+        },
+        {
+          "name": "محوطه سازی",
+          "value": 1210905.28
+        },
+        {
+          "name": "تاسیسات",
+          "value": 171103.59
+        },
+        {
+          "name": "تجهیزات اداری و پذیرش",
+          "value": 21600.0
+        },
+        {
+          "name": "تجهیزات رستوران و صبحانه‌خوری هتل",
+          "value": 16148.232
+        },
+        {
+          "name": "تجهیزات اقامتی",
+          "value": 168200.0
+        },
+        {
+          "name": "هزینه های قبل بهره برداری",
+          "value": 520953.3970199999
+        },
+        {
+          "name": "هزینه های پیش بینی نشده",
+          "value": 212110.12549019608
+        }
+      ],
+      "opex": {
+        "fixed": 297074.33243210014,
+        "variable": 236343.72952982876,
+        "depreciation": 131723.61909489805
+      },
+      "assumptions": {
+        "inflation": 0.43499999999999994,
+        "discount": 0.43499999999999994,
+        "tax": 0,
+        "euro": 2.65
+      },
+      "items": [
+        {
+          "name": "بهره برداری از اتاق استاندارد ۳۵ متری",
+          "quantity": 48.0,
+          "unit": "اجاره روزانه هر واحد",
+          "rate": 45.0,
+          "periods": 365.0,
+          "realization": 1.0,
+          "nominal": 788400.0,
+          "type": "اقامت",
+          "confidence": "مفروضه ثبت‌شده در اکسل کاربر",
+          "provenance": "درآمدهای پروژه!E10:K10",
+          "url": null
+        },
+        {
+          "name": "بهره برداری از سوئیت لوکس",
+          "quantity": 4.0,
+          "unit": "اجاره روزانه هر واحد",
+          "rate": 120.0,
+          "periods": 365.0,
+          "realization": 0.9,
+          "nominal": 157680.0,
+          "type": "اقامت",
+          "confidence": "مفروضه ثبت‌شده در اکسل کاربر",
+          "provenance": "درآمدهای پروژه!E11:K11",
+          "url": null
+        },
+        {
+          "name": "اجاره ویلای ساحلی بزرگ ۱۱۱ متری",
+          "quantity": 6.0,
+          "unit": "اجاره روزانه هر واحد",
+          "rate": 150.0,
+          "periods": 365.0,
+          "realization": 0.85,
+          "nominal": 279225.0,
+          "type": "اقامت",
+          "confidence": "مفروضه ثبت‌شده در اکسل کاربر",
+          "provenance": "درآمدهای پروژه!E12:K12",
+          "url": null
+        },
+        {
+          "name": "اجاره ویلای ساحلی کوچک ۹۱ متری",
+          "quantity": 4.0,
+          "unit": "اجاره روزانه هر واحد",
+          "rate": 150.0,
+          "periods": 365.0,
+          "realization": 0.9,
+          "nominal": 197100.0,
+          "type": "اقامت",
+          "confidence": "مفروضه ثبت‌شده در اکسل کاربر",
+          "provenance": "درآمدهای پروژه!E13:K13",
+          "url": null
+        },
+        {
+          "name": "اجاره رستوران چهارفصل مستقل",
+          "quantity": 1035.5,
+          "unit": "اجاره ماهانه هر مترمربع",
+          "rate": 13.0,
+          "periods": 12.0,
+          "realization": 1.0,
+          "nominal": 161538.0,
+          "type": "اجاره",
+          "confidence": "مفروضه ثبت‌شده در اکسل کاربر",
+          "provenance": "درآمدهای پروژه!E14:K14",
+          "url": null
+        },
+        {
+          "name": "اجاره کافی‌شاپ ساحلی",
+          "quantity": 98.65,
+          "unit": "اجاره ماهانه هر مترمربع",
+          "rate": 20.0,
+          "periods": 12.0,
+          "realization": 1.0,
+          "nominal": 23676.0,
+          "type": "اجاره",
+          "confidence": "مفروضه ثبت‌شده در اکسل کاربر",
+          "provenance": "درآمدهای پروژه!E15:K15",
+          "url": null
+        },
+        {
+          "name": "اجاره چایخانه ساحلی",
+          "quantity": 30.0,
+          "unit": "اجاره ماهانه هر مترمربع",
+          "rate": 15.0,
+          "periods": 12.0,
+          "realization": 1.0,
+          "nominal": 5400.0,
+          "type": "اجاره",
+          "confidence": "مفروضه ثبت‌شده در اکسل کاربر",
+          "provenance": "درآمدهای پروژه!E16:K16",
+          "url": null
+        },
+        {
+          "name": "اجاره مرکز تجاری جنوبی",
+          "quantity": 1344.3569999999997,
+          "unit": "اجاره ماهانه هر مترمربع",
+          "rate": 0.0,
+          "periods": 12.0,
+          "realization": 1.0,
+          "nominal": 0.0,
+          "type": "اجاره",
+          "confidence": "مفروضه ثبت‌شده در اکسل کاربر",
+          "provenance": "درآمدهای پروژه!E17:K17",
+          "url": null
+        }
+      ],
+      "sourceSnapshot": {
+        "capex": 10817616.4,
+        "sourceYearCount": 26,
+        "baselineYear3Cash": 1028969.5993517756,
+        "firstYearInvest": 4327046.5600000005,
+        "secondYearInvest": 6490569.84,
+        "thresholdYear": 16,
+        "irr": 0.44282753837906275,
+        "npv": 399053.79713646695,
+        "mainIrrCell": "جریانات نقدی!I43",
+        "mainNpvCell": "جریانات نقدی!I44",
+        "incomeSourceCount": 7
+      },
+      "baselineCashflow40y": [
+        {
+          "year": 1,
+          "cash": -4327046.5600000005,
+          "revenue": 0.0,
+          "opex": 0.0,
+          "capex": 4327046.5600000005,
+          "depreciation": 0.0
+        },
+        {
+          "year": 2,
+          "cash": -6490569.84,
+          "revenue": 0.0,
+          "opex": 0.0,
+          "capex": 6490569.84,
+          "depreciation": 0.0
+        },
+        {
+          "year": 3,
+          "cash": 1028969.5993517756,
+          "revenue": 1564137.8886000002,
+          "opex": 806416.8587789161,
+          "capex": 0.0,
+          "depreciation": 271248.5695306914
+        },
+        {
+          "year": 4,
+          "cash": 1827051.0423944427,
+          "revenue": 2664856.8229749375,
+          "opex": 1227047.477857037,
+          "capex": 0.0,
+          "depreciation": 389241.6972765422
+        },
+        {
+          "year": 5,
+          "cash": 2873287.4071414596,
+          "revenue": 4125648.389627387,
+          "opex": 1810922.8180777654,
+          "capex": 0.0,
+          "depreciation": 558561.8355918381
+        },
+        {
+          "year": 6,
+          "cash": 4123167.429247994,
+          "revenue": 5920305.4391153,
+          "opex": 2598674.2439415934,
+          "capex": 0.0,
+          "depreciation": 801536.2340742878
+        },
+        {
+          "year": 7,
+          "cash": 5916745.260970871,
+          "revenue": 8495638.305130456,
+          "opex": 3729097.5400561877,
+          "capex": 0.0,
+          "depreciation": 1150204.495896603
+        },
+        {
+          "year": 8,
+          "cash": 8490529.449493201,
+          "revenue": 12191240.967862204,
+          "opex": 5351254.969980628,
+          "capex": 0.0,
+          "depreciation": 1650543.4516116253
+        },
+        {
+          "year": 9,
+          "cash": 12183909.760022743,
+          "revenue": 17494430.788882263,
+          "opex": 7679050.881922202,
+          "capex": 0.0,
+          "depreciation": 2368529.8530626823
+        },
+        {
+          "year": 10,
+          "cash": 17483910.50563264,
+          "revenue": 25104508.18204605,
+          "opex": 11019438.015558358,
+          "capex": 0.0,
+          "depreciation": 3398840.3391449493
+        },
+        {
+          "year": 11,
+          "cash": 25089411.57558284,
+          "revenue": 36024969.24123608,
+          "opex": 15812893.552326247,
+          "capex": 0.0,
+          "depreciation": 4877335.8866730025
+        },
+        {
+          "year": 12,
+          "cash": 36003305.61096136,
+          "revenue": 51695830.86117377,
+          "opex": 22691502.247588165,
+          "capex": 0.0,
+          "depreciation": 6998976.997375758
+        },
+        {
+          "year": 13,
+          "cash": 51664743.55172957,
+          "revenue": 74183517.28578438,
+          "opex": 32562305.725289024,
+          "capex": 0.0,
+          "depreciation": 10043531.991234215
+        },
+        {
+          "year": 14,
+          "cash": 74138906.99673194,
+          "revenue": 106453347.30510059,
+          "opex": 46726908.71578975,
+          "capex": 0.0,
+          "depreciation": 14412468.407421099
+        },
+        {
+          "year": 15,
+          "cash": 106389331.54031035,
+          "revenue": 152760553.38281935,
+          "opex": 67053114.00715829,
+          "capex": 0.0,
+          "depreciation": 20681892.164649278
+        },
+        {
+          "year": 16,
+          "cash": 152668690.7603453,
+          "revenue": 219211394.10434574,
+          "opex": 96221218.60027213,
+          "capex": 0.0,
+          "depreciation": 29678515.256271712
+        },
+        {
+          "year": 17,
+          "cash": 219079571.24109554,
+          "revenue": 314568350.53973615,
+          "opex": 138077448.6913905,
+          "capex": 0.0,
+          "depreciation": 42588669.392749906
+        },
+        {
+          "year": 18,
+          "cash": 314379184.73097205,
+          "revenue": 451405583.02452135,
+          "opex": 198141138.87214538,
+          "capex": 0.0,
+          "depreciation": 61114740.578596115
+        },
+        {
+          "year": 19,
+          "cash": 451134130.088945,
+          "revenue": 647767011.6401882,
+          "opex": 284332534.28152865,
+          "capex": 0.0,
+          "depreciation": 87699652.73028542
+        },
+        {
+          "year": 20,
+          "cash": 647377476.6776361,
+          "revenue": 929545661.7036701,
+          "opex": 408017186.6939936,
+          "capex": 0.0,
+          "depreciation": 125849001.6679596
+        },
+        {
+          "year": 21,
+          "cash": 928986679.032408,
+          "revenue": 1333898024.544767,
+          "opex": 585504662.9058809,
+          "capex": 0.0,
+          "depreciation": 180593317.39352205
+        },
+        {
+          "year": 22,
+          "cash": 1333095884.4115052,
+          "revenue": 1914143665.2217402,
+          "opex": 840199191.2699392,
+          "capex": 0.0,
+          "depreciation": 259151410.45970413
+        },
+        {
+          "year": 23,
+          "cash": 1912992594.1305106,
+          "revenue": 2746796159.593198,
+          "opex": 1205685839.4723628,
+          "capex": 0.0,
+          "depreciation": 371882274.00967544
+        },
+        {
+          "year": 24,
+          "cash": 2745144372.577282,
+          "revenue": 3941652489.016238,
+          "opex": 1730159179.6428404,
+          "capex": 0.0,
+          "depreciation": 533651063.20388424
+        },
+        {
+          "year": 25,
+          "cash": 3939282174.6484003,
+          "revenue": 5656271321.738302,
+          "opex": 2482778422.787476,
+          "capex": 0.0,
+          "depreciation": 765789275.6975739
+        },
+        {
+          "year": 26,
+          "cash": 5652869920.620454,
+          "revenue": 8116749346.694464,
+          "opex": 3562787036.7000284,
+          "capex": 0.0,
+          "depreciation": 1098907610.6260185
+        }
+      ]
+    },
+    {
+      "code": "08",
+      "name": "سناریوی 8 طبقه",
+      "hotelKeys": 56,
+      "villaCount": 10,
+      "cabins": 0,
+      "capex": 13567237.28,
+      "costBreakdown": [
+        {
+          "name": "زمین",
+          "value": 0.0
+        },
+        {
+          "name": "مانده ابنیه پس از سرشکن هزینه‌های داخل سقف سند",
+          "value": 11039688.412587844
+        },
+        {
+          "name": "محوطه سازی",
+          "value": 1210905.28
+        },
+        {
+          "name": "تاسیسات",
+          "value": 201343.59
+        },
+        {
+          "name": "تجهیزات اداری و پذیرش",
+          "value": 22800.0
+        },
+        {
+          "name": "تجهیزات رستوران و صبحانه‌خوری هتل",
+          "value": 17251.620000000003
+        },
+        {
+          "name": "تجهیزات اقامتی",
+          "value": 196200.0
+        },
+        {
+          "name": "هزینه های قبل بهره برداری",
+          "value": 613024.11702
+        },
+        {
+          "name": "هزینه های پیش بینی نشده",
+          "value": 266024.26039215684
+        }
+      ],
+      "opex": {
+        "fixed": 343378.9863010414,
+        "variable": 286334.2581754758,
+        "depreciation": 160763.78262587846
+      },
+      "assumptions": {
+        "inflation": 0.43499999999999994,
+        "discount": 0.43499999999999994,
+        "tax": 0,
+        "euro": 2.65
+      },
+      "items": [
+        {
+          "name": "بهره برداری از اتاق استاندارد ۳۵ متری",
+          "quantity": 48.0,
+          "unit": "اجاره روزانه هر واحد",
+          "rate": 45.0,
+          "periods": 365.0,
+          "realization": 1.0,
+          "nominal": 788400.0,
+          "type": "اقامت",
+          "confidence": "مفروضه ثبت‌شده در اکسل کاربر",
+          "provenance": "درآمدهای پروژه!E72:K72",
+          "url": null
+        },
+        {
+          "name": "بهره برداری از سوئیت لوکس",
+          "quantity": 8.0,
+          "unit": "اجاره روزانه هر واحد",
+          "rate": 120.0,
+          "periods": 365.0,
+          "realization": 0.9,
+          "nominal": 315360.0,
+          "type": "اقامت",
+          "confidence": "مفروضه ثبت‌شده در اکسل کاربر",
+          "provenance": "درآمدهای پروژه!E73:K73",
+          "url": null
+        },
+        {
+          "name": "اجاره ویلای ساحلی بزرگ ۱۱۱ متری",
+          "quantity": 6.0,
+          "unit": "اجاره روزانه هر واحد",
+          "rate": 150.0,
+          "periods": 365.0,
+          "realization": 0.85,
+          "nominal": 279225.0,
+          "type": "اقامت",
+          "confidence": "مفروضه ثبت‌شده در اکسل کاربر",
+          "provenance": "درآمدهای پروژه!E74:K74",
+          "url": null
+        },
+        {
+          "name": "اجاره ویلای ساحلی کوچک ۹۱ متری",
+          "quantity": 4.0,
+          "unit": "اجاره روزانه هر واحد",
+          "rate": 150.0,
+          "periods": 365.0,
+          "realization": 0.9,
+          "nominal": 197100.0,
+          "type": "اقامت",
+          "confidence": "مفروضه ثبت‌شده در اکسل کاربر",
+          "provenance": "درآمدهای پروژه!E75:K75",
+          "url": null
+        },
+        {
+          "name": "اجاره رستوران چهارفصل مستقل",
+          "quantity": 1035.5,
+          "unit": "اجاره ماهانه هر مترمربع",
+          "rate": 13.0,
+          "periods": 12.0,
+          "realization": 1.0,
+          "nominal": 161538.0,
+          "type": "اجاره",
+          "confidence": "مفروضه ثبت‌شده در اکسل کاربر",
+          "provenance": "درآمدهای پروژه!E76:K76",
+          "url": null
+        },
+        {
+          "name": "اجاره کافی‌شاپ ساحلی",
+          "quantity": 98.65,
+          "unit": "اجاره ماهانه هر مترمربع",
+          "rate": 20.0,
+          "periods": 12.0,
+          "realization": 1.0,
+          "nominal": 23676.0,
+          "type": "اجاره",
+          "confidence": "مفروضه ثبت‌شده در اکسل کاربر",
+          "provenance": "درآمدهای پروژه!E77:K77",
+          "url": null
+        },
+        {
+          "name": "اجاره چایخانه ساحلی",
+          "quantity": 30.0,
+          "unit": "اجاره ماهانه هر مترمربع",
+          "rate": 15.0,
+          "periods": 12.0,
+          "realization": 1.0,
+          "nominal": 5400.0,
+          "type": "اجاره",
+          "confidence": "مفروضه ثبت‌شده در اکسل کاربر",
+          "provenance": "درآمدهای پروژه!E78:K78",
+          "url": null
+        },
+        {
+          "name": "اجاره مرکز تجاری جنوبی",
+          "quantity": 1344.3569999999997,
+          "unit": "اجاره ماهانه هر مترمربع",
+          "rate": 0.0,
+          "periods": 12.0,
+          "realization": 1.0,
+          "nominal": 0.0,
+          "type": "اجاره",
+          "confidence": "مفروضه ثبت‌شده در اکسل کاربر",
+          "provenance": "درآمدهای پروژه!E79:K79",
+          "url": null
+        },
+        {
+          "name": "اجاره کاربری تجاری طبقه اول هتل",
+          "quantity": 1176.0,
+          "unit": "اجاره ماهانه هر مترمربع",
+          "rate": 13.0,
+          "periods": 12.0,
+          "realization": 1.0,
+          "nominal": 183456.0,
+          "type": "اجاره",
+          "confidence": "مفروضه ثبت‌شده در اکسل کاربر",
+          "provenance": "درآمدهای پروژه!E80:K80",
+          "url": null
+        }
+      ],
+      "sourceSnapshot": {
+        "capex": 13567237.28,
+        "sourceYearCount": 26,
+        "baselineYear3Cash": 1459898.0514954552,
+        "firstYearInvest": 5426894.9120000005,
+        "secondYearInvest": 8140342.367999999,
+        "thresholdYear": 15,
+        "irr": 0.4413938275094291,
+        "npv": 380872.64433538355,
+        "mainIrrCell": "جریانات نقدی!I119",
+        "mainNpvCell": "جریانات نقدی!I120",
+        "incomeSourceCount": 8
+      },
+      "baselineCashflow40y": [
+        {
+          "year": 1,
+          "cash": -5426894.9120000005,
+          "revenue": 0.0,
+          "opex": 0.0,
+          "capex": 5426894.9120000005,
+          "depreciation": 0.0
+        },
+        {
+          "year": 2,
+          "cash": -8140342.367999999,
+          "revenue": 0.0,
+          "opex": 0.0,
+          "capex": 8140342.367999999,
+          "depreciation": 0.0
+        },
+        {
+          "year": 3,
+          "cash": 1459898.0514954552,
+          "revenue": 2071794.5094,
+          "opex": 942945.2581823197,
+          "capex": 0.0,
+          "depreciation": 331048.8002777746
+        },
+        {
+          "year": 4,
+          "cash": 2477255.4794323505,
+          "revenue": 3439938.3226359375,
+          "opex": 1437737.8716021937,
+          "capex": 0.0,
+          "depreciation": 475055.0283986065
+        },
+        {
+          "year": 5,
+          "cash": 3829163.1369327703,
+          "revenue": 5271321.715164249,
+          "opex": 2123862.543983479,
+          "capex": 0.0,
+          "depreciation": 681703.9657520005
+        },
+        {
+          "year": 6,
+          "cash": 5494849.101498527,
+          "revenue": 7564346.661260698,
+          "opex": 3047742.750616292,
+          "capex": 0.0,
+          "depreciation": 978245.1908541207
+        },
+        {
+          "year": 7,
+          "cash": 7885108.460650385,
+          "revenue": 10854837.458909102,
+          "opex": 4373510.84713438,
+          "capex": 0.0,
+          "depreciation": 1403781.8488756632
+        },
+        {
+          "year": 8,
+          "cash": 11315130.641033303,
+          "revenue": 15576691.753534561,
+          "opex": 6275988.065637834,
+          "capex": 0.0,
+          "depreciation": 2014426.9531365766
+        },
+        {
+          "year": 9,
+          "cash": 16237212.469882792,
+          "revenue": 22352552.666322097,
+          "opex": 9006042.874190293,
+          "capex": 0.0,
+          "depreciation": 2890702.6777509875
+        },
+        {
+          "year": 10,
+          "cash": 23300399.89428181,
+          "revenue": 32075913.07617221,
+          "opex": 12923671.524463069,
+          "capex": 0.0,
+          "depreciation": 4148158.342572667
+        },
+        {
+          "year": 11,
+          "cash": 33436073.8482944,
+          "revenue": 46028935.26430713,
+          "opex": 18545468.637604505,
+          "capex": 0.0,
+          "depreciation": 5952607.221591778
+        },
+        {
+          "year": 12,
+          "cash": 47980765.972302444,
+          "revenue": 66051522.10428071,
+          "opex": 26612747.494962465,
+          "capex": 0.0,
+          "depreciation": 8541991.362984201
+        },
+        {
+          "year": 13,
+          "cash": 68852399.17025402,
+          "revenue": 94783934.21964285,
+          "opex": 38189292.65527115,
+          "capex": 0.0,
+          "depreciation": 12257757.605882332
+        },
+        {
+          "year": 14,
+          "cash": 98803192.80931452,
+          "revenue": 136014945.60518748,
+          "opex": 54801634.960314095,
+          "capex": 0.0,
+          "depreciation": 17589882.164441146
+        },
+        {
+          "year": 15,
+          "cash": 141782581.68136632,
+          "revenue": 195181446.943444,
+          "opex": 78640346.16805074,
+          "capex": 0.0,
+          "depreciation": 25241480.905973043
+        },
+        {
+          "year": 16,
+          "cash": 203458004.71276072,
+          "revenue": 280085376.3638422,
+          "opex": 112848896.75115278,
+          "capex": 0.0,
+          "depreciation": 36221525.10007132
+        },
+        {
+          "year": 17,
+          "cash": 291962236.76281166,
+          "revenue": 401922515.08211356,
+          "opex": 161938166.83790427,
+          "capex": 0.0,
+          "depreciation": 51977888.51860234
+        },
+        {
+          "year": 18,
+          "cash": 418965809.75463474,
+          "revenue": 576758809.142833,
+          "opex": 232381269.41239262,
+          "capex": 0.0,
+          "depreciation": 74588270.02419436
+        },
+        {
+          "year": 19,
+          "cash": 601215936.9979008,
+          "revenue": 827648891.1199653,
+          "opex": 333467121.6067834,
+          "capex": 0.0,
+          "depreciation": 107034167.4847189
+        },
+        {
+          "year": 20,
+          "cash": 862744869.5919876,
+          "revenue": 1187676158.7571502,
+          "opex": 478525319.5057342,
+          "capex": 0.0,
+          "depreciation": 153594030.34057164
+        },
+        {
+          "year": 21,
+          "cash": 1238038887.8645024,
+          "revenue": 1704315287.8165107,
+          "opex": 686683833.4907286,
+          "capex": 0.0,
+          "depreciation": 220407433.53872034
+        },
+        {
+          "year": 22,
+          "cash": 1776585804.0855613,
+          "revenue": 2445692438.016693,
+          "opex": 985391301.0591955,
+          "capex": 0.0,
+          "depreciation": 316284667.1280637
+        },
+        {
+          "year": 23,
+          "cash": 2549400628.86278,
+          "revenue": 3509568648.5539546,
+          "opex": 1414036517.0199459,
+          "capex": 0.0,
+          "depreciation": 453868497.3287714
+        },
+        {
+          "year": 24,
+          "cash": 3658389902.41809,
+          "revenue": 5036231010.674925,
+          "opex": 2029142401.9236221,
+          "capex": 0.0,
+          "depreciation": 651301293.6667869
+        },
+        {
+          "year": 25,
+          "cash": 5249789509.969958,
+          "revenue": 7226991500.318517,
+          "opex": 2911819346.760398,
+          "capex": 0.0,
+          "depreciation": 934617356.4118392
+        },
+        {
+          "year": 26,
+          "cash": 7533447946.8068905,
+          "revenue": 10370732802.957073,
+          "opex": 4178460762.601171,
+          "capex": 0.0,
+          "depreciation": 1341175906.4509892
+        }
+      ]
+    },
+    {
+      "code": "10",
+      "name": "سناریوی 10 طبقه",
+      "hotelKeys": 60,
+      "villaCount": 10,
+      "cabins": 8,
+      "capex": 15924611.3,
+      "costBreakdown": [
+        {
+          "name": "زمین",
+          "value": 0.0
+        },
+        {
+          "name": "مانده ابنیه پس از سرشکن هزینه‌های داخل سقف سند",
+          "value": 13794986.971607843
+        },
+        {
+          "name": "محوطه سازی",
+          "value": 475141.17
+        },
+        {
+          "name": "تاسیسات",
+          "value": 254700.0
+        },
+        {
+          "name": "تجهیزات اداری و پذیرش",
+          "value": 26800.0
+        },
+        {
+          "name": "تجهیزات رستوران و صبحانه‌خوری هتل",
+          "value": 19459.278000000002
+        },
+        {
+          "name": "تجهیزات اقامتی",
+          "value": 265800.0
+        },
+        {
+          "name": "هزینه های قبل بهره برداری",
+          "value": 775476.6000000001
+        },
+        {
+          "name": "هزینه های پیش بینی نشده",
+          "value": 312247.28039215686
+        }
+      ],
+      "opex": {
+        "fixed": 391732.65839123534,
+        "variable": 328788.0947454118,
+        "depreciation": 181495.84257607843
+      },
+      "assumptions": {
+        "inflation": 0.43499999999999994,
+        "discount": 0.43499999999999994,
+        "tax": 0,
+        "euro": 2.65
+      },
+      "items": [
+        {
+          "name": "بهره برداری از اتاق استاندارد ۳۵ متری",
+          "quantity": 48.0,
+          "unit": "اجاره روزانه هر واحد",
+          "rate": 45.0,
+          "periods": 365.0,
+          "realization": 1.0,
+          "nominal": 788400.0,
+          "type": "اقامت",
+          "confidence": "مفروضه ثبت‌شده در اکسل کاربر",
+          "provenance": "درآمدهای پروژه!E134:K134",
+          "url": null
+        },
+        {
+          "name": "بهره برداری از سوئیت لوکس",
+          "quantity": 12.0,
+          "unit": "اجاره روزانه هر واحد",
+          "rate": 120.0,
+          "periods": 365.0,
+          "realization": 0.9,
+          "nominal": 473040.0,
+          "type": "اقامت",
+          "confidence": "مفروضه ثبت‌شده در اکسل کاربر",
+          "provenance": "درآمدهای پروژه!E135:K135",
+          "url": null
+        },
+        {
+          "name": "اجاره ویلای ساحلی بزرگ ۱۱۱ متری",
+          "quantity": 6.0,
+          "unit": "اجاره روزانه هر واحد",
+          "rate": 150.0,
+          "periods": 365.0,
+          "realization": 0.85,
+          "nominal": 279225.0,
+          "type": "اقامت",
+          "confidence": "مفروضه ثبت‌شده در اکسل کاربر",
+          "provenance": "درآمدهای پروژه!E136:K136",
+          "url": null
+        },
+        {
+          "name": "اجاره ویلای ساحلی کوچک ۹۱ متری",
+          "quantity": 4.0,
+          "unit": "اجاره روزانه هر واحد",
+          "rate": 150.0,
+          "periods": 365.0,
+          "realization": 0.9,
+          "nominal": 197100.0,
+          "type": "اقامت",
+          "confidence": "مفروضه ثبت‌شده در اکسل کاربر",
+          "provenance": "درآمدهای پروژه!E137:K137",
+          "url": null
+        },
+        {
+          "name": "اجاره کلبه سوئیسی ۶۴ متری",
+          "quantity": 8.0,
+          "unit": "اجاره روزانه هر واحد",
+          "rate": 85.0,
+          "periods": 365.0,
+          "realization": 0.8,
+          "nominal": 198560.0,
+          "type": "اقامت",
+          "confidence": "مفروضه ثبت‌شده در اکسل کاربر",
+          "provenance": "درآمدهای پروژه!E138:K138",
+          "url": null
+        },
+        {
+          "name": "اجاره رستوران چهارفصل مستقل",
+          "quantity": 1035.5,
+          "unit": "اجاره ماهانه هر مترمربع",
+          "rate": 12.0,
+          "periods": 12.0,
+          "realization": 1.0,
+          "nominal": 149112.0,
+          "type": "اجاره",
+          "confidence": "مفروضه ثبت‌شده در اکسل کاربر",
+          "provenance": "درآمدهای پروژه!E139:K139",
+          "url": null
+        },
+        {
+          "name": "اجاره کافی‌شاپ ساحلی",
+          "quantity": 98.65,
+          "unit": "اجاره ماهانه هر مترمربع",
+          "rate": 20.0,
+          "periods": 12.0,
+          "realization": 1.0,
+          "nominal": 23676.0,
+          "type": "اجاره",
+          "confidence": "مفروضه ثبت‌شده در اکسل کاربر",
+          "provenance": "درآمدهای پروژه!E140:K140",
+          "url": null
+        },
+        {
+          "name": "اجاره چایخانه ساحلی",
+          "quantity": 30.0,
+          "unit": "اجاره ماهانه هر مترمربع",
+          "rate": 15.0,
+          "periods": 12.0,
+          "realization": 1.0,
+          "nominal": 5400.0,
+          "type": "اجاره",
+          "confidence": "مفروضه ثبت‌شده در اکسل کاربر",
+          "provenance": "درآمدهای پروژه!E141:K141",
+          "url": null
+        },
+        {
+          "name": "واگذاری سینما، سالن چندمنظوره، اسپا و باشگاه",
+          "quantity": 2352.0,
+          "unit": "اجاره ماهانه هر مترمربع",
+          "rate": 12.0,
+          "periods": 12.0,
+          "realization": 1.0,
+          "nominal": 338688.0,
+          "type": "خدمات",
+          "confidence": "مفروضه ثبت‌شده در اکسل کاربر",
+          "provenance": "درآمدهای پروژه!E142:K142",
+          "url": null
+        },
+        {
+          "name": "اجاره کافی‌بار و سوپرمارکت مرکزی",
+          "quantity": 100.0,
+          "unit": "اجاره ماهانه هر مترمربع",
+          "rate": 12.0,
+          "periods": 12.0,
+          "realization": 1.0,
+          "nominal": 14400.0,
+          "type": "اجاره",
+          "confidence": "مفروضه ثبت‌شده در اکسل کاربر",
+          "provenance": "درآمدهای پروژه!E143:K143",
+          "url": null
+        }
+      ],
+      "sourceSnapshot": {
+        "capex": 15924611.3,
+        "sourceYearCount": 26,
+        "baselineYear3Cash": 1985203.9875421855,
+        "firstYearInvest": 6369844.5200000005,
+        "secondYearInvest": 9554766.78,
+        "thresholdYear": 14,
+        "irr": 0.45179360964210247,
+        "npv": 1112487.8211297132,
+        "mainIrrCell": "جریانات نقدی!I195",
+        "mainNpvCell": "جریانات نقدی!I196",
+        "incomeSourceCount": 10
+      },
+      "baselineCashflow40y": [
+        {
+          "year": 1,
+          "cash": -6369844.5200000005,
+          "revenue": 0.0,
+          "opex": 0.0,
+          "capex": 6369844.5200000005,
+          "depreciation": 0.0
+        },
+        {
+          "year": 2,
+          "cash": -9554766.78,
+          "revenue": 0.0,
+          "opex": 0.0,
+          "capex": 9554766.78,
+          "depreciation": 0.0
+        },
+        {
+          "year": 3,
+          "cash": 1985203.9875421855,
+          "revenue": 2688948.36035,
+          "opex": 1077485.1492365398,
+          "capex": 0.0,
+          "depreciation": 373740.7764287251
+        },
+        {
+          "year": 4,
+          "cash": 3323792.928487269,
+          "revenue": 4430822.586808188,
+          "opex": 1643347.672496139,
+          "capex": 0.0,
+          "depreciation": 536318.0141752205
+        },
+        {
+          "year": 5,
+          "cash": 5110473.437945569,
+          "revenue": 6768770.77443376,
+          "opex": 2427913.686829633,
+          "capex": 0.0,
+          "depreciation": 769616.3503414416
+        },
+        {
+          "year": 6,
+          "cash": 7333529.383451892,
+          "revenue": 9713186.061312446,
+          "opex": 3484056.140600523,
+          "capex": 0.0,
+          "depreciation": 1104399.4627399687
+        },
+        {
+          "year": 7,
+          "cash": 10523614.665253464,
+          "revenue": 13938421.99798336,
+          "opex": 4999620.561761752,
+          "capex": 0.0,
+          "depreciation": 1584813.2290318552
+        },
+        {
+          "year": 8,
+          "cash": 15101387.044638723,
+          "revenue": 20001635.567106124,
+          "opex": 7174455.506128112,
+          "capex": 0.0,
+          "depreciation": 2274206.983660712
+        },
+        {
+          "year": 9,
+          "cash": 21670490.409056567,
+          "revenue": 28702347.03879729,
+          "opex": 10295343.651293842,
+          "capex": 0.0,
+          "depreciation": 3263487.021553122
+        },
+        {
+          "year": 10,
+          "cash": 31097153.736996174,
+          "revenue": 41187868.000674106,
+          "opex": 14773818.139606662,
+          "capex": 0.0,
+          "depreciation": 4683103.87592873
+        },
+        {
+          "year": 11,
+          "cash": 44624415.61258952,
+          "revenue": 59104590.58096735,
+          "opex": 21200429.030335564,
+          "capex": 0.0,
+          "depreciation": 6720254.061957728
+        },
+        {
+          "year": 12,
+          "cash": 64036036.40406594,
+          "revenue": 84815087.48368813,
+          "opex": 30422615.658531528,
+          "capex": 0.0,
+          "depreciation": 9643564.57890934
+        },
+        {
+          "year": 13,
+          "cash": 91891712.23983467,
+          "revenue": 121709650.53909251,
+          "opex": 43656453.46999276,
+          "capex": 0.0,
+          "depreciation": 13838515.170734905
+        },
+        {
+          "year": 14,
+          "cash": 131864607.06416272,
+          "revenue": 174653348.52359775,
+          "opex": 62647010.72943961,
+          "capex": 0.0,
+          "depreciation": 19858269.27000459
+        },
+        {
+          "year": 15,
+          "cash": 189225711.13707352,
+          "revenue": 250627555.13136277,
+          "opex": 89898460.39674583,
+          "capex": 0.0,
+          "depreciation": 28496616.402456585
+        },
+        {
+          "year": 16,
+          "cash": 271538895.4817005,
+          "revenue": 359650541.61350554,
+          "opex": 129004290.66933027,
+          "capex": 0.0,
+          "depreciation": 40892644.5375252
+        },
+        {
+          "year": 17,
+          "cash": 389658315.01624024,
+          "revenue": 516098527.21538055,
+          "opex": 185121157.11048895,
+          "capex": 0.0,
+          "depreciation": 58680944.91134866
+        },
+        {
+          "year": 18,
+          "cash": 559159682.0483048,
+          "revenue": 740601386.5540711,
+          "opex": 265648860.45355162,
+          "capex": 0.0,
+          "depreciation": 84207155.94778533
+        },
+        {
+          "year": 19,
+          "cash": 802394143.7393173,
+          "revenue": 1062762989.705092,
+          "opex": 381206114.7508466,
+          "capex": 0.0,
+          "depreciation": 120837268.78507194
+        },
+        {
+          "year": 20,
+          "cash": 1151435596.2659202,
+          "revenue": 1525064890.2268069,
+          "opex": 547030774.6674649,
+          "capex": 0.0,
+          "depreciation": 173401480.70657825
+        },
+        {
+          "year": 21,
+          "cash": 1652310080.6415956,
+          "revenue": 2188468117.475468,
+          "opex": 784989161.6478122,
+          "capex": 0.0,
+          "depreciation": 248831124.8139398
+        },
+        {
+          "year": 22,
+          "cash": 2371064965.7206903,
+          "revenue": 3140451748.577297,
+          "opex": 1126459446.9646106,
+          "capex": 0.0,
+          "depreciation": 357072664.1080036
+        },
+        {
+          "year": 23,
+          "cash": 3402478225.8091903,
+          "revenue": 4506548259.208422,
+          "opex": 1616469306.3942163,
+          "capex": 0.0,
+          "depreciation": 512399272.9949853
+        },
+        {
+          "year": 24,
+          "cash": 4882556254.036188,
+          "revenue": 6466896751.964085,
+          "opex": 2319633454.6757,
+          "capex": 0.0,
+          "depreciation": 735292956.7478038
+        },
+        {
+          "year": 25,
+          "cash": 7006468224.541931,
+          "revenue": 9279996839.068462,
+          "opex": 3328674007.45963,
+          "capex": 0.0,
+          "depreciation": 1055145392.9330984
+        },
+        {
+          "year": 26,
+          "cash": 10054281902.217667,
+          "revenue": 13316795464.06324,
+          "opex": 4776647200.704569,
+          "capex": 0.0,
+          "depreciation": 1514133638.8589964
+        }
+      ]
+    }
+  ],
+  "sourceHashSha256": "f9ecc46c1850d69af37cff8b1a7b8d7271b618a6ccf100bfede393dd1ba3f989",
+  "sourceNotes": "آخرین فایل کاربر، اصلاح محاسبات؛ تمام ورودی‌های درآمد و هزینه بدون جایگزینی با نسخه قبلی و بدون هزینه اضافی استخراج شده‌اند."
+}</script>
+<script>/* Chaboksar FS — calculation engine; monetary units: million IRR.
+ * Accounting matches the latest user-supplied corrected FS workbook, including its fixed-OPEX
+ * category as recorded. This library never reads cached KPI values to calculate results.
+ */
+'use strict';
+const ChaboksarFinance = (() => {
+  const BUILD_YEARS = 2;
+  const clamp = (n, min, max) => Math.min(max, Math.max(min, n));
+  const isFiniteNumber = x => typeof x === 'number' && Number.isFinite(x);
+  const defaults = Object.freeze({discount:43.5,inflation:43.5,operatingYears:20,revenueChange:0,costChange:0});
+  const clean = a => ({
+    discount:clamp(Number(a.discount??defaults.discount),0,80),
+    inflation:clamp(Number(a.inflation??defaults.inflation),0,80),
+    operatingYears:Math.round(clamp(Number(a.operatingYears??defaults.operatingYears),1,30)),
+    revenueChange:a._internalSensitivity?Number(a.revenueChange):clamp(Number(a.revenueChange??defaults.revenueChange),-50,50),
+    costChange:a._internalSensitivity?Number(a.costChange):clamp(Number(a.costChange??defaults.costChange),-50,50)
+  });
+  const baseLine = it => Number(it.quantity)*Number(it.rate)*Number(it.periods);
+  const groupOf = it => it.type === 'اقامت' ? 'اقامت' : it.type === 'خدمات' ? 'خدمات اختصاصی' : 'اجاره و تجاری';
+  function revenueSources(s, a, occupancy=1, withInflation=1) {
+    const result = {'اقامت':0,'اجاره و تجاری':0,'خدمات اختصاصی':0};
+    const revMultiplier=1+a.revenueChange/100;
+    for (const item of s.items) {
+      const group=groupOf(item);
+      const utilization=group==='اقامت' ? occupancy*Number(item.realization??1) : Number(item.realization??1);
+      result[group]+=baseLine(item)*utilization*withInflation*revMultiplier;
+    }
+    return result;
+  }
+  function buildCashflow(s, params) {
+    const a=clean(params), horizon=a.operatingYears+BUILD_YEARS;
+    const result=[]; let cum=0, cumPV=0;
+    const annualInfl=1+a.inflation/100, opMultiplier=1+a.costChange/100;
+    for(let year=1;year<=horizon;year++) {
+      const inBuild=year<=BUILD_YEARS;
+      const occupancy=inBuild?0:year===3?0.4:year===4?0.5:0.55;
+      const escalation=annualInfl**(year-1);
+      const sources=inBuild?{'اقامت':0,'اجاره و تجاری':0,'خدمات اختصاصی':0}:revenueSources(s,a,occupancy,escalation);
+      const revenue=Object.values(sources).reduce((x,y)=>x+y,0);
+      const fixedOpex=inBuild?0:s.opex.fixed*escalation*opMultiplier;
+      const variableOpex=inBuild?0:s.opex.variable*occupancy*escalation*opMultiplier;
+      const opex=fixedOpex+variableOpex;
+      const depreciation=inBuild?0:s.opex.depreciation*escalation;
+      const capex=year===1?s.capex*.4:year===2?s.capex*.6:0;
+      const ebt=revenue-opex;
+      const tax=Math.max(0,ebt)*Number(s.assumptions.tax||0);
+      // Match corrected Excel cashflow: EBT already includes depreciation in fixed OPEX; add it back once.
+      const cash=ebt-capex-tax+depreciation;
+      const discounted=cash/(1+a.discount/100)**(year-1);
+      cum+=cash;cumPV+=discounted;
+      result.push({year,occupancy,sources,revenue,fixedOpex,variableOpex,opex,depreciation,capex,ebt,tax,cash,discounted,cumulative:cum,cumulativePV:cumPV});
+    }
+    return result;
+  }
+  function npv(flows, rate) {
+    if (!flows.length || rate<=-1) return null;
+    const d=1+rate;let sum=0;
+    for(let i=0;i<flows.length;i++)sum+=flows[i]/(d**i);
+    return Number.isFinite(sum)?sum:null;
+  }
+  // Excel IRR: equidistant annual periods; first cash is t=0.
+  // Initial two-year negative investment followed by positive operating flows
+  // implies one economically relevant positive root for the supplied cases.
+  function irr(flows) {
+    if(flows.length<3 || !flows.some(x=>x<0) || !flows.some(x=>x>0))return null;
+    let lo=-.95,hi=1,fl=npv(flows,lo),fh=npv(flows,hi);
+    if(fl===null||fh===null)return null;
+    for(let k=0;k<40 && fl*fh>0;k++) {hi=hi*2+1;fh=npv(flows,hi);if(fh===null)return null;}
+    if(fl*fh>0)return null;
+    for(let k=0;k<105;k++) {
+      const mid=(lo+hi)/2, f=npv(flows,mid);
+      if(f===null)return null;
+      if(Math.abs(f)<1e-8 || Math.abs(hi-lo)<1e-13)return mid;
+      if(f*fl>0){lo=mid;fl=f;}else{hi=mid;fh=f;}
+    }
+    return (lo+hi)/2;
+  }
+  function crossing(rows,field) {
+    for(let i=1;i<rows.length;i++) {
+      const before=rows[i-1][field],after=rows[i][field];
+      if(before<0 && after>=0 && after!==before)return (i)+(-before)/(after-before);
+    }
+    return null;
+  }
+  function metrics(s, params) {
+    const a=clean(params),rows=buildCashflow(s,a);
+    const cumFlows=[];let threshold=null;
+    for(const row of rows){
+      cumFlows.push(row.cash);
+      row.irr=row.year<3?null:irr(cumFlows);
+      if(threshold===null && row.irr!==null && row.irr>a.discount/100 && row.cumulativePV>0)threshold=row.year;
+    }
+    const decisionYear=threshold??rows.length;
+    const decision=rows[decisionYear-1];
+    const inflows=rows.reduce((sum,r)=>sum+r.revenue,0);
+    const outflows=rows.reduce((sum,r)=>sum+r.opex+r.capex,0);
+    const decisionRows=rows.slice(0,decisionYear);
+    const decisionInflows=decisionRows.reduce((sum,r)=>sum+r.revenue,0);
+    const decisionOutflows=decisionRows.reduce((sum,r)=>sum+r.opex+r.capex,0);
+    return {scenario:s, assumptions:a,rows,horizon:rows.length,threshold,decisionYear,
+      capex:s.capex,irr:decision.irr,npv:decision.cumulativePV,thresholdIrr:threshold===null?null:decision.irr,thresholdNpv:threshold===null?null:decision.cumulativePV,irrAtHorizon:rows.at(-1).irr,
+      npvAtHorizon:rows.at(-1).cumulativePV,bc:decisionOutflows>0?decisionInflows/decisionOutflows:null,
+      bcAtHorizon:outflows>0?inflows/outflows:null,
+      pp:crossing(rows,'cumulative'),pbp:crossing(rows,'cumulativePV'),
+      inflows,outflows,status:threshold===null?'عدم تحقق در افق انتخابی':'تحقق آستانه'};
+  }
+  // All 81 sensitivity cells keep the same decision horizon of the current base case.
+  function sensitivity(s,params,decisionYear) {
+    const a=clean(params),limits=[-20,-15,-10,-5,0,5,10,15,20];
+    const matrix=[];
+    for(const revenueDelta of limits){
+      const line=[];
+      for(const costDelta of limits){
+        const scenarioA={...a,_internalSensitivity:true,
+          revenueChange:(100+a.revenueChange)*(1+revenueDelta/100)-100,
+          costChange:(100+a.costChange)*(1+costDelta/100)-100};
+        const cash=buildCashflow(s,scenarioA).slice(0,decisionYear).map(x=>x.cash);
+        line.push({revenueDelta,costDelta,irr:irr(cash),npv:npv(cash,a.discount/100)});
+      }
+      matrix.push(line);
+    }
+    return {limits,matrix,year:decisionYear,center:matrix[4][4]};
+  }
+  return {defaults,clean,baseLine,groupOf,revenueSources,buildCashflow,npv,irr,metrics,sensitivity};
+})();
+if(typeof module!=='undefined' && typeof module.exports!=='undefined')module.exports=ChaboksarFinance;
+</script>
+<script>/* Chaboksar updated dashboard: the latest user-supplied 3-scenario spreadsheet, glass UI. */
+'use strict';
+(() => {
+  const data=JSON.parse(document.getElementById('modelData').textContent);
+  const E=ChaboksarFinance;
+  const state={...E.defaults,selected:'06',chart:'cumulative',sensitivity:'irr',visible:new Set(['06','08','10']),base:null,results:[],sensCell:null};
+  const colors={'06':'#10a79a','08':'#4f84f6','10':'#da9557'};
+  const groupColors={'اقامت':'#087e76','اجاره و تجاری':'#3568b8','خدمات اختصاصی':'#a06c3f'};
+  const $=id=>document.getElementById(id);
+  const nf=(dec=0)=>new Intl.NumberFormat('fa-IR',{minimumFractionDigits:dec,maximumFractionDigits:dec});
+  const num=(v,d=0)=>Number.isFinite(v)?nf(d).format(v):'—';
+  const percent=v=>Number.isFinite(v)?`${num(v*100,2)}٪`:'—';
+  const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const signed=(x,unit='')=>!Number.isFinite(x)?'—':`${x>0?'+':''}${num(x,1)}${unit}`;
+  function toast(msg){const t=$('toast');t.textContent=msg;t.classList.add('show');clearTimeout(toast.id);toast.id=setTimeout(()=>t.classList.remove('show'),3200);}
+  // Short, decision-useful popovers; no financial value is covered by them.
+  const definitions={
+    capex:{name:'هزینه سرمایه‌گذاری ثابت',body:'کل هزینه مصوب سند ساخت؛ هزینه تجهیزات و خدمات درون همین سقف سرشکن شده و مبلغ اضافی منظور نشده است.'},
+    bc:{name:'نسبت درآمد به هزینه',body:'مقایسه مجموع درآمد با هزینه و سرمایه‌گذاری تا سال مبنا؛ بیش از یک یعنی فزونی درآمد اسمی.'},
+    irr:{name:'نرخ بازده داخلی',body:'عدد اصلی: اولین سال عبور از آستانه. عدد دوم: بازده در انتهای افق انتخابی؛ برای مقایسه تغییرات از عدد دوم استفاده کنید.'},
+    npv:{name:'خالص ارزش فعلی',body:'مازاد ارزش فعلی جریان‌های نقدی بر سرمایه‌گذاری؛ عدد اصلی در سال عبور و عدد دوم در افق انتخابی.'},
+    pp:{name:'دوره بازگشت سرمایه',body:'زمان بازیابی ساده سرمایه از جریان نقدی تجمعی؛ شامل دو سال ساخت.'},
+    pbp:{name:'دوره بازگشت سود و سرمایه',body:'زمان بازیابی سرمایه با لحاظ نرخ تنزیل؛ معیار بازگشت ارزش زمانی وجوه.'}
+  };
+  const kpis=[['capex','هزینه سرمایه‌گذاری ثابت','میلیون ریال'],['bc','نسبت درآمد به هزینه (B/C)','مرتبه'],['irr','نرخ بازده داخلی (IRR)','درصد'],['npv','خالص ارزش فعلی (NPV)','میلیون ریال'],['pp','دوره بازگشت سرمایه (PP)','سال'],['pbp','دوره بازگشت سود و سرمایه (PBP)','سال']];
+  const controlSpec=[
+    {k:'discount',name:'نرخ تنزیل',min:0,max:80,step:.25,desc:'درصد سالانه',suffix:'٪',ico:'percent'},
+    {k:'inflation',name:'نرخ تورم',min:0,max:80,step:.25,desc:'درصد سالانه',suffix:'٪',ico:'trend'},
+    {k:'operatingYears',name:'دوره بهره‌برداری',min:1,max:30,step:1,desc:'۲۰ سال پیش‌فرض · حداکثر ۳۰ سال',suffix:' سال',ico:'calendar'},
+    {k:'revenueChange',name:'تغییر درآمدها',min:-50,max:50,step:1,desc:'',suffix:'٪',ico:'revenue'},
+    {k:'costChange',name:'تغییر هزینه جاری',min:-50,max:50,step:1,desc:'',suffix:'٪',ico:'cost'}
+  ];
+  const controlIcons={percent:'◉',trend:'↗',calendar:'▦',revenue:'↗',cost:'↘'};
+  function buildControls(){
+    $('controlsGrid').innerHTML=controlSpec.map(x=>{
+      const bipolar=x.k==='revenueChange'||x.k==='costChange';
+      const scale=bipolar?'<span class="range-scale" aria-hidden="true"><b>−۵۰٪</b><b>۰</b><b>+۵۰٪</b></span>':`<span class="control-description">${x.desc}</span>`;
+      return `<div class="control-card ${bipolar?'control-bipolar':''}" data-control="${x.k}"><div class="control-top"><label for="range-${x.k}"><span class="control-symbol" aria-hidden="true">${controlIcons[x.ico]}</span>${x.name}</label><span class="control-value" id="val-${x.k}"></span></div><input type="range" dir="ltr" class="range" id="range-${x.k}" min="${x.min}" max="${x.max}" step="${x.step}" value="${state[x.k]}" aria-label="${x.name}"><div class="control-bottom">${scale}<input type="number" class="control-number" id="number-${x.k}" aria-label="ورود دقیق ${x.name}" min="${x.min}" max="${x.max}" step="${x.step}" value="${state[x.k]}"></div></div>`;
+    }).join('');
+    controlSpec.forEach(c=>{
+      $('range-'+c.k).addEventListener('input',e=>setControl(c,Number(e.target.value)));
+      $('number-'+c.k).addEventListener('change',e=>setControl(c,Number(e.target.value)));
+    });
+    syncControls();
+  }
+  function setControl(spec,val){
+    if(!Number.isFinite(val)){syncControls();return;}
+    state[spec.k]=spec.k==='operatingYears'?Math.round(Math.max(spec.min,Math.min(spec.max,val))):Math.max(spec.min,Math.min(spec.max,val));
+    syncControls();scheduleRender();
+  }
+  function syncControls(){
+    for(const x of controlSpec){
+      const n=state[x.k],r=$('range-'+x.k),inp=$('number-'+x.k);
+      if(!r||!inp)continue;
+      r.value=String(n);inp.value=String(n);
+      const position=(n-x.min)/(x.max-x.min)*100;
+      if(x.k==='revenueChange'||x.k==='costChange'){
+        const zero=(0-x.min)/(x.max-x.min)*100;
+        const isGood=x.k==='revenueChange'?n>0:n<0;
+        const colour=n===0?'var(--line)':isGood?'#24b887':'#ed6979';
+        const from=Math.min(zero,position),to=Math.max(zero,position);
+        const gradient=`linear-gradient(to right,var(--line) 0%,var(--line) ${from}%,${colour} ${from}%,${colour} ${to}%,var(--line) ${to}%,var(--line) 100%)`;
+        r.style.background=gradient;
+        r.style.setProperty('--thumb-color',n===0?'var(--teal)':colour);
+        r.dataset.polarity=n===0?'neutral':isGood?'positive':'negative';
+        r.setAttribute('aria-valuetext',`${num(n)} درصد؛ ${n===0?'بدون تغییر':isGood?'اثر مطلوب':'اثر نامطلوب'}`);
+        r.closest('.control-card').dataset.polarity=r.dataset.polarity;
+      }else{
+        r.style.background=`linear-gradient(to right,var(--teal) 0%,var(--teal) ${position}%,var(--line) ${position}%,var(--line) 100%)`;r.style.setProperty('--pct',position.toFixed(2)+'%');r.style.setProperty('--thumb-color','var(--teal)');
+      }
+      $('val-'+x.k).textContent=(n>0 && (x.k==='revenueChange'||x.k==='costChange')?'+':'')+num(n,n%1?2:0)+x.suffix;
+    }
+    $('horizonBadge').textContent=`بهره‌برداری: ${num(state.operatingYears)} سال | همراه با ۲ سال ساخت`;
+    const liveHorizon=$('activeHorizon');if(liveHorizon)liveHorizon.textContent=num(state.operatingYears);
+    const changed=controlSpec.some(x=>state[x.k]!==E.defaults[x.k]);
+    $('changeStatus').textContent=changed?'◉ مفروضات نسبت به فایل مبنا تغییر کرده‌اند':'● مفروضات اولیه فایل اکسل';
+    $('changeStatus').classList.toggle('is-changed',changed);
+  }
+  function metricValue(metric,m){
+    if(metric==='capex')return num(m.capex);
+    if(metric==='bc')return m.bc===null?'—':num(m.bc,3)+'×';
+    if(metric==='irr')return m.threshold===null?'—':percent(m.thresholdIrr);
+    if(metric==='npv')return m.threshold===null?'—':num(m.thresholdNpv);
+    return m[metric]===null?`بیش از ${num(m.horizon)} سال`:num(m[metric],2);
+  }
+  function metricUnit(metric,m){
+    if((metric==='irr'||metric==='npv') && m.threshold===null)return `عبور از آستانه تا سال ${num(m.horizon)} محقق نشده`;
+    if(metric==='irr'||metric==='npv')return `مبنای مقدار بزرگ: سال ${num(m.threshold)}`;
+    if(metric==='bc')return `مبنای محاسبه: سال ${num(m.decisionYear)}`;
+    if(metric==='pp'||metric==='pbp')return `نخستین عبور، تا سال ${num(m.horizon)}`;
+    return 'میلیون ریال';
+  }
+  function deltaHTML(metric,current,base){
+    let v=current[metric],b=base[metric];
+    if(v===null||b===null||!Number.isFinite(v)||!Number.isFinite(b))return '<span>مبنای قابل قیاس ندارد</span>';
+    const d=v-b;
+    if(Math.abs(d)<(metric==='npv'||metric==='capex'?1e-5:1e-10))return '<span>بدون تغییر از مبنا</span>';
+    const better=metric==='pp'||metric==='pbp'||metric==='capex'?d<0:d>0;
+    const txt=metric==='irr'?signed(d*100,' واحد٪'):metric==='bc'?signed(d,'×'):metric==='npv'||metric==='capex'?(b? signed(d/b*100,'٪'):'—'):signed(d,' سال');
+    return `<span class="delta ${better?'positive':'negative'}">${esc(txt)}</span><span>از مبنا</span>`;
+  }
+  const glyphs={
+    info:'<circle cx="12" cy="12" r="9"/><path d="M12 11v5m0-8h.01"/>',
+    capex:'<path d="M3 20h18M6 20V9l6-5 6 5v11M9 12h6M9 16h6M4 9h2M18 9h2"/>',
+    bc:'<rect x="3" y="10" width="5" height="10" rx="1"/><rect x="10" y="5" width="5" height="15" rx="1"/><rect x="17" y="2" width="4" height="18" rx="1"/>',
+    irr:'<path d="m3 17 6-6 4 3 8-9M15 5h6v6"/><path d="M4 21h16"/>',
+    npv:'<circle cx="12" cy="12" r="9"/><path d="M15 8H10a2 2 0 0 0 0 4h4a2 2 0 0 1 0 4H9m3-10v12"/>',
+    pp:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l4 2M5 4 3 6M19 4l2 2"/>',
+    pbp:'<path d="M12 2v5m0 10v5M5 5l3 3m8 8 3 3M2 12h5m10 0h5M5 19l3-3m8-8 3-3"/><circle cx="12" cy="12" r="5"/>'
+  };
+  const icon=key=>`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${glyphs[key]}</svg>`;
+  function secondaryMetric(key,m){
+    if(key!=='irr'&&key!=='npv')return '';
+    const value=key==='irr'?percent(m.irrAtHorizon):num(m.npvAtHorizon);
+    const negative=key==='npv'&&m.npvAtHorizon<0?' negative-text':'';
+    return `<div class="kpi-secondary" role="note"><span>افق منتخب <b>${num(state.operatingYears)} ساله</b></span><strong class="${negative}" dir="ltr">${value}</strong></div>`;
+  }
+  let helpPinned=false,helpCard=null;
+  function hideHelp(force=false){
+    if(helpPinned&&!force)return;
+    const pop=$('kpiHelp');pop.classList.remove('visible');pop.setAttribute('aria-hidden','true');
+    helpCard=null;if(force)helpPinned=false;
+  }
+  function helpPosition(card,event){
+    const el=$('kpiHelp'),rect=card.getBoundingClientRect(),pw=el.offsetWidth,ph=el.offsetHeight;
+    const vw=window.innerWidth,vh=window.innerHeight,gap=12,pad=10;
+    const pointerX=event&&Number.isFinite(event.clientX)?event.clientX:rect.left+rect.width/2;
+    const pointerY=event&&Number.isFinite(event.clientY)?event.clientY:rect.top+32;
+    let left,top;
+    // A popover must NEVER cover the active KPI. Use an exterior side if possible;
+    // otherwise position above/below the whole card, clamped to the viewport.
+    if(vw-rect.right>=pw+gap+pad){left=rect.right+gap;top=pointerY-ph/2;}
+    else if(rect.left>=pw+gap+pad){left=rect.left-pw-gap;top=pointerY-ph/2;}
+    else if(rect.top>=ph+gap+pad){left=pointerX-pw/2;top=rect.top-ph-gap;}
+    else {left=pointerX-pw/2;top=rect.bottom+gap;}
+    left=Math.min(Math.max(pad,left),Math.max(pad,vw-pw-pad));
+    top=Math.min(Math.max(pad,top),Math.max(pad,vh-ph-pad));
+    el.style.left=left+'px';el.style.top=top+'px';
+  }
+  function showHelp(card,event,pinned=false){
+    const key=card.dataset.key,info=definitions[key],pop=$('kpiHelp');if(!info)return;
+    if(helpPinned && helpCard!==card && !pinned)return;
+    helpCard=card;if(pinned)helpPinned=true;
+    pop.innerHTML=`<span class="help-title"><span class="help-dot" aria-hidden="true"></span>${esc(info.name)}</span><p>${esc(info.body)}</p>`;
+    pop.setAttribute('aria-hidden','false');pop.classList.add('visible');
+    helpPosition(card,event);
+  }
+  function attachHelpEvents(){
+    document.querySelectorAll('.kpi-card').forEach(card=>{
+      card.addEventListener('pointerenter',e=>{if(e.pointerType!=='touch'&&!helpPinned)showHelp(card,e);});
+      card.addEventListener('pointermove',e=>{if(e.pointerType!=='touch'&&!helpPinned&&helpCard===card)helpPosition(card,e);});
+      card.addEventListener('pointerleave',()=>hideHelp());
+      const btn=card.querySelector('.kpi-info');
+      btn.addEventListener('focus',()=>{if(!helpPinned)showHelp(card,null);});
+      btn.addEventListener('blur',()=>{if(!helpPinned)hideHelp();});
+      btn.addEventListener('click',e=>{
+        e.stopPropagation();
+        if(helpPinned&&helpCard===card)hideHelp(true);else {hideHelp(true);showHelp(card,e,true);}
+      });
+    });
+  }
+  function renderScenarios(){
+    hideHelp(true);
+    $('scenarioRows').innerHTML=state.results.map((m,i)=>{
+      const s=m.scenario,b=state.base[i],chosen=s.code===state.selected;
+      const status=m.threshold===null?'<span class="threshold-badge waiting">◌ عبور از آستانه محقق نشده</span>':`<span class="threshold-badge achieved"><span class="state-pulse"></span> عبور از آستانه در سال ${num(m.threshold)}</span>`;
+      const cards=kpis.map(([key,title])=>{
+        const dual=key==='irr'||key==='npv';
+        const mainValue=metricValue(key,m);
+        const unit=metricUnit(key,m);
+        const mainContext=dual?(m.threshold===null?`عدم تحقق آستانه تا سال ${num(m.horizon)}`:`سال عبور از آستانه: ${num(m.threshold)}`):unit;
+        const negative=key==='npv'&&m.thresholdNpv!==null&&m.thresholdNpv<0?' negative':'';
+        const label=key==='irr'?'نرخ بازده داخلی':key==='npv'?'خالص ارزش فعلی':title;
+        return `<article class="kpi-card ${dual?'dual-kpi':''}" data-key="${key}" aria-label="${esc(title)}: ${esc(mainValue)}">
+          <div class="kpi-heading"><span class="kpi-icon">${icon(key)}</span><div class="kpi-heading-text"><span class="kpi-label">${esc(label)}</span><span class="kpi-acronym">${key.toUpperCase()}</span></div><button class="kpi-info" type="button" aria-label="توضیح ${esc(label)}" aria-controls="kpiHelp" title="راهنمای شاخص">${icon('info')}</button></div>
+          <div class="kpi-primary"><strong class="kpi-value${negative}" dir="ltr">${mainValue}</strong><span class="kpi-unit">${esc(mainContext)}</span></div>
+          ${secondaryMetric(key,m)}
+          <div class="kpi-bottom"><div class="kpi-meta">${deltaHTML(key,m,b)}</div></div>
+        </article>`;
+      }).join('');
+      const tint=s.code==='06'?'پهنه سبز اقیانوسی':s.code==='08'?'پهنه آبی معماری':'پهنه برنزی ساحلی';
+      return `<article class="scenario-row ${chosen?'is-selected':''}" data-sc="${s.code}" aria-label="${esc(s.name)}"><div class="scenario-top"><div class="sc-name"><span class="sc-bubble">${icon('capex')}<b>S${s.code}</b></span><div class="sc-heading"><span class="sc-overline">${tint} / سرمایه‌گذاری گردشگری</span><h3>${esc(s.name)}</h3><p>${num(s.hotelKeys)} کلید هتل <span>•</span> ${num(s.villaCount)} ویلای ساحلی${s.cabins?' <span>•</span> '+num(s.cabins)+' کلبه سوئیسی':''}</p></div></div><div class="sc-right">${status}<button class="select-scenario" data-select="${s.code}" type="button" aria-pressed="${chosen}">${chosen?'✓ سناریوی منتخب':'تحلیل حساسیت ↗'}</button></div></div><div class="scenario-main"><div class="kpi-grid">${cards}</div></div><div class="sc-extra"><span>✦ افق انتخابی: <strong>${num(state.operatingYears)} سال بهره‌برداری</strong></span><span>◷ دوره ساخت: <strong>۲ سال</strong></span><span>◎ نرخ تنزیل: <strong>${num(state.discount,2)}٪</strong></span><span>مبنای عبور IRR / NPV: <strong>${m.threshold===null?"عدم تحقق":`سال ${num(m.threshold)}`}</strong></span></div></article>`;
+    }).join('');
+    attachHelpEvents();
+    document.querySelectorAll('[data-select]').forEach(b=>b.addEventListener('click',()=>selectScenario(b.dataset.select)));
+  }
+  function selectScenario(code){state.selected=code;state.sensCell=null;renderScenarios();drawChart();renderSensitivity();}
+  const svgSafe=s=>esc(s);
+  const shortAxis=n=>{
+    const a=Math.abs(n);let v=a>=1e9?num(n/1e9,1)+'ب':a>=1e6?num(n/1e6,1)+'م':a>=1e3?num(n/1e3,0)+'ه':num(n,0);
+    return v;
+  };
+  function drawChart(){
+    const key=state.chart,padL=81,padR=26,padT=25,padB=54,width=1000,height=365;
+    const x0=padL,x1=width-padR,y0=height-padB,y1=padT;
+    const maxyear=state.operatingYears+2;
+    const vis=state.results.filter(m=>state.visible.has(m.scenario.code));
+    const all=vis.flatMap(m=>m.rows.map(r=>r[key]));
+    let min=all.length?Math.min(0,...all):-1,max=all.length?Math.max(0,...all):1;
+    if(min===max){min-=1;max+=1;}const pad=(max-min)*.13;min-=pad;max+=pad;
+    const x=yr=>x0+(yr-1)/(maxyear-1)*(x1-x0);
+    const y=v=>y0-(v-min)/(max-min)*(y0-y1);
+    let s=`<title>${key==='cumulative'?'جریان نقدی تجمعی':'ارزش فعلی تجمعی'} سه سناریوی توسعه</title><desc>مقادیر در واحد میلیون ریال؛ از سال اول ساخت تا پایان افق تحلیل انتخابی.</desc>`;
+    for(let i=0;i<=5;i++) {const value=min+(max-min)*i/5,Y=y(value);s+=`<line class="gridline" x1="${x0}" y1="${Y}" x2="${x1}" y2="${Y}"/><text class="axis-text" text-anchor="end" x="${x0-11}" y="${Y+4}">${svgSafe(shortAxis(value))}</text>`;}
+    if(min<0&&max>0)s+=`<line class="zero-line" x1="${x0}" y1="${y(0)}" x2="${x1}" y2="${y(0)}"/>`;
+    const tickStep=Math.max(1,Math.ceil(maxyear/7));
+    for(let yr=1;yr<=maxyear;yr++)if(yr===1||yr===maxyear||yr%tickStep===0)s+=`<text class="axis-text" x="${x(yr)}" y="${height-20}" text-anchor="middle">${yr}</text>`;
+    s+=`<text class="axis-text" x="${(x0+x1)/2}" y="${height-3}" text-anchor="middle">سال از شروع ساخت</text>`;
+    for(const m of vis){
+      const code=m.scenario.code,color=colors[code],dim=state.selected!==code?'dim':'';
+      const d=m.rows.map((r,i)=>`${i?'L':'M'}${x(r.year).toFixed(2)},${y(r[key]).toFixed(2)}`).join(' ');
+      s+=`<path d="${d}" stroke="${color}" class="chart-line ${dim}"/><circle cx="${x(m.rows[0].year)}" cy="${y(m.rows[0][key])}" r="3" fill="${color}"/>`;
+      if(m.threshold!==null){const r=m.rows[m.threshold-1];s+=`<circle cx="${x(r.year)}" cy="${y(r[key])}" r="6" stroke="${color}" fill="var(--surface)" stroke-width="3"><title>${svgSafe(m.scenario.name)}: سال عبور ${m.threshold}</title></circle>`;}
+    }
+    s+=`<line id="chartCrosshair" x1="0" y1="${y1}" x2="0" y2="${y0}" stroke="var(--muted)" stroke-dasharray="4 4" style="display:none"/>`;
+    $('mainChart').innerHTML=s;
+    $('chartLegend').innerHTML=data.scenarios.map(s=>`<button type="button" class="legend-btn" data-vis="${s.code}" aria-pressed="${state.visible.has(s.code)}"><span class="legend-dot" style="background:${colors[s.code]}"></span>${esc(s.name)}</button>`).join('');
+    document.querySelectorAll('[data-vis]').forEach(b=>b.onclick=()=>{const code=b.dataset.vis;if(state.visible.has(code)&&state.visible.size===1){toast('حداقل یک سناریو باید قابل مشاهده باشد.');return;}state.visible.has(code)?state.visible.delete(code):state.visible.add(code);drawChart();});
+    const chart=$('mainChart'),tip=$('chartTooltip');
+    chart.onpointermove=evt=>{
+      const rect=chart.getBoundingClientRect(),px=(evt.clientX-rect.left)/rect.width*width;
+      if(px<x0||px>x1){tip.classList.remove('show');chart.querySelector('#chartCrosshair').style.display='none';return;}
+      const year=Math.max(1,Math.min(maxyear,Math.round(1+(px-x0)/(x1-x0)*(maxyear-1))));
+      const content=vis.map(m=>`<div style="display:flex;gap:13px;justify-content:space-between"><span style="color:${colors[m.scenario.code]};font-weight:900">${esc(m.scenario.name)}</span><b dir="ltr">${num(m.rows[year-1][key])}</b></div>`).join('');
+      tip.innerHTML=`<div style="font-weight:900;border-bottom:1px solid #ffffff4a;margin-bottom:5px">سال ${num(year)} · میلیون ریال</div>${content}`;
+      tip.classList.add('show');tip.style.left=Math.max(7,Math.min(rect.width-225,evt.clientX-rect.left-100))+'px';tip.style.top=Math.max(0,Math.min(rect.height-95,evt.clientY-rect.top-100))+'px';
+      const line=chart.querySelector('#chartCrosshair');line.style.display='';line.setAttribute('x1',x(year));line.setAttribute('x2',x(year));
+    };
+    chart.onpointerleave=()=>{tip.classList.remove('show');const el=chart.querySelector('#chartCrosshair');if(el)el.style.display='none';};
+  }
+  function renderRevenue(){
+    const groups=['اقامت','اجاره و تجاری','خدمات اختصاصی'];
+    $('revenueBars').innerHTML=state.results.map(m=>{
+      const r=m.rows[2],total=r.revenue||1;
+      const segs=groups.map(g=>{const v=r.sources[g]||0;return v>0?`<span class="stack-seg" style="width:${100*v/total}%;background:${groupColors[g]}" title="${esc(g)}: ${num(v)} میلیون ریال"></span>`:'';}).join('');
+      return `<div class="income-row"><div class="income-top"><span>${esc(m.scenario.name)}</span><span class="num">${num(total)} <small style="color:var(--muted)">میلیون ریال</small></span></div><div class="stack-bar" role="img" aria-label="ترکیب درآمد ${esc(m.scenario.name)}">${segs}</div></div>`;
+    }).join('');
+    $('revenueLegend').innerHTML=groups.map(g=>`<span><i class="legend-dot" style="background:${groupColors[g]}"></i>${g}</span>`).join('');
+  }
+  function renderComparison(){
+    const config=[['irr','نرخ بازده داخلی در سال مبنا','irr'],['npv','خالص ارزش فعلی در سال مبنا (میلیون ریال)','npv']];
+    $('comparisonBars').innerHTML=config.map(([key,title])=>{
+      const max=Math.max(1,...state.results.map(m=>Math.abs(m[key]??0)));
+      return `<div class="metric-strip"><h3>${title}</h3>${state.results.map(m=>{const v=m[key];const val=key==='irr'?percent(v):num(v);const width=v===null?0:Math.max(1,Math.abs(v)/max*100);return `<div class="metric-bar-item"><strong>${esc(m.scenario.name)}</strong><div class="metric-track"><div class="metric-fill" style="width:${width}%;background:${v!==null&&v<0?'var(--negative)':colors[m.scenario.code]}"></div></div><span class="metric-val">${val}</span></div>`;}).join('')}</div>`;
+    }).join('');
+  }
+  function heatFormat(value,type){
+    if(value===null||!Number.isFinite(value))return '—';
+    if(type==='irr')return percent(value);
+    const a=Math.abs(value);
+    return a>=1e6?num(value/1e6,2)+'م':a>=1e3?num(value/1e3,0)+'ه':num(value);
+  }
+  function sensInfo(cell,sen,base){
+    const chosen=cell||sen.center;
+    const irrVal=chosen.irr, npvVal=chosen.npv;
+    $('sensitivityAside').innerHTML=`<div class="section-kicker">S${base.scenario.code} · SENSITIVITY</div><h3>خوانش نقطه انتخابی</h3><p>مبنای مقایسه، افق ثابت سال ${num(sen.year)} از آغاز ساخت است؛ هر حالت در همین افق محاسبه می‌شود.</p><div class="mini-label">${state.sensitivity==='irr'?'نرخ بازده داخلی':'خالص ارزش فعلی'}</div><div class="sens-big ${state.sensitivity==='npv'&&npvVal<0?'negative-text':''}">${state.sensitivity==='irr'?percent(irrVal):num(npvVal)}</div><div class="mini-label">${state.sensitivity==='irr'?'درصد':'میلیون ریال'}</div><dl><dt>تغییر درآمد</dt><dd>${signed(chosen.revenueDelta,'٪')}</dd><dt>تغییر هزینه جاری</dt><dd>${signed(chosen.costDelta,'٪')}</dd><dt>IRR</dt><dd>${percent(irrVal)}</dd><dt>NPV (میلیون ریال)</dt><dd>${num(npvVal)}</dd><dt>مبنای سناریو</dt><dd>${percent(sen.center.irr)} / ${num(sen.center.npv)}</dd><dt>نرخ تنزیل</dt><dd>${num(state.discount,2)}٪</dd></dl><div class="heat-key"><i style="background:#a8dcc2"></i>مطلوب<i style="background:#f9e9a7"></i>نزدیک آستانه<i style="background:#efb0b7"></i>نامطلوب<i style="background:#85a6df"></i>مفروضات پایه</div>`;
+  }
+  function renderSensitivity(){
+    const m=state.results.find(x=>x.scenario.code===state.selected),s=m.scenario;
+    const sen=E.sensitivity(s,state,m.decisionYear);
+    const typ=state.sensitivity;
+    document.querySelectorAll('[data-pick]').forEach(b=>{
+      b.dataset.current=String(b.dataset.pick===state.selected);
+      b.style.setProperty('--accent',colors[b.dataset.pick]);
+      b.style.setProperty('--sc-bg',b.dataset.pick==='06'?'var(--surface-3)':b.dataset.pick==='08'?'var(--surface-3)':'var(--surface-3)');
+      b.setAttribute('aria-pressed',String(b.dataset.pick===state.selected));
+    });
+    document.querySelectorAll('[data-sens]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.sens===typ)));
+    const cellDisplay=(cell,i,j)=>{
+      const v=cell[typ];
+      const ref=typ==='irr'?state.discount/100:0;
+      // Financially meaningful palette: negative -> pastel coral; near threshold -> amber; above threshold -> mint.
+      const distance=v===null?null:typ==='irr'?(v-ref)*100:(v-ref)/Math.max(1,Math.abs(sen.center.npv))*100;
+      const score=distance===null?null:Math.max(-1,Math.min(1,distance/(typ==='irr'?6:40)));
+      const shade=score===null?'#dce3eb':score>=.30?'#99ddbe':score>=.03?'#c4eac8':score>=-.03?'#f9e8a8':score>=-.30?'#f6d2b1':'#edb0b6';
+      const center=i===4&&j===4?'center':'';
+      const compact=typ==='irr'?v===null?'—':num(v*100,1)+'٪':heatFormat(v,typ);
+      return `<div class="heat-cell ${center}" role="button" tabindex="0" data-heat="${i}-${j}" style="background:${shade};" aria-label="درآمد ${signed(cell.revenueDelta,' درصد')}، هزینه ${signed(cell.costDelta,' درصد')}، ${typ==='irr'?'نرخ بازده':'خالص ارزش فعلی'} ${heatFormat(v,typ)}" title="درآمد ${signed(cell.revenueDelta,'٪')} | هزینه ${signed(cell.costDelta,'٪')} | IRR ${percent(cell.irr)} | NPV ${num(cell.npv)}"><span>${compact}</span></div>`;
+    };
+    let html='<div class="heat-cell heat-axis">درآمد ↓<small>هزینه ←</small></div>';
+    for(const c of sen.limits)html+=`<div class="heat-cell heat-axis">${signed(c,'٪')}</div>`;
+    for(let i=0;i<9;i++){
+      html+=`<div class="heat-cell heat-axis">${signed(sen.limits[i],'٪')}<small>درآمد</small></div>`;
+      for(let j=0;j<9;j++)html+=cellDisplay(sen.matrix[i][j],i,j);
+    }
+    $('heatmap').innerHTML=html;
+    $('heatmap').querySelectorAll('[data-heat]').forEach(el=>{
+      function activate(){const [i,j]=el.dataset.heat.split('-').map(Number);state.sensCell=[i,j];sensInfo(sen.matrix[i][j],sen,m);$('heatmap').querySelectorAll('[data-heat]').forEach(e=>e.style.outline='');el.style.outline='2px solid var(--teal)';}
+      el.addEventListener('click',activate);el.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();activate();}});
+    });
+    const selected=state.sensCell; sensInfo(selected?sen.matrix[selected[0]][selected[1]]:sen.center,sen,m);
+  }
+  function renderCashTable(){
+    $('cashTable').querySelector('thead').innerHTML='<tr><th>سناریو</th><th>سال</th><th>ضریب اشغال</th><th>درآمد (میلیون ریال)</th><th>هزینه جاری</th><th>سرمایه‌گذاری</th><th>استهلاک افزوده‌شده</th><th>جریان نقدی آزاد</th><th>جریان تجمعی</th><th>ارزش فعلی تجمعی</th><th>IRR تا این سال</th></tr>';
+    $('cashTable').querySelector('tbody').innerHTML=state.results.flatMap(m=>m.rows.map(r=>`<tr><td><strong style="color:${colors[m.scenario.code]}">${esc(m.scenario.name)}</strong></td><td>${num(r.year)}</td><td>${percent(r.occupancy)}</td><td>${num(r.revenue)}</td><td>${num(r.opex)}</td><td>${num(r.capex)}</td><td>${num(r.depreciation)}</td><td class="${r.cash<0?'negative-text':'positive-text'}">${num(r.cash)}</td><td class="${r.cumulative<0?'negative-text':'positive-text'}">${num(r.cumulative)}</td><td class="${r.cumulativePV<0?'negative-text':'positive-text'}">${num(r.cumulativePV)}</td><td>${percent(r.irr)}</td></tr>`)).join('');
+  }
+  function renderMethod(){
+    const source=data.scenarios.map(s=>{
+      const actual=state.base.find(m=>m.scenario.code===s.code);
+      const irrDelta=actual.irr-s.sourceSnapshot.irr,npvDelta=actual.npv-s.sourceSnapshot.npv;
+      return `<p><strong>${esc(s.name)}:</strong> سال مبنا در فایل ${num(s.sourceSnapshot.thresholdYear)}؛ بازحساب وب ${num(actual.decisionYear)}. اختلاف NPV محاسبه‌شده با مقدار ذخیره‌شده اکسل در مفروضات اولیه: <span dir="ltr">${signed(npvDelta)}</span> میلیون ریال؛ اختلاف IRR: <span dir="ltr">${signed(irrDelta*100,' واحد درصد')}</span>.</p>`;
+    }).join('');
+    $('methodBody').innerHTML=`<p><strong>منبع داده:</strong> <code>${esc(data.source)}</code>. آخرین فایل اکسل ارسالی کارفرما است؛ کل سرمایه‌گذاری سه سناریو عین ارقام سند هزینه ساخت باقی مانده است. تمام تعرفه‌ها، مقادیر، ضرایب تحقق، CAPEX و هزینه‌های ثابت/متغیر از همین فایل خوانده شده‌اند؛ نرخ‌های فاقد معامله قطعی همچنان فرض تحلیلی‌اند. در همین فایل نرخ اجاره مرکز تجاری جنوبی برای سناریوهای ۶ و ۸ طبقه صفر ثبت شده و درآمدی برای آن‌ها فرض یا اضافه نشده است.</p>
+    <p><strong>افق:</strong> دو سال ساخت با سهم ۴۰/۶۰ + دوره بهره‌برداری قابل تنظیم، با سقف ۳۰ سال بهره‌برداری (۳۲ سال شامل ساخت). در هر سناریو، سال تصمیم‌گیری اولین سالی است که به‌صورت هم‌زمان NPV بزرگ‌تر از صفر و IRR بزرگ‌تر از نرخ تنزیل می‌شوند. در صورت عدم تحقق، کارت مقدار بزرگ را با نشان عدم تحقق و مقدار افق منتخب را جداگانه نمایش می‌دهد. برای مقایسه اثر افزایش درآمد، مقدار IRR در افق ثابت منتخب باید بررسی شود؛ تغییر سال آستانه می‌تواند عدد آستانه‌ای را غیرتک‌سویه کند.</p>
+    <p><strong>منطق سالانه:</strong> درآمد اقامت = مجموع تعداد × نرخ × ۳۶۵ × ضریب تحقق اختصاصی واحد × ضریب اشغال سالانه؛ درآمد اجاره/خدمات = تعداد × نرخ × دوره × ضریب تحقق مندرج در فایل. اشغال سال‌های بهره‌برداری به‌ترتیب ۴۰٪، ۵۰٪ و از سال سوم بهره‌برداری ۵۵٪ است. رشد تورمی به توان (سال از شروع ساخت − ۱) اعمال می‌شود.</p>
+    <p><strong>جریان نقدی مطابق شیت نهایی:</strong> درآمد − کل هزینه ثبت‌شده (سرمایه‌گذاری و هزینه جاری) − مالیات + استهلاک غیرنقدی. استهلاک در هزینه ثابت فایل درج شده و یک بار در جریان نقدی به سود افزوده می‌شود. سقف سرمایه‌گذاری ثابت دقیقاً رقم برآورد اصلی است و هیچ هزینه تکمیلی به آن اضافه نشده است.</p>
+    <p><strong>تنزیل:</strong> ارزش فعلی نقد سال n برابر جریان نقد سال n تقسیم بر (۱ + نرخ تنزیل) به توان (n−۱) است. IRR بر اساس دوره‌های سالانه معادل تابع IRR اکسل محاسبه می‌شود. B/C کارت نسبت مجموع درآمد به مجموع هزینه جاری و سرمایه‌گذاری تا نخستین سال عبور از آستانه است؛ مقدار افق کامل به‌طور جدا در موتور محاسبه ثبت می‌شود. PP و PBP با درون‌یابی سال عبور از صفر محاسبه می‌شوند.</p>
+    <p><strong>تحلیل حساسیت:</strong> در هر یک از ۸۱ خانه، درآمد و هزینه جاری با ضرایب مستقل تغییر می‌کنند؛ افق محاسبه در کل ماتریس ثابت و برابر سال تصمیم‌گیری سناریوی منتخب تحت مفروضات فعلی است. نرخ تنزیل ثابت می‌ماند؛ هیچ خروجی منفی یا عدم تحقق پنهان نمی‌شود.</p><p><strong>کنترل بازتولید مفروضات اولیه:</strong></p>${source}
+    <p><strong>دامنه داده و کنترل صحت:</strong> از آخرین اکسل اصلاح‌شده، ۲۶ سال جریان نقدی برای هر سناریو قابل استخراج است؛ مقدار اولیه موتور وب برای همان ۲۶ سال با مقادیر جریان نقدی آزاد شیت مبنا کنترل شده است. برای بازه انتخابی بیش از ۲۴ سال بهره‌برداری (بیش از ۲۶ سال از شروع ساخت)، محاسبات تا سقف ۳۰ سال بهره‌برداری با امتداد همان فرمول‌های مصوب انجام می‌شود؛ اعداد سال‌های توسعه‌یافته در خود اکسل ثبت نشده‌اند. تعرفه‌های درآمدی صرفاً مفروضات فایل کاربر هستند، نه استعلام مستقل بازار.</p>`;
+  }
+  let raf=0;
+  function scheduleRender(){if(raf)cancelAnimationFrame(raf);raf=requestAnimationFrame(()=>{raf=0;renderAll();});}
+  function renderAll(){
+    const a=E.clean(state);Object.assign(state,a);
+    state.results=data.scenarios.map(s=>E.metrics(s,a));
+    renderScenarios();drawChart();renderRevenue();renderComparison();renderSensitivity();renderCashTable();
+    $('runStatus').textContent='● محاسبات زنده';
+  }
+  function exportCSV(){
+    if(!state.results.length)return;
+    const rows=[['سناریو','سال','اشغال','درآمد ـ میلیون ریال','هزینه جاری','سرمایه‌گذاری','استهلاک غیرنقدی افزوده‌شده','جریان آزاد','جریان تجمعی','ارزش فعلی تجمعی','IRR سالانه','نرخ تنزیل','نرخ تورم','تغییر درآمد','تغییر هزینه']];
+    for(const m of state.results)for(const r of m.rows)rows.push([m.scenario.name,r.year,r.occupancy,r.revenue,r.opex,r.capex,r.depreciation,r.cash,r.cumulative,r.cumulativePV,r.irr??'',state.discount/100,state.inflation/100,state.revenueChange/100,state.costChange/100]);
+    const csv='\ufeff'+rows.map(row=>row.map(v=>'"'+String(v??'').replace(/"/g,'""')+'"').join(',')).join('\r\n');
+    const blob=new Blob([csv],{type:'text/csv;charset=utf-8;'}),url=URL.createObjectURL(blob),link=document.createElement('a');
+    link.href=url;link.download='Chaboksar_FS_3_Scenarios_'+(state.operatingYears+2)+'Y.csv';document.body.append(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);
+    toast('فایل CSV با مقادیر محاسبه‌شده آماده شد.');
+  }
+  function init(){
+    state.base=data.scenarios.map(s=>E.metrics(s,E.defaults));
+    buildControls();
+    if(window.matchMedia && window.matchMedia("(max-width:690px)").matches){document.querySelector(".control-disclosure").open=false;}
+    renderAll();renderMethod();
+    $('restoreBtn').onclick=()=>{Object.assign(state,E.defaults);state.sensCell=null;syncControls();renderAll();toast('مفروضات اولیه بازگردانده شد.');};
+    document.addEventListener('keydown',e=>{if(e.key==='Escape')hideHelp(true);});
+    document.addEventListener('pointerdown',e=>{if(helpPinned&&!e.target.closest('.kpi-info'))hideHelp(true);});
+    window.addEventListener('scroll',()=>{if(helpPinned&&helpCard&&helpCard.isConnected)helpPosition(helpCard,null);else hideHelp(true);},{passive:true});
+    window.addEventListener('resize',()=>hideHelp(true),{passive:true});
+    $('themeBtn').onclick=()=>{const dark=document.body.dataset.theme!=='dark';document.body.dataset.theme=dark?'dark':'light';$('themeBtn').setAttribute('aria-pressed',String(dark));$('themeBtn').setAttribute('aria-label',dark?'فعال‌کردن حالت روشن':'فعال‌کردن حالت تاریک');};
+    $('csvBtn').onclick=exportCSV;$('mobileCsvBtn').onclick=exportCSV;$('printBtn').onclick=()=>window.print();
+    document.querySelectorAll('[data-chart]').forEach(b=>b.onclick=()=>{state.chart=b.dataset.chart;document.querySelectorAll('[data-chart]').forEach(el=>el.setAttribute('aria-pressed',String(el===b)));$('chartSubtitle').textContent=state.chart==='cumulative'?'جریان نقدی تجمعی؛ بازه از آغاز ساخت تا پایان افق انتخابی':'ارزش فعلی تجمعی؛ نرخ تنزیل اعمال شده است';drawChart();});
+    document.querySelectorAll('[data-pick]').forEach(b=>b.onclick=()=>selectScenario(b.dataset.pick));
+    document.querySelectorAll('[data-sens]').forEach(b=>b.onclick=()=>{state.sensitivity=b.dataset.sens;state.sensCell=null;renderSensitivity();});
+    window.__chaboksar={engine:E,data,reset:()=>{$('restoreBtn').click();},getState:()=>({...E.clean(state),results:state.results})};
+  }
+  init();
+})();
+</script>
+</body></html>
