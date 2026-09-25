@@ -1,0 +1,826 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>داشبورد امکان‌سنجی | بازسازی و تجهیز هتل مشهد</title>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet">
+<style>
+:root{--bg:#eff4fb;--bg2:#e6effb;--ink:#18263d;--muted:#667790;--soft:#91a0b8;--panel:rgba(255,255,255,.81);--panelSolid:#fff;--border:rgba(116,141,177,.19);--border2:rgba(106,133,172,.30);--nav:rgba(255,255,255,.83);--cyan:#0e90a8;--cyan2:#10b8b1;--violet:#665fd6;--purple:#8a75ed;--amber:#ec9b46;--green:#169a79;--red:#cd5472;--fill:#f3f7fc;--shadow:0 14px 40px rgba(31,54,99,.07),0 3px 10px rgba(31,54,99,.035);--grid:#e7edf6;--chartText:#64738a;--hover:#eaf4fb;--glass:blur(18px) saturate(150%);--radius:22px;--gradient:linear-gradient(125deg,#138ba7,#5b67d7);color-scheme:light}
+html[data-theme=dark]{--bg:#0b1425;--bg2:#121e33;--ink:#e9f0fe;--muted:#a2b1c8;--soft:#72859d;--panel:rgba(22,34,56,.80);--panelSolid:#1a2940;--border:rgba(161,186,221,.12);--border2:rgba(169,192,221,.25);--nav:rgba(16,29,48,.86);--cyan:#46cadd;--cyan2:#43d7bb;--violet:#a2a2ff;--purple:#a78aff;--amber:#f4ba75;--green:#44d7ad;--red:#ff7b99;--fill:#1d304b;--shadow:0 12px 36px rgba(0,0,0,.13);--grid:#293950;--chartText:#a2b1c8;--hover:#233951;--gradient:linear-gradient(125deg,#117c9c,#6566ce);color-scheme:dark}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Vazirmatn,"Noto Sans Arabic",Tahoma,system-ui,sans-serif;line-height:1.75;min-width:320px;font-size:14px;transition:background .2s,color .2s}body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(ellipse 45% 28% at 86% 0%,rgba(49,177,197,.14),transparent 80%),radial-gradient(ellipse 39% 35% at 7% 24%,rgba(121,101,223,.115),transparent 80%),radial-gradient(ellipse 45% 25% at 55% 90%,rgba(38,145,189,.08),transparent 85%)}button,input{font:inherit}button{cursor:pointer}button:focus-visible,summary:focus-visible,input:focus-visible{outline:3px solid var(--cyan2);outline-offset:3px}a{color:inherit;text-decoration:none}svg{display:block}button:disabled{cursor:not-allowed;opacity:.46}.sr{position:absolute;width:1px;height:1px;clip:rect(0,0,0,0);overflow:hidden;white-space:nowrap}
+.shell{max-width:1480px;margin:auto;padding:24px 30px 46px}.glass{background:var(--panel);border:1px solid var(--border);box-shadow:var(--shadow);backdrop-filter:var(--glass);-webkit-backdrop-filter:var(--glass)}.solid{background:var(--panelSolid);border:1px solid var(--border);box-shadow:var(--shadow)}.topbar{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:78px;border-radius:22px;padding:12px 18px;margin-bottom:24px;position:relative;z-index:2}.identity{display:flex;align-items:center;gap:12px;min-width:0}.id-icon{display:grid;place-items:center;width:46px;height:46px;flex:none;border-radius:15px;color:#fff;background:var(--gradient);box-shadow:0 10px 20px rgba(22,137,162,.18)}.identity h1{margin:0;font-size:15px;font-weight:900;letter-spacing:-.3px}.identity p{margin:1px 0 0;color:var(--muted);font-size:11px}.nav-actions{display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:flex-end}.icon-btn,.small-btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;background:var(--panelSolid);color:var(--ink);border:1px solid var(--border);border-radius:13px;height:38px;padding:0 12px;font-weight:750;font-size:12px;transition:transform .16s,background .16s,border-color .16s}.icon-btn:hover,.small-btn:hover{transform:translateY(-2px);border-color:var(--border2);background:var(--hover)}.icon-btn.square{width:39px;padding:0}.icon-btn svg,.small-btn svg{width:17px;height:17px;stroke:currentColor;stroke-width:1.8;fill:none;stroke-linecap:round;stroke-linejoin:round}.primary-btn{color:white;background:var(--gradient);border:0;box-shadow:0 8px 16px rgba(37,131,180,.18)}.primary-btn:hover{background:var(--gradient);color:#fff}.data-status{display:flex;gap:7px;align-items:center;color:var(--muted);font-size:11px;padding:5px 11px;background:var(--fill);border-radius:40px}.live-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 0 3px rgba(28,190,151,.11)}
+.hero{position:relative;overflow:hidden;display:grid;grid-template-columns:minmax(0,1.32fr) minmax(260px,.76fr);gap:18px;border-radius:28px;padding:33px 36px;min-height:257px;margin-bottom:22px}.hero::after{content:"";position:absolute;width:390px;height:390px;border:1px solid rgba(59,147,175,.15);border-radius:50%;left:-140px;top:-180px;box-shadow:0 0 0 47px rgba(49,147,171,.035),0 0 0 96px rgba(49,147,171,.023);pointer-events:none}.hero-main{position:relative;z-index:1}.eyebrow{display:inline-flex;align-items:center;gap:8px;letter-spacing:1px;font-size:10px;font-weight:950;color:var(--cyan);margin-bottom:13px}.eyebrow .dash{width:20px;height:2px;background:var(--cyan);border-radius:5px}.hero h2{margin:0 0 9px;font-size:clamp(25px,3.05vw,40px);line-height:1.5;font-weight:950;letter-spacing:-1.1px}.hero p{max-width:700px;color:var(--muted);margin:0 0 24px;font-size:13px}.hero-badges{display:flex;gap:8px;flex-wrap:wrap}.hero-badges span{display:inline-flex;align-items:center;gap:7px;padding:8px 12px;background:var(--fill);border:1px solid var(--border);border-radius:11px;font-size:12px;font-weight:800}.hero-badges b{color:var(--cyan);font-size:14px}.hero-side{border-radius:22px;background:linear-gradient(140deg,rgba(37,143,168,.11),rgba(106,94,217,.085));border:1px solid var(--border);padding:20px 22px;display:flex;flex-direction:column;justify-content:space-between;position:relative;z-index:1}.hero-side .kicker{color:var(--muted);font-size:11px;font-weight:750}.hero-side .big{display:flex;align-items:baseline;gap:9px;margin:6px 0}.hero-side .big strong{font-size:clamp(30px,3.4vw,44px);line-height:1.45;letter-spacing:-1px;font-weight:950}.hero-side .big small{font-size:12px;color:var(--muted)}.gauge-track{height:9px;background:var(--border2);border-radius:30px;overflow:hidden;margin:12px 0}.gauge-track span{display:block;background:linear-gradient(90deg,var(--cyan),var(--violet));height:100%;border-radius:30px;width:0;transition:width .4s}.gauge-legend{display:flex;justify-content:space-between;gap:10px;font-size:11px;color:var(--muted)}.side-note{display:flex;align-items:center;gap:7px;font-size:11px;margin-top:16px;color:var(--muted)}.pill{display:inline-flex;align-items:center;padding:3px 9px;border-radius:20px;background:rgba(17,164,146,.105);color:var(--green);font-weight:850;font-size:10px}
+.section{margin-top:30px}.section-head{display:flex;align-items:end;justify-content:space-between;gap:14px;margin-bottom:15px}.section-head h2{font-weight:950;font-size:19px;margin:0;line-height:1.5;letter-spacing:-.25px}.section-head h2:before{content:"";display:inline-block;width:5px;height:21px;border-radius:5px;background:linear-gradient(var(--cyan),var(--violet));vertical-align:-4px;margin-left:10px}.section-head p{margin:4px 0 0;font-size:12px;color:var(--muted)}.minor-note{font-size:11px;color:var(--muted);background:var(--fill);border:1px solid var(--border);border-radius:50px;padding:6px 12px;white-space:nowrap}.metric-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.metric{padding:19px 20px 17px;min-height:142px;border-radius:19px;position:relative;overflow:hidden;transition:transform .18s,border-color .18s}.metric:hover{transform:translateY(-3px);border-color:var(--border2)}.metric:before{content:"";width:49px;height:49px;position:absolute;top:-19px;left:-17px;transform:rotate(35deg);border-radius:15px;background:var(--accent);opacity:.11}.metric-top{display:flex;align-items:center;justify-content:space-between;gap:10px}.metric-label{font-size:12px;font-weight:800;color:var(--muted)}.metric-icon{width:31px;height:31px;background:var(--fill);border:1px solid var(--border);border-radius:10px;display:grid;place-items:center;font-size:15px;color:var(--accent)}.metric-number{font-size:clamp(21px,2.25vw,28px);font-weight:950;letter-spacing:-.8px;margin:10px 0 0;line-height:1.6;white-space:nowrap}.metric-number .u{font-size:11px;font-weight:700;margin-right:5px;letter-spacing:0;color:var(--muted)}.metric-sub{margin-top:3px;color:var(--muted);font-size:10.5px}.metric.negative .metric-number{color:var(--red)}
+.analytics-grid{display:grid;grid-template-columns:minmax(0,1.32fr) minmax(320px,.68fr);gap:15px;align-items:stretch}.panel{border-radius:23px;padding:21px 23px;min-width:0}.panel-top{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:18px}.panel-title{margin:0;font-size:14px;font-weight:950}.panel-caption{color:var(--muted);font-size:11px;margin:4px 0 0}.stat-bubble{background:var(--fill);padding:6px 10px;border-radius:11px;color:var(--cyan);font-weight:900;font-size:12px;white-space:nowrap}.bar-entry{margin:15px 0}.bar-row{display:flex;justify-content:space-between;align-items:baseline;gap:10px;font-weight:800;font-size:12px}.bar-row .value{white-space:nowrap;font-size:12px}.bar-track{height:9px;background:var(--fill);border-radius:14px;overflow:hidden;margin-top:7px}.bar-track i{height:100%;display:block;border-radius:14px;width:0;background:var(--bar);transition:width .4s}.bar-entry .descr{font-size:10px;color:var(--muted);margin-top:3px}.donut-wrap{display:grid;grid-template-columns:minmax(145px,1fr) minmax(160px,1fr);align-items:center;gap:8px;min-height:232px}.donut-shell{position:relative;display:flex;align-items:center;justify-content:center;max-width:220px;margin:auto;aspect-ratio:1;width:100%}.donut-shell svg{width:100%;overflow:visible}.donut-center{position:absolute;text-align:center;pointer-events:none}.donut-center strong{font-size:25px;display:block;line-height:1.3}.donut-center span{font-size:10px;color:var(--muted)}.legend{display:flex;flex-direction:column;gap:13px}.legend-item{display:flex;align-items:flex-start;gap:9px}.legend-dot{width:10px;height:10px;border-radius:4px;flex:none;margin-top:7px}.legend-text{flex:1;min-width:0}.legend-text b{display:block;font-size:11px}.legend-text small{display:block;color:var(--muted);font-size:10px}.legend-val{font-weight:900;font-size:12px;white-space:nowrap}
+.accordion-wrap{margin-top:16px;display:grid;gap:11px}.acc{border:1px solid var(--border);border-radius:17px;background:var(--panel);overflow:hidden}.acc>summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:12px;align-items:center;padding:17px 19px;transition:background .15s}.acc>summary:hover{background:var(--hover)}.acc>summary::-webkit-details-marker{display:none}.acc[open]>summary{background:linear-gradient(95deg,rgba(31,156,167,.075),rgba(113,99,211,.05));border-bottom:1px solid var(--border)}.acc-title{display:flex;align-items:center;gap:11px;min-width:0}.acc-ic{width:36px;height:36px;border-radius:12px;background:var(--fill);display:grid;place-items:center;color:var(--cyan);font-size:17px;flex:none}.acc-main b{font-size:13px;display:block}.acc-main small{font-size:11px;color:var(--muted)}.acc-right{display:flex;align-items:center;gap:12px}.acc-amount{font-size:14px;font-weight:950;white-space:nowrap}.acc-amount small{display:block;text-align:left;font-weight:600;color:var(--muted);font-size:10px}.chevron{color:var(--muted);width:17px;height:17px;transition:transform .2s}.acc[open] .chevron{transform:rotate(180deg)}.acc-body{padding:16px 18px 19px;background:var(--panelSolid)}.income-line{border:1px solid var(--border);border-radius:14px;overflow:hidden;margin:9px 0;background:var(--panel)}.income-line>summary{list-style:none;cursor:pointer;padding:13px 15px;display:flex;align-items:center;gap:14px;justify-content:space-between}.income-line>summary::-webkit-details-marker{display:none}.income-line[open]>summary{background:var(--fill)}.line-title{font-size:12px;font-weight:850}.line-sub{color:var(--muted);font-size:10px}.line-amount{font-size:12px;font-weight:950;white-space:nowrap}.tiny-bar{height:4px;background:var(--fill);width:70px;border-radius:5px;margin-top:6px}.tiny-bar>span{height:100%;border-radius:5px;display:block;background:var(--cyan)}.income-line .chevron{width:14px}.income-line[open] .chevron{transform:rotate(180deg)}.line-details{display:grid;grid-template-columns:repeat(5,1fr);gap:9px;padding:15px;border-top:1px solid var(--border)}.detail-tile{background:var(--fill);border-radius:11px;padding:9px 10px}.detail-tile small{font-size:10px;color:var(--muted);display:block}.detail-tile b{font-size:12px;display:block;margin-top:5px;overflow-wrap:anywhere}.line-note{grid-column:1/-1;font-size:10px;color:var(--muted)}.linkline{display:flex;justify-content:space-between;gap:10px;margin-top:10px;font-size:11px;color:var(--muted)}
+.chart-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}.chart-area{width:100%;overflow:hidden}.chart-area svg{width:100%;height:290px;overflow:visible}.chart-key{display:flex;gap:13px;flex-wrap:wrap;align-items:center;color:var(--muted);font-size:10.5px}.key-square{display:inline-block;width:9px;height:9px;border-radius:3px;margin-left:5px}.seg{display:inline-flex;gap:3px;flex-wrap:wrap;background:var(--fill);border:1px solid var(--border);border-radius:11px;padding:3px}.seg button{border:0;background:transparent;color:var(--muted);border-radius:8px;font-size:11px;padding:6px 10px;font-weight:800}.seg button.active{background:var(--panelSolid);color:var(--ink);box-shadow:0 2px 7px rgba(24,54,86,.08)}.chart-note{display:flex;gap:7px;align-items:start;color:var(--muted);font-size:10px;border-top:1px solid var(--border);padding-top:11px;margin:9px 0 0}.chart-note svg{width:14px;height:14px;flex:none;margin-top:3px}
+.cost-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:15px}.cost-lines{display:flex;flex-direction:column;gap:8px}.cost-line{display:grid;grid-template-columns:minmax(130px,1.55fr) minmax(100px,2fr) auto;gap:12px;align-items:center;font-size:11px}.cost-line b{font-size:11px;font-weight:850}.cost-line .thin{height:7px;background:var(--fill);border-radius:20px;overflow:hidden}.cost-line .thin i{display:block;height:100%;background:var(--bar);border-radius:20px}.cost-line .val{font-weight:900;white-space:nowrap}.cost-total{margin-top:auto;padding:13px 15px;border-radius:12px;background:var(--fill);display:flex;justify-content:space-between;align-items:center;font-size:12px;font-weight:850}.opex-chart{display:flex;flex-direction:column;gap:15px;margin:18px 0}.opex-item .opex-label{display:flex;justify-content:space-between;font-size:12px;gap:8px;font-weight:800}.opex-item .opex-label span{color:var(--muted);font-size:11px}.opex-item .bar-track{height:12px}.mini-kpis{display:grid;grid-template-columns:1fr 1fr;gap:9px}.mini-kpis>div{padding:11px;background:var(--fill);border-radius:11px}.mini-kpis small{display:block;color:var(--muted);font-size:10px}.mini-kpis strong{font-size:15px;display:block}.opex-details{margin-top:12px}.opex-details summary{cursor:pointer;color:var(--cyan);font-size:11px;font-weight:900}.opex-details .row{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid var(--border);gap:8px;font-size:10.5px}.opex-details .row b{font-weight:850;white-space:nowrap}
+.sensitivity-top{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}.matrix-scroll{overflow:auto;padding:4px 2px 10px}.matrix{display:grid;grid-template-columns:93px repeat(5,minmax(78px,1fr));gap:7px;min-width:570px;margin-top:15px}.matrix>div{min-height:54px;border-radius:10px;display:grid;place-items:center;text-align:center;padding:5px;font-size:11px}.matrix .matrix-head{color:var(--muted);font-weight:900;background:var(--fill);border:1px solid var(--border)}.matrix .axis-title{font-size:10px;line-height:1.7}.matrix .mcell{font-weight:900;border:1px solid var(--border);position:relative}.matrix .mcell.center{outline:2px solid var(--cyan);outline-offset:1px}.matrix .mcell small{font-size:9px;font-weight:600;opacity:.78;display:block}.matrix .mcell.neg{background:rgba(210,75,113,.12);color:var(--red)}.matrix .mcell.pos{background:rgba(32,155,120,.13);color:var(--green)}.matrix .mcell.mid{background:rgba(230,165,76,.16);color:var(--amber)}.matrix-legend{display:flex;align-items:center;gap:15px;flex-wrap:wrap;color:var(--muted);font-size:10px}.matrix-legend i{width:10px;height:10px;border-radius:3px;display:inline-block;margin-left:5px}
+.table-area{overflow:auto;border-radius:15px;border:1px solid var(--border);background:var(--panelSolid)}table{border-collapse:collapse;min-width:850px;width:100%;direction:rtl;text-align:right;font-variant-numeric:tabular-nums}th,td{padding:12px 15px;font-size:11px;white-space:nowrap;border-bottom:1px solid var(--border);text-align:right}th{background:var(--fill);color:var(--muted);font-weight:950;position:sticky;top:0;z-index:1}tr:last-child td{border-bottom:0}tbody tr:hover{background:var(--hover)}td.num{text-align:left;direction:ltr;unicode-bidi:isolate}td.year{text-align:center;font-weight:950;color:var(--cyan)}.table-area .neg{color:var(--red);font-weight:850}.table-area .pos{color:var(--green);font-weight:850}.annual-foot{display:flex;justify-content:space-between;gap:10px;color:var(--muted);font-size:10px;margin-top:13px;align-items:center;flex-wrap:wrap}.foot{margin-top:35px;padding:18px 0;border-top:1px solid var(--border);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:var(--muted);font-size:11px}.foot strong{color:var(--ink)}.designer-credit{width:100%;display:flex;justify-content:center;margin-top:8px}.designer-credit span{display:inline-flex;align-items:center;gap:10px;padding:8px 16px;border-radius:999px;background:linear-gradient(180deg,rgba(255,255,255,.46),rgba(255,255,255,.18));border:1px solid var(--border);box-shadow:0 8px 18px rgba(31,54,99,.05);color:var(--muted);font-size:11px;font-weight:800;letter-spacing:.15px}.designer-credit span::before,.designer-credit span::after{content:"";display:block;width:22px;height:1.5px;border-radius:2px;background:linear-gradient(90deg,transparent,var(--border2))}.designer-credit span::after{background:linear-gradient(90deg,var(--border2),transparent)}.designer-credit b{color:var(--ink);font-weight:900}
+.drawer-overlay{position:fixed;inset:0;background:rgba(7,19,36,.43);z-index:19;opacity:0;pointer-events:none;transition:opacity .2s;backdrop-filter:blur(4px)}.drawer-overlay.on{opacity:1;pointer-events:auto}.drawer{position:fixed;right:0;top:0;bottom:0;width:min(440px,100%);z-index:20;transform:translateX(110%);transition:transform .26s cubic-bezier(.2,.6,.2,1);background:var(--panelSolid);border-left:1px solid var(--border);box-shadow:-18px 0 75px rgba(0,0,0,.17);padding:23px 26px;overflow-y:auto}.drawer.open{transform:translateX(0)}.drawer-head{display:flex;justify-content:space-between;align-items:center;padding-bottom:18px;border-bottom:1px solid var(--border)}.drawer-head h2{font-size:18px;margin:0}.drawer-sub{font-size:11px;color:var(--muted);margin:12px 0 20px}.slider-block{padding:15px 0;border-bottom:1px solid var(--border)}.slider-head{display:flex;justify-content:space-between;align-items:baseline;gap:10px;font-weight:850;font-size:12px}.slider-head output{font-size:16px;color:var(--cyan);font-weight:950;direction:ltr}.slider-help{color:var(--muted);font-size:10px;line-height:1.7;margin-top:8px}.slider{width:100%;accent-color:var(--cyan);cursor:pointer;margin:14px 0 0;direction:ltr}.slider-lims{display:flex;justify-content:space-between;direction:ltr;font-size:10px;color:var(--soft)}.drawer-foot{display:flex;gap:9px;margin-top:25px}.drawer-foot button{flex:1}.important{background:var(--fill);border-radius:12px;padding:13px;color:var(--muted);font-size:10.5px;line-height:1.9;margin-top:18px}.toast{position:fixed;bottom:20px;left:50%;transform:translate(-50%,40px);background:var(--ink);color:var(--bg);padding:9px 16px;border-radius:12px;opacity:0;z-index:33;pointer-events:none;transition:opacity .2s,transform .2s;font-size:12px}.toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:1150px){.metric-grid{grid-template-columns:repeat(2,1fr)}.hero{grid-template-columns:1.2fr .8fr}.analytics-grid,.cost-grid{grid-template-columns:1fr 1fr}.shell{padding:18px 20px 42px}}
+@media(max-width:820px){.hero,.analytics-grid,.cost-grid,.chart-grid{grid-template-columns:1fr}.hero{padding:25px}.hero-side{min-height:170px}.nav-actions .data-status{display:none}.topbar{flex-wrap:wrap}.shell{padding:14px 13px 33px}.section{margin-top:25px}.panel{padding:18px}.chart-area svg{height:255px}.line-details{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:480px){.identity h1{font-size:13px}.identity p{font-size:9px}.topbar{padding:11px}.nav-actions{width:100%;justify-content:space-between}.nav-actions .small-btn{flex:1}.hero h2{font-size:25px}.hero-badges span{padding:7px 10px}.metric-grid{gap:9px}.metric{padding:14px;min-height:124px}.metric-number{font-size:21px}.metric-label{font-size:10px}.metric-sub{font-size:9px}.section-head{align-items:start}.minor-note{white-space:normal}.donut-wrap{grid-template-columns:1fr}.legend{display:grid;grid-template-columns:1fr 1fr;gap:10px}.line-details{grid-template-columns:1fr 1fr}.acc-amount{font-size:12px}.acc>summary{padding:13px}.acc-main b{font-size:11px}.cost-line{grid-template-columns:minmax(100px,1fr) minmax(55px,.7fr) auto;gap:6px;font-size:10px}.cost-line b{font-size:10px}.cost-line .val{font-size:10px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}@media print{body{background:#fff!important;color:#111!important}body:before,.nav-actions,.drawer,.drawer-overlay,.topbar .data-status,.toast,.seg,.small-btn.print-hide{display:none!important}.shell{padding:0;max-width:100%}.glass,.solid{background:#fff!important;box-shadow:none!important;backdrop-filter:none!important;border:1px solid #ccd4df!important;break-inside:avoid}.hero{min-height:auto}.section{break-inside:avoid}.acc-body{break-inside:avoid}.chart-area svg{height:220px}.metric-grid{grid-template-columns:repeat(4,1fr)}.metric{min-height:120px}.foot{display:block}}
+
+/* --- Responsive, always-visible scenario console, adapting on scroll --- */
+:root{--font-ui:"Vazirmatn", "Vazir", Tahoma, sans-serif}
+html,body,button,input,select,textarea,output,table,th,td,.toast,svg text{font-family:var(--font-ui)!important}
+.controls-wrapper{position:sticky;top:11px;z-index:18;margin:0 0 24px;scroll-margin-top:12px;transition:filter .2s}
+.controls-wrapper.attention{filter:drop-shadow(0 0 12px rgba(15,169,191,.38))}
+#drawer.controls-panel{position:relative;inset:auto;right:auto;top:auto;bottom:auto;transform:none!important;width:100%;max-width:none;z-index:auto;overflow:visible;padding:18px 20px 12px;border-radius:24px;background:var(--panel);border:1px solid var(--border2);box-shadow:var(--shadow);backdrop-filter:blur(18px) saturate(150%);-webkit-backdrop-filter:blur(18px) saturate(150%);transition:padding .25s,box-shadow .25s,background .25s}
+.controls-panel .drawer-head{border:0;padding:0 0 13px;gap:14px}
+.ctrl-title-wrap{display:flex;align-items:center;gap:11px;min-width:0}
+.ctrl-glyph{width:37px;height:37px;display:grid;place-items:center;flex:none;font-size:19px;border-radius:11px;color:var(--cyan);background:var(--fill);border:1px solid var(--border)}
+.ctrl-title-wrap h2{font-size:15px;margin:0;line-height:1.5;font-weight:950}
+.ctrl-title-wrap p{margin:2px 0 0;font-size:10.5px;color:var(--muted);line-height:1.7}
+.ctrl-actions{display:flex;align-items:center;gap:9px;flex-shrink:0}
+.ctrl-state{font-size:10.5px;color:var(--green);background:rgba(32,155,120,.09);border:1px solid rgba(32,155,120,.16);border-radius:30px;padding:6px 12px;font-weight:850;white-space:nowrap}
+#drawer .reset-inline{height:34px;padding:0 11px;font-size:10.5px}
+#drawer .mobile-close{display:none}
+#drawer .control-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;align-items:stretch}
+#drawer .slider-block{min-width:0;border-radius:15px;border:1px solid var(--border);background:var(--panelSolid);padding:12px 13px 9px;box-shadow:0 2px 7px rgba(24,54,86,.025);transition:padding .2s,border-color .18s,background .2s}
+#drawer .slider-block:hover{border-color:var(--border2)}
+#drawer .slider-head{display:flex;gap:7px;align-items:start;flex-direction:column;min-height:45px;font-size:11px;font-weight:850}
+#drawer .slider-head label{line-height:1.5}
+#drawer .slider-head output{display:block;font-size:18px;color:var(--ctrl-color);font-weight:950;direction:ltr;unicode-bidi:isolate;line-height:1.4}
+#drawer .slider{display:block;width:100%;margin:10px 0 7px;direction:ltr;accent-color:var(--ctrl-color);height:18px;background:transparent;appearance:none;-webkit-appearance:none}
+#drawer .slider::-webkit-slider-runnable-track{height:6px;background:linear-gradient(to right,var(--ctrl-color) var(--progress),var(--fill) var(--progress));border:1px solid var(--border);border-radius:99px}
+#drawer .slider::-moz-range-track{height:6px;background:var(--fill);border-radius:99px}
+#drawer .slider::-moz-range-progress{height:6px;background:var(--ctrl-color);border-radius:99px}
+#drawer .slider::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:17px;height:17px;background:var(--panelSolid);border:4px solid var(--ctrl-color);border-radius:50%;margin-top:-6px;box-shadow:0 2px 5px rgba(26,59,94,.17)}
+#drawer .slider::-moz-range-thumb{width:11px;height:11px;background:var(--panelSolid);border:4px solid var(--ctrl-color);border-radius:50%}
+#drawer .slider-lims{font-size:9px;line-height:1.4}
+#drawer .slider-help{font-size:9px;line-height:1.55;margin:8px 0 0;min-height:28px}
+#drawer .ctrl-footnote{font-size:10px;margin:10px 0 0;color:var(--muted);text-align:center;line-height:1.6}
+.controls-wrapper.compact #drawer{padding:10px 15px 9px;background:var(--nav);border-color:var(--border2);border-top-color:rgba(255,255,255,.6);box-shadow:0 10px 30px rgba(29,57,102,.12);backdrop-filter:blur(24px) saturate(160%);-webkit-backdrop-filter:blur(24px) saturate(160%)}
+.controls-wrapper.compact .drawer-head{padding-bottom:6px!important}
+.controls-wrapper.compact .ctrl-title-wrap h2{font-size:12px}
+.controls-wrapper.compact .ctrl-title-wrap p,.controls-wrapper.compact .ctrl-footnote,.controls-wrapper.compact .slider-help{display:none}
+.controls-wrapper.compact .ctrl-glyph{height:27px;width:27px;font-size:15px}
+.controls-wrapper.compact #drawer .slider-block{padding:6px 10px 5px;border-radius:11px;background:var(--panel)}
+.controls-wrapper.compact #drawer .slider-head{min-height:0;flex-direction:row;justify-content:space-between;align-items:baseline;gap:5px;font-size:10px}
+.controls-wrapper.compact #drawer .slider-head output{font-size:12px;white-space:nowrap}
+.controls-wrapper.compact #drawer .slider{margin:7px 0 4px;height:14px}
+.controls-wrapper.compact #drawer .slider-lims{font-size:8px}
+.controls-wrapper.compact #drawer .ctrl-state{font-size:9px;padding:3px 9px}
+.controls-wrapper.compact #drawer .reset-inline{height:29px}
+.mobile-fab{display:none}
+@media (min-width:721px) and (max-width:1190px){
+ #drawer .control-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+ #drawer .slider-head{min-height:0;flex-direction:row;align-items:baseline;justify-content:space-between;gap:8px}
+ #drawer .slider-head output{font-size:15px;white-space:nowrap}
+ #drawer .slider-help{min-height:0}
+ .controls-wrapper.compact #drawer .control-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}
+}
+@media (max-width:720px){
+ .controls-wrapper{position:static;margin:0;height:0;z-index:auto}
+ #drawer.controls-panel{position:fixed;right:0;left:auto;top:0;bottom:0;width:min(420px,100%);max-width:100%;z-index:30;overflow-y:auto;transform:translateX(110%)!important;border-radius:21px 0 0 21px;padding:21px 17px 35px;border:0;border-left:1px solid var(--border2);background:var(--panelSolid);backdrop-filter:none;-webkit-backdrop-filter:none;box-shadow:-16px 0 48px rgba(0,0,0,.22);transition:transform .25s cubic-bezier(.2,.6,.2,1)}
+ #drawer.controls-panel.open{transform:translateX(0)!important}
+ #drawer .drawer-head{gap:10px;padding-bottom:13px;border-bottom:1px solid var(--border)}
+ #drawer .ctrl-title-wrap h2{font-size:15px}
+ #drawer .ctrl-title-wrap p{font-size:10px}
+ #drawer .ctrl-glyph{width:32px;height:32px}
+ #drawer .ctrl-actions{gap:6px}
+ #drawer .ctrl-state{display:none}
+ #drawer .reset-inline{height:30px;font-size:10px;padding:0 8px}
+ #drawer .mobile-close{display:inline-flex;width:31px;height:31px;font-size:18px;padding:0}
+ #drawer .control-grid{grid-template-columns:1fr 1fr;gap:10px;margin-top:15px}
+ #drawer .slider-block{padding:11px}
+ #drawer .slider-head{min-height:55px;font-size:10px}
+ #drawer .slider-head output{font-size:16px}
+ #drawer .slider-help{font-size:9px;min-height:0}
+ #drawer .ctrl-footnote{margin-top:15px}
+ .mobile-fab{display:inline-flex;align-items:center;gap:9px;position:fixed;bottom:17px;left:50%;transform:translateX(-50%);z-index:17;border:1px solid rgba(255,255,255,.2);color:#fff;background:var(--gradient);box-shadow:0 8px 25px rgba(35,112,166,.32);border-radius:40px;padding:11px 20px;font-weight:900;font-size:12px;white-space:nowrap}
+ .mobile-fab .fab-dot{height:6px;width:6px;border-radius:50%;background:#a4fce1}
+ .drawer-overlay.on{z-index:29}
+ .foot{padding-bottom:50px}
+}
+@media (max-width:430px){#drawer .control-grid{grid-template-columns:1fr 1fr;gap:8px}#drawer .slider-block{padding:10px 8px}#drawer .slider-head{font-size:9.5px}#drawer .reset-inline{font-size:9px}}
+@media print{.controls-wrapper,.mobile-fab,.drawer-overlay{display:none!important}}
+
+/* V3 — bilingual KPI watermarks, evidence-based thresholds, comfortable sliders */
+:root{--metric-critical:rgba(205,84,114,.068);--metric-critical-border:rgba(205,84,114,.40)}
+html[data-theme=dark]{--metric-critical:rgba(255,123,153,.10);--metric-critical-border:rgba(255,123,153,.47)}
+.metric{isolation:isolate}
+.metric-watermark{position:absolute;left:13px;bottom:-19px;direction:ltr;white-space:nowrap;pointer-events:none;user-select:none;font-family:var(--font-ui)!important;font-size:clamp(38px,3.6vw,54px);font-weight:950;letter-spacing:1px;line-height:1.5;color:var(--accent);opacity:.095;z-index:0}
+.metric-watermark .scope{display:block;position:absolute;left:3px;bottom:14px;font-size:8px;letter-spacing:1.5px;font-weight:900;opacity:.95;line-height:1.2}
+.metric-top,.metric-number,.metric-sub{position:relative;z-index:1}
+.metric.negative{background:linear-gradient(130deg,var(--panel),var(--metric-critical));border-color:var(--metric-critical-border)}
+.metric.negative .metric-number,.metric.negative .metric-number .u{color:var(--red)}
+.metric.negative .metric-icon{color:var(--red);border-color:var(--metric-critical-border);background:var(--metric-critical)}
+.metric.negative .metric-watermark{color:var(--red);opacity:.16}
+.metric.negative .metric-sub{color:var(--red)}
+.metric .metric-number{overflow-wrap:anywhere}
+#drawer .slider{touch-action:pan-x;user-select:none;-webkit-user-select:none;cursor:grab;min-height:24px;margin:7px 0 3px;will-change:auto}
+#drawer .slider:active{cursor:grabbing}
+#drawer .slider::-webkit-slider-thumb{width:21px;height:21px;margin-top:-8px;box-shadow:0 2px 7px rgba(26,59,94,.18);transition:box-shadow .12s ease,transform .12s ease}
+#drawer .slider:hover::-webkit-slider-thumb,#drawer .slider:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 5px rgba(18,155,172,.12),0 2px 9px rgba(26,59,94,.15)}
+#drawer .slider:active::-webkit-slider-thumb{transform:scale(1.10)}
+#drawer .slider::-moz-range-thumb{width:15px;height:15px;transition:transform .12s ease,box-shadow .12s ease}
+#drawer .slider:active::-moz-range-thumb{transform:scale(1.10)}
+.controls-wrapper.compact #drawer .slider{min-height:19px;margin:5px 0 2px}
+@media(max-width:480px){.metric-watermark{font-size:40px;bottom:-13px;left:10px}.metric-watermark .scope{bottom:12px;font-size:7px}}
+</style>
+</head>
+<body>
+<div class="shell">
+<header class="topbar glass">
+ <div class="identity"><span class="id-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 10h2m2 0h2M9 14h2m2 0h2M10 21v-4h4v4"/></svg></span><div><h1>امکان‌سنجی مالی هتل مشهد</h1><p>داشبورد تعاملی بازسازی و تجهیز · بر پایه فایل اکسل پروژه</p></div></div>
+ <div class="nav-actions"><span class="data-status"><i class="live-dot"></i><span id="scenarioLabel">سناریوی مبنا</span></span><button class="small-btn" id="unitBtn" type="button" title="تغییر واحد نمایش"><svg viewBox="0 0 24 24"><path d="M3 7h18M7 3v8m10-8v8M4 17h16M7 13v8m10-8v8"/></svg><span id="unitBtnText">میلیارد تومان</span></button><button class="icon-btn square" id="themeBtn" type="button" title="تغییر تم" aria-label="تغییر تم"><svg viewBox="0 0 24 24"><path d="M20.5 14.5A8 8 0 0 1 9.5 3.5 8.5 8.5 0 1 0 20.5 14.5Z"/></svg></button><button class="icon-btn square" id="printBtn" type="button" title="چاپ / PDF" aria-label="چاپ / PDF"><svg viewBox="0 0 24 24"><path d="M7 8V3h10v5M7 17H4V9h16v8h-3M7 14h10v7H7zM17 11h.01"/></svg></button><button class="small-btn primary-btn" id="settingsBtn" type="button"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 17h16M9 4v6m6 4v6"/></svg> کنترل‌های سناریو</button></div>
+</header>
+<main>
+<section class="hero glass" aria-label="شناسنامه پروژه">
+<div class="hero-main"><div class="eyebrow"><span class="dash"></span> FINANCIAL FEASIBILITY <span class="dash"></span> MASHHAD HOTEL</div><h2>بازسازی و تجهیز هتل مشهد</h2><p>نمای یکپارچه ظرفیت اقامت، منابع درآمد، سرمایه‌گذاری و جریان نقدی پروژه. شاخص‌های مالی بر اساس سال آستانه مدل اکسل و افق انتخابی تفکیک شده‌اند.</p><div class="hero-badges"><span><b id="badgeUnits">۶۸</b> واحد اقامتی</span><span><b id="badgeArea">۲٬۴۰۰</b> مترمربع زیربنا</span><span><b id="badgeRentable">۶۹۳</b> مترمربع اجاره‌ای</span><span><b>۱</b> سال بازسازی</span></div></div>
+<div class="hero-side"><div><span class="kicker">IRR در سال آستانه مدل</span><div class="big"><strong id="heroIRR">—</strong><small id="heroYear">سال —</small></div><div class="gauge-track"><span id="heroGauge"></span></div><div class="gauge-legend"><span>نرخ تنزیل: <b id="heroDiscount">—</b></span><span>بازده واقعی: <b id="heroReal">—</b></span></div></div><div class="side-note"><span class="pill" id="heroStatus">—</span><span id="heroNote">براساس محاسبات مدل</span></div></div>
+</section>
+
+<!-- The scenario controls are part of the document above the KPI grid, not an off-canvas desktop drawer. -->
+<section class="controls-wrapper" id="controlPanel" aria-label="کنترل‌های زنده سناریو">
+ <section class="drawer controls-panel glass" id="drawer" aria-label="تنظیمات سناریو" aria-hidden="false">
+  <div class="drawer-head ctrl-header">
+    <div class="ctrl-title-wrap"><span class="ctrl-glyph" aria-hidden="true">☷</span><div><h2>تنظیمات زنده سناریو</h2><p>تغییر هر پارامتر، هم‌زمان در شاخص‌ها، نمودارها و جداول اعمال می‌شود.</p></div></div>
+    <div class="ctrl-actions"><span class="ctrl-state" id="controlState">سناریوی مبنا</span><button class="small-btn reset-inline" type="button" id="resetBtn">↺ بازنشانی به اکسل</button><button class="icon-btn square mobile-close" type="button" id="closeDrawer" aria-label="بستن تنظیمات سناریو">✕</button></div>
+  </div>
+  <div id="sliderBlocks" class="control-grid"></div>
+  <p class="ctrl-footnote">مقادیر پایه از اکسل · باز‌محاسبه فوری بدون دکمه تأیید · تغییرات صرفاً در این داشبورد</p>
+ </section>
+</section>
+<button class="mobile-fab" id="mobileFab" type="button" aria-controls="drawer" aria-expanded="false">☷ <span>کنترل سناریو</span><span class="fab-dot" aria-hidden="true"></span></button>
+<section class="section" aria-label="شاخص‌های کلیدی"><div class="section-head"><div><h2>نمای مدیریتی پروژه</h2><p>خلاصه خروجی‌های مدل مالی با تفکیک افق ارزیابی و سال آستانه.</p></div><span class="minor-note" id="viewStatus">مبنای محاسبه: فایل اکسل</span></div><div class="metric-grid" id="metrics"></div></section>
+<section class="section" id="revenueSection"><div class="section-head"><div><h2>ظرفیت درآمدی پروژه</h2><p>شش ردیف درآمدی، در دو گروه اقامتی و اجاره‌ای؛ محاسبه براساس تعداد، نرخ، دوره فعالیت و ضریب استفاده.</p></div><span class="minor-note">نمایش گرافیکی + جزئیات بازشونده</span></div>
+<div class="analytics-grid"><article class="panel solid"><div class="panel-top"><div><h3 class="panel-title">ترکیب منابع درآمد</h3><p class="panel-caption">ظرفیت سالانه با قیمت پایه و فروض استفاده هر ردیف</p></div><span class="stat-bubble" id="revTotal">—</span></div><div id="revBars"></div><div class="linkline"><span>سهم هر ردیف از کل درآمد پایه / سناریویی</span><span>مقادیر با تغییر درآمد باز‌محاسبه می‌شوند.</span></div></article><article class="panel solid"><div class="panel-top"><div><h3 class="panel-title">سهم گروه‌های درآمدی</h3><p class="panel-caption">اقامت در برابر اجاره فضاهای مکمل</p></div></div><div class="donut-wrap"><div class="donut-shell" id="revenueDonut"></div><div class="legend" id="revenueLegend"></div></div></article></div>
+<div class="accordion-wrap" id="revenueAccordions"></div>
+</section>
+<section class="section" id="cashflowSection"><div class="section-head"><div><h2>رفتار مالی در طول زمان</h2><p>بازمحاسبه جریانات نقدی، سود عملیاتی و خالص ارزش فعلی در مرورگر.</p></div><span class="minor-note" id="horizonPill">افق ۲۰ ساله</span></div><div class="chart-grid"><article class="panel solid"><div class="panel-top"><div><h3 class="panel-title">جریان نقد آزاد، درآمد و هزینه جاری</h3><p class="panel-caption">سری سالانه؛ واحد ارقام تابع کلید نمایش است</p></div><div class="seg" id="rangeSwitch"><button type="button" data-range="focus" class="active">تا آستانه</button><button type="button" data-range="all">کل افق</button></div></div><div class="chart-key"><span><i class="key-square" style="background:var(--cyan)"></i>جریان نقد آزاد</span><span><i class="key-square" style="background:var(--violet)"></i>درآمد</span><span><i class="key-square" style="background:var(--amber)"></i>هزینه جاری</span></div><div id="cashChart" class="chart-area" role="img" aria-label="نمودار روند جریان نقد آزاد، درآمد و هزینه جاری"></div><div class="chart-note">ارقام اسمی‌اند؛ با افزایش تورم در افق بلندمدت، مقادیر سنوات پایانی بزرگ‌تر می‌شوند.</div></article><article class="panel solid"><div class="panel-top"><div><h3 class="panel-title">مسیر خالص ارزش فعلی تجمعی</h3><p class="panel-caption">NPV با نرخ تنزیل انتخاب‌شده؛ خط مبنا = صفر</p></div><span class="stat-bubble" id="npvChartBadge">—</span></div><div class="chart-key"><span><i class="key-square" style="background:var(--green)"></i>NPV تجمعی</span><span><i class="key-square" style="background:var(--red)"></i>زیر صفر</span></div><div id="npvChart" class="chart-area" role="img" aria-label="نمودار خالص ارزش فعلی تجمعی"></div><div class="chart-note">سال نخست، دوره سرمایه‌گذاری است. NPV تجمعی پس از اولین سال بهره‌برداری ترسیم می‌شود.</div></article></div></section>
+<section class="section" id="costSection"><div class="section-head"><div><h2>ساختار منابع و مصارف</h2><p>بازنمایی تصویری هزینه ثابت سرمایه‌گذاری و هزینه عملیاتی استخراج‌شده از اکسل.</p></div><span class="minor-note">مقادیر سرمایه‌گذاری در قیمت پایه</span></div><div class="cost-grid"><article class="panel solid"><div class="panel-top"><div><h3 class="panel-title">اجزای سرمایه‌گذاری ثابت (CAPEX)</h3><p class="panel-caption">ده قلم هزینه مطابق جدول تجمیعی سرمایه‌گذاری</p></div><span class="stat-bubble" id="capexTotal">—</span></div><div class="cost-lines" id="capexLines"></div><div class="cost-total"><span>جمع هزینه ثابت سرمایه‌گذاری</span><b id="capexFooter">—</b></div></article><article class="panel solid"><div class="panel-top"><div><h3 class="panel-title">ترکیب پایه هزینه جاری (OPEX)</h3><p class="panel-caption">تفکیک ثابت و متغیر؛ پیش از اعمال تورم سالانه</p></div></div><div class="opex-chart" id="opexBars"></div><div class="mini-kpis" id="opexKpis"></div><details class="opex-details"><summary>مشاهده ریز اقلام عملیاتی ▾</summary><div id="opexDetails"></div></details></article></div></section>
+<section class="section" id="sensSection"><div class="section-head"><div><h2>تحلیل حساسیت تعاملی</h2><p>تأثیر همزمان تغییر درآمد و هزینه بر شاخص‌های مالی در افق ارزیابی ماتریس.</p></div><span class="minor-note" id="sensHorizon">سال آستانه: —</span></div><article class="panel solid"><div class="sensitivity-top"><div><h3 class="panel-title">ماتریس تغییرات ±۲۰٪ نسبت به سناریوی فعال</h3><p class="panel-caption">خانه مرکزی = وضعیت فعال. ستون: تغییر درآمد؛ ردیف: تغییر هزینه جاری.</p></div><div class="seg" id="sensSwitch"><button type="button" data-sens="npv" class="active">NPV</button><button type="button" data-sens="irr">IRR</button></div></div><div class="matrix-scroll"><div class="matrix" id="sensitivityMatrix"></div></div><div class="matrix-legend" id="matrixLegend"><span><i style="background:rgba(32,155,120,.5)"></i>NPV مثبت / IRR بالاتر از تنزیل</span><span><i style="background:rgba(210,75,113,.5)"></i>NPV منفی / IRR پایین‌تر از تنزیل</span><span><i style="background:rgba(230,165,76,.6)"></i>مرز معیار</span></div><div class="chart-note">حساسیت به‌صورت محاسباتی از جریان‌های نقدی سناریوی جاری تولید می‌شود؛ تصویر یا جدول کپی‌شده از اکسل نیست.</div></article></section>
+<section class="section" id="detailsSection"><div class="section-head"><div><h2>ردیابی جزئیات و مبانی</h2><p>برای کنترل محاسبات، جزئیات سالانه و برنامه فیزیکی به‌صورت بازشونده در دسترس‌اند.</p></div><button class="small-btn print-hide" id="csvBtn" type="button"><svg viewBox="0 0 24 24"><path d="M12 3v12m-4-4 4 4 4-4M4 17v4h16v-4"/></svg> خروجی CSV</button></div><div class="accordion-wrap"><details class="acc" id="annualAccordion"><summary><span class="acc-title"><span class="acc-ic">↗</span><span class="acc-main"><b>جزئیات جریانات نقدی سالانه</b><small>درآمد، هزینه، CAPEX، جریان آزاد، تجمعی و NPV</small></span></span><span class="acc-right"><span class="acc-amount">۲۰ ردیف مبنا<small id="annualCount">افق انتخابی: ۲۰ سال</small></span><svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></span></summary><div class="acc-body"><div class="table-area"><table><thead><tr><th>سال</th><th>نرخ تحقق اقامت</th><th>درآمد</th><th>هزینه جاری</th><th>سرمایه‌گذاری</th><th>جریان نقد آزاد</th><th>جریان تجمعی</th><th>NPV تجمعی</th></tr></thead><tbody id="annualBody"></tbody></table></div><div class="annual-foot"><span>واحد: <b class="unit-name">میلیارد تومان</b> · سال نخست دوره بازسازی است.</span><span>اعداد سناریوی فعال را نشان می‌دهند.</span></div></div></details><details class="acc" id="physicalAccordion"><summary><span class="acc-title"><span class="acc-ic">▦</span><span class="acc-main"><b>برنامه فیزیکی و ظرفیت‌ها</b><small>ترازهای ساختمان، واحدهای اقامتی و فضاهای اجاره‌ای</small></span></span><span class="acc-right"><span class="acc-amount">۲٬۴۰۰ مترمربع<small>۶ تراز با زیرزمین</small></span><svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></span></summary><div class="acc-body"><div class="mini-kpis" id="physicalKpis" style="grid-template-columns:repeat(4,1fr);margin-bottom:13px"></div><div class="table-area"><table style="min-width:620px"><thead><tr><th>تراز</th><th>کاربری</th><th>زیربنا (م²)</th><th>فضای اجاره‌ای (م²)</th></tr></thead><tbody id="physicalRows"></tbody></table></div></div></details><details class="acc" id="methodAccordion"><summary><span class="acc-title"><span class="acc-ic">ⓘ</span><span class="acc-main"><b>مبانی محاسبه و قابلیت ردیابی</b><small>چگونگی تبدیل داده‌های اکسل به داشبورد تعاملی</small></span></span><svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></summary><div class="acc-body" style="color:var(--muted);font-size:12px;line-height:2.2"><p>داده‌های پایه، نرخ‌ها، ظرفیت‌ها، ضرایب تحقق، CAPEX و OPEX مستقیماً از فایل اکسل ورودی استخراج شده‌اند. درآمد پایه هر ردیف = ظرفیت × نرخ واحد × تعداد دوره فعال × ضریب استفاده. در مدل سالانه، درآمد اجاره‌ای با تحقق کامل و درآمد اقامتی با برنامه تحقق ۴۰٪، ۴۵٪، ۵۰٪، ۵۵٪ و ۶۰٪ از سال دوم تا ششم (و سپس ۶۰٪) محاسبه می‌شود.</p><p>هزینه جاری = هزینه ثابت پایه + هزینه متغیر متناسب با تحقق اقامت؛ تورم به درآمد و هزینه سالانه اعمال می‌شود. جریان نقد آزاد برابر درآمد منهای هزینه جاری به‌اضافه استهلاک (آیتم غیرنقدی) است. مالیات در فایل مبنا صفر ثبت شده است. نرخ بازده و NPV با جریان نقد سال اولِ منفی سرمایه‌گذاری سنجیده می‌شوند.</p><p>«سال آستانه» نخستین سالی است که IRR تجمعی از نرخ تنزیل عبور کرده و NPV مثبت می‌شود. بازگشت ساده و تنزیلی با درون‌یابی خطی محاسبه می‌شوند. نسبت نقطه سربه‌سر نمایش‌داده‌شده، مطابق فرمول خاص فایل اکسل (CAPEX تقسیم بر حاشیه عملیاتی تجمعی تا سال آستانه) است و نباید با ضریب اشغال سربه‌سر استاندارد اشتباه گرفته شود.</p><p>پنل سناریو محاسبات را فقط در همین فایل HTML تغییر می‌دهد و فایل Excel اصلی را اصلاح نمی‌کند. در صورت تغییر فایل اکسل، برای همگام‌سازی داده‌های پایه باید داشبورد مجدداً از فایل جدید تولید شود.</p></div></details></div></section>
+</main><footer class="foot"><div><strong>داشبورد امکان‌سنجی بازسازی و تجهیز هتل مشهد</strong><br>محاسبات مستقل و آفلاین · فونت وزیرمتن از وب یا نصب محلی</div><div>مبنای داده: <b>FS_بازسازی_هتل_مشهد.xlsx</b><br>مبالغ و نتایج در محیط مرورگر قابل تغییر و باز‌محاسبه‌اند.</div><div class="designer-credit"><span>تحلیل و طراحی: <b>حمیدرضا ترابی</b></span></div></footer>
+</div>
+<div class="drawer-overlay" id="overlay"></div><div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script>
+'use strict';
+const DATA={
+  "meta": {
+    "project": "بازسازی و تجهیز هتل مشهد",
+    "source": "FS_بازسازی_هتل_مشهد.xlsx",
+    "units": "میلیون ریال",
+    "yearOfConstruction": 1,
+    "horizon": 20
+  },
+  "physical": {
+    "site": 423.0,
+    "gross": 2400.0,
+    "levels": 6.0,
+    "rooms": 60.0,
+    "suites": 8.0,
+    "units": 68.0,
+    "regularCapacity": 152.0,
+    "extraCapacity": 212.0,
+    "rentable": 693.0,
+    "hotelArea": 1707.0,
+    "floors": [
+      {
+        "label": "منفی ۱",
+        "usage": "رستوران با قابلیت کترینگ و بیرون‌بر (اجاره‌ای)",
+        "area": 400.0,
+        "rentable": 400.0
+      },
+      {
+        "label": "طبقه اول",
+        "usage": "لابی، پذیرش، مدیریت و تجاری",
+        "area": 400.0,
+        "rentable": 70.0
+      },
+      {
+        "label": "طبقات دوم تا چهارم",
+        "usage": "اتاق‌های دوتخته و سوئیت‌ها",
+        "area": 1200.0,
+        "rentable": 0.0
+      },
+      {
+        "label": "طبقه پنجم",
+        "usage": "روف‌گاردن (رستوران و کافه) و فضاهای اقامتی و خدماتی",
+        "area": 400.0,
+        "rentable": 223.0
+      }
+    ]
+  },
+  "assumptions": {
+    "inflation": 0.43499999999999994,
+    "discount": 0.43499999999999994,
+    "firstOccupancy": 0.4,
+    "euroRate": 1.8
+  },
+  "revenue": [
+    {
+      "id": 6,
+      "label": "بهره برداری از اتاق دوتخته",
+      "short": "اتاق دوتخته",
+      "group": "اقامتی",
+      "quantity": 60.0,
+      "unit": "واحد",
+      "rate": 50.0,
+      "cycles": 365.0,
+      "usage": 1.0,
+      "annual": 1095000.0,
+      "rateUnit": "اجاره روزانه هر واحد"
+    },
+    {
+      "id": 7,
+      "label": "تخت اضافه در اتاق‌های دوتخته",
+      "short": "تخت اضافه",
+      "group": "اقامتی",
+      "quantity": 60.0,
+      "unit": "تخت",
+      "rate": 10.0,
+      "cycles": 365.0,
+      "usage": 0.2,
+      "annual": 43800.0,
+      "rateUnit": "اجاره روزانه هر تخت"
+    },
+    {
+      "id": 8,
+      "label": "بهره برداری از سوئیت چهارتخته",
+      "short": "سوئیت چهارتخته",
+      "group": "اقامتی",
+      "quantity": 8.0,
+      "unit": "واحد",
+      "rate": 100.0,
+      "cycles": 365.0,
+      "usage": 1.0,
+      "annual": 292000.0,
+      "rateUnit": "اجاره روزانه هر واحد"
+    },
+    {
+      "id": 9,
+      "label": "اجاره رستوران با قابلیت کترینگ و بیرون‌بر (منفی ۱)",
+      "short": "رستوران و کترینگ",
+      "group": "اجاره‌ای",
+      "quantity": 400.0,
+      "unit": "مترمربع",
+      "rate": 15.0,
+      "cycles": 12.0,
+      "usage": 1.0,
+      "annual": 72000.0,
+      "rateUnit": "اجاره ماهانه هر مترمربع"
+    },
+    {
+      "id": 10,
+      "label": "اجاره روف‌گاردن طبقه پنجم (کافه)",
+      "short": "روف‌گاردن و کافه",
+      "group": "اجاره‌ای",
+      "quantity": 223.0,
+      "unit": "مترمربع",
+      "rate": 15.0,
+      "cycles": 12.0,
+      "usage": 1.0,
+      "annual": 40140.0,
+      "rateUnit": "اجاره ماهانه هر مترمربع"
+    },
+    {
+      "id": 11,
+      "label": "اجاره تجاری طبقه اول",
+      "short": "فضای تجاری",
+      "group": "اجاره‌ای",
+      "quantity": 70.0,
+      "unit": "مترمربع",
+      "rate": 13.0,
+      "cycles": 12.0,
+      "usage": 1.0,
+      "annual": 10920.0,
+      "rateUnit": "اجاره ماهانه هر مترمربع"
+    }
+  ],
+  "capex": [
+    {
+      "name": "زمین (ملک موجود)",
+      "amount": 0.0
+    },
+    {
+      "name": "هزینه تخریب و برچیدن",
+      "amount": 108000.0
+    },
+    {
+      "name": "هزینه ابنیه (بازسازی، دکوراسیون و تکمیل)",
+      "amount": 1817315.2
+    },
+    {
+      "name": "محوطه سازی (روف‌گاردن)",
+      "amount": 8920.0
+    },
+    {
+      "name": "تاسیسات",
+      "amount": 1345035.0
+    },
+    {
+      "name": "تجهیزات اداری و پذیرش",
+      "amount": 24800.0
+    },
+    {
+      "name": "تجهیزات لابی، لانژ، آبدارخانه و لاندری",
+      "amount": 17765.0
+    },
+    {
+      "name": "تجهیزات اقامتی",
+      "amount": 112400.0
+    },
+    {
+      "name": "هزینه های قبل بهره برداری",
+      "amount": 65764.8
+    },
+    {
+      "name": "هزینه های پیش بینی نشده",
+      "amount": 40000.0
+    }
+  ],
+  "operating": [
+    {
+      "name": "حقوق و دستمزد",
+      "amount": 28864.0,
+      "type": "متغیر"
+    },
+    {
+      "name": "هزینه انرژی",
+      "amount": 1869.2003142857143,
+      "type": "متغیر"
+    },
+    {
+      "name": "تعمیر و نگهداری",
+      "amount": 168900.7232,
+      "type": "متغیر"
+    },
+    {
+      "name": "تبلیغات",
+      "amount": 6000.0,
+      "type": "متغیر"
+    },
+    {
+      "name": "سایر هزینه های جاری",
+      "amount": 10281.696175714285,
+      "type": "متغیر"
+    },
+    {
+      "name": "حقوق و دستمزد",
+      "amount": 259776.0,
+      "type": "ثابت"
+    },
+    {
+      "name": "تعمیر و نگهداری",
+      "amount": 42225.1808,
+      "type": "ثابت"
+    },
+    {
+      "name": "هزینه انرژی",
+      "amount": 467.30007857142857,
+      "type": "ثابت"
+    },
+    {
+      "name": "استهلاک",
+      "amount": 95954.85199999998,
+      "type": "ثابت"
+    },
+    {
+      "name": "سایر هزینه های ثابت",
+      "amount": 19921.16664392857,
+      "type": "ثابت"
+    }
+  ],
+  "operatingTotal": {
+    "fixed": 418344.4995224999,
+    "variable": 215915.61969,
+    "depreciation": 95954.85199999998
+  },
+  "annual": [
+    {
+      "year": 1,
+      "occ": 0.0,
+      "rent": 0.0,
+      "stay": 0.0,
+      "revenue": 0.0,
+      "opex": 0.0,
+      "capex": 3540000.0,
+      "depreciation": 0.0,
+      "fcf": -3540000.0,
+      "cumulative": -3540000.0,
+      "npv": 0.0
+    },
+    {
+      "year": 2,
+      "occ": 0.4,
+      "rent": 176591.1,
+      "stay": 821279.2000000001,
+      "revenue": 997870.3,
+      "opex": 724259.9225168474,
+      "capex": 0.0,
+      "depreciation": 137695.21261999998,
+      "fcf": 411305.5901031527,
+      "cumulative": -3128694.4098968473,
+      "npv": -3253375.8953985
+    },
+    {
+      "year": 3,
+      "occ": 0.45,
+      "rent": 253408.2285,
+      "stay": 1325852.6085,
+      "revenue": 1579260.837,
+      "opex": 1061543.930909483,
+      "capex": 0.0,
+      "depreciation": 197592.63010969997,
+      "fcf": 715309.536200217,
+      "cumulative": -2413384.8736966304,
+      "npv": -2906007.5717815
+    },
+    {
+      "year": 4,
+      "occ": 0.5,
+      "rent": 363640.8078975,
+      "stay": 2113998.325775,
+      "revenue": 2477639.1336725,
+      "opex": 1555216.942765461,
+      "capex": 0.0,
+      "depreciation": 283545.42420741945,
+      "fcf": 1205967.6151144584,
+      "cumulative": -1207417.258582172,
+      "npv": -2497895.0291489996
+    },
+    {
+      "year": 5,
+      "occ": 0.55,
+      "rent": 521824.55933291255,
+      "stay": 3336946.3572358387,
+      "revenue": 3858770.9165687514,
+      "opex": 2277514.8246097937,
+      "capex": 0.0,
+      "depreciation": 406887.68373764696,
+      "fcf": 1988143.7756966047,
+      "cumulative": 780726.5171144328,
+      "npv": -2029038.2675009994
+    },
+    {
+      "year": 6,
+      "occ": 0.6,
+      "rent": 748818.2426427295,
+      "stay": 5223837.84287283,
+      "revenue": 5972656.08551556,
+      "opex": 3333925.9376639007,
+      "capex": 0.0,
+      "depreciation": 583883.8261635235,
+      "fcf": 3222613.9740151823,
+      "cumulative": 4003340.4911296153,
+      "npv": -1499437.2868374994
+    },
+    {
+      "year": 7,
+      "occ": 0.6,
+      "rent": 1074554.178192317,
+      "stay": 7496207.3045225125,
+      "revenue": 8570761.48271483,
+      "opex": 4784183.720547698,
+      "capex": 0.0,
+      "depreciation": 837873.2905446562,
+      "fcf": 4624451.052711788,
+      "cumulative": 8627791.543841403,
+      "npv": -969836.3061739989
+    },
+    {
+      "year": 8,
+      "occ": 0.6,
+      "rent": 1541985.2457059748,
+      "stay": 10757057.481989805,
+      "revenue": 12299042.72769578,
+      "opex": 6865303.638985946,
+      "capex": 0.0,
+      "depreciation": 1202348.1719315816,
+      "fcf": 6636087.260641416,
+      "cumulative": 15263878.804482818,
+      "npv": -440235.32551049907
+    },
+    {
+      "year": 9,
+      "occ": 0.6,
+      "rent": 2212748.827588074,
+      "stay": 15436377.48665537,
+      "revenue": 17649126.314243443,
+      "opex": 9851710.721944833,
+      "capex": 0.0,
+      "depreciation": 1725369.6267218196,
+      "fcf": 9522785.21902043,
+      "cumulative": 24786664.023503248,
+      "npv": 89365.6551530012
+    },
+    {
+      "year": 10,
+      "occ": 0.6,
+      "rent": 3175294.5675888862,
+      "stay": 22151201.693350453,
+      "revenue": 25326496.260939337,
+      "opex": 14137204.885990836,
+      "capex": 0.0,
+      "depreciation": 2475905.414345811,
+      "fcf": 13665196.789294314,
+      "cumulative": 38451860.81279756,
+      "npv": 618966.6358165015
+    },
+    {
+      "year": 11,
+      "occ": 0.6,
+      "rent": 4556547.704490053,
+      "stay": 31786974.429957908,
+      "revenue": 36343522.13444796,
+      "opex": 20286889.01139685,
+      "capex": 0.0,
+      "depreciation": 3552924.2695862395,
+      "fcf": 19609557.39263735,
+      "cumulative": 58061418.20543491,
+      "npv": 1148567.6164800012
+    },
+    {
+      "year": 12,
+      "occ": 0.6,
+      "rent": 6538645.955943224,
+      "stay": 45614308.30698959,
+      "revenue": 52152954.262932815,
+      "opex": 29111685.73135448,
+      "capex": 0.0,
+      "depreciation": 5098446.326856253,
+      "fcf": 28139714.858434588,
+      "cumulative": 86201133.0638695,
+      "npv": 1678168.597143501
+    },
+    {
+      "year": 13,
+      "occ": 0.6,
+      "rent": 9382956.946778528,
+      "stay": 65456532.42053008,
+      "revenue": 74839489.36730862,
+      "opex": 41775269.02449369,
+      "capex": 0.0,
+      "depreciation": 7316270.479038725,
+      "fcf": 40380490.82185365,
+      "cumulative": 126581623.88572316,
+      "npv": 2207769.577807002
+    },
+    {
+      "year": 14,
+      "occ": 0.6,
+      "rent": 13464543.218627188,
+      "stay": 93930124.02346066,
+      "revenue": 107394667.24208784,
+      "opex": 59947511.05014844,
+      "capex": 0.0,
+      "depreciation": 10498848.13742057,
+      "fcf": 57946004.32935997,
+      "cumulative": 184527628.21508312,
+      "npv": 2737370.5584705016
+    },
+    {
+      "year": 15,
+      "occ": 0.6,
+      "rent": 19321619.518730015,
+      "stay": 134789727.97366604,
+      "revenue": 154111347.49239606,
+      "opex": 86024678.35696301,
+      "capex": 0.0,
+      "depreciation": 15065847.077198518,
+      "fcf": 83152516.21263157,
+      "cumulative": 267680144.4277147,
+      "npv": 3266971.5391340023
+    },
+    {
+      "year": 16,
+      "occ": 0.6,
+      "rent": 27726524.009377573,
+      "stay": 193423259.64221078,
+      "revenue": 221149783.65158835,
+      "opex": 123445413.44224192,
+      "capex": 0.0,
+      "depreciation": 21619490.555779874,
+      "fcf": 119323860.7651263,
+      "cumulative": 387004005.192841,
+      "npv": 3796572.519797502
+    },
+    {
+      "year": 17,
+      "occ": 0.6,
+      "rent": 39787561.95345682,
+      "stay": 277562377.58657247,
+      "revenue": 317349939.5400293,
+      "opex": 177144168.28961718,
+      "capex": 0.0,
+      "depreciation": 31023968.94754412,
+      "fcf": 171229740.19795623,
+      "cumulative": 558233745.3907973,
+      "npv": 4326173.500461001
+    },
+    {
+      "year": 18,
+      "occ": 0.6,
+      "rent": 57095151.403210536,
+      "stay": 398302011.8367315,
+      "revenue": 455397163.239942,
+      "opex": 254201881.49560064,
+      "capex": 0.0,
+      "depreciation": 44519395.43972581,
+      "fcf": 245714677.1840672,
+      "cumulative": 803948422.5748644,
+      "npv": 4855774.4811245
+    },
+    {
+      "year": 19,
+      "occ": 0.6,
+      "rent": 81931542.26360711,
+      "stay": 571563386.9857097,
+      "revenue": 653494929.2493168,
+      "opex": 364779699.9461869,
+      "capex": 0.0,
+      "depreciation": 63885332.456006534,
+      "fcf": 352600561.75913644,
+      "cumulative": 1156548984.3340008,
+      "npv": 5385375.461788001
+    },
+    {
+      "year": 20,
+      "occ": 0.6,
+      "rent": 117571763.14827621,
+      "stay": 820193460.3244934,
+      "revenue": 937765223.4727696,
+      "opex": 523458869.42277825,
+      "capex": 0.0,
+      "depreciation": 91675452.07436939,
+      "fcf": 505981806.12436074,
+      "cumulative": 1662530790.4583616,
+      "npv": 5914976.442451499
+    }
+  ],
+  "benchmarks": {
+    "threshold": 9.0,
+    "irrThreshold": 0.44231034694416116,
+    "npvThreshold": 89365.6551530012,
+    "payback": 4.607308824111133,
+    "discountedPayback": 8.831258516475854,
+    "breakevenModel": 0.15423849906735998,
+    "irrFull": 0.5995310274492271,
+    "npvFull": 5914976.442451499,
+    "realIrrThreshold": 0.005094318427986799,
+    "bc": 1.5710320207671202
+  }
+};
+const $=id=>document.getElementById(id);
+const BASE={income:0,cost:0,inflation:DATA.assumptions.inflation*100,discount:DATA.assumptions.discount*100,occ:DATA.assumptions.firstOccupancy*100,horizon:DATA.meta.horizon};
+let state={...BASE}, unit='toman', theme='light', chartRange='focus', sensMetric='npv', current=null;
+const nf=new Intl.NumberFormat('fa-IR',{maximumFractionDigits:1});
+const n2=new Intl.NumberFormat('fa-IR',{minimumFractionDigits:2,maximumFractionDigits:2});
+const n0=new Intl.NumberFormat('fa-IR',{maximumFractionDigits:0});
+const ef=new Intl.NumberFormat('en-US',{maximumFractionDigits:2});
+const fmt=(x,digits=1)=>x==null||!Number.isFinite(x)?'—':(digits===2?n2:digits===0?n0:nf).format(x);
+const pct=(x,digits=2)=>x==null||!Number.isFinite(x)?'—':fmt(x*100,digits)+'٪';
+const sign=(n)=>n<0?'−':'';
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const amount=x=>x==null||!Number.isFinite(x)?'—':fmt(x/(unit==='toman'?10000:1),Math.abs(x/(unit==='toman'?10000:1))<10?2:1);
+const amountWithUnit=x=>amount(x)+(unit==='toman'?' میلیارد تومان':' میلیون ریال');
+const uName=()=>unit==='toman'?'میلیارد تومان':'میلیون ریال';
+const clamp=(x,a,b)=>Math.max(a,Math.min(b,x));
+const byId=id=>DATA.revenue.find(x=>x.id===id);
+const capex=DATA.capex.reduce((a,b)=>a+b.amount,0);
+const baseRent=DATA.revenue.filter(x=>x.group==='اجاره‌ای').reduce((a,b)=>a+b.annual,0);
+const baseStay=DATA.revenue.filter(x=>x.group==='اقامتی').reduce((a,b)=>a+b.annual,0);
+const baseIncome=baseRent+baseStay;
+function calcIrr(flows){if(flows.length<2||flows[0]>=0||!flows.slice(1).some(x=>x>0))return null;const pv=r=>flows.reduce((s,cf,i)=>s+cf/Math.pow(1+r,i),0);let low=-.9999,high=100;let a=pv(low),b=pv(high);if(!Number.isFinite(a)||!Number.isFinite(b)||a*b>0)return null;for(let k=0;k<130;k++){let mid=(low+high)/2, v=pv(mid);if(v>0)low=mid;else high=mid;}return(low+high)/2;}
+function model(s=state,deltaIncome=0,deltaCost=0){
+ const inflation=s.inflation/100,discount=s.discount/100;
+ const incomeM=(1+s.income/100)*(1+deltaIncome/100),costM=(1+s.cost/100)*(1+deltaCost/100);
+ let rows=[],cum=0,npv=-capex,payback=null,disPayback=null;
+ for(let i=0;i<s.horizon;i++){
+  const year=i+1,occ=year===1?0:clamp(DATA.annual[i].occ+(s.occ-BASE.occ)/100,0,1), factor=Math.pow(1+inflation,year-1);
+  const rent=year===1?0:baseRent*incomeM*factor;
+  const stay=year===1?0:baseStay*incomeM*occ*factor;
+  const rev=rent+stay;
+  const fixed=year===1?0:DATA.operatingTotal.fixed*costM*factor;
+  const variable=year===1?0:DATA.operatingTotal.variable*costM*factor*occ;
+  const op=fixed+variable;
+  const dep=year===1?0:DATA.operatingTotal.depreciation*costM*factor;
+  const free=year===1?-capex:rev-op+dep;
+  const oldCum=cum;cum+=free;
+  if(year>1){const last=npv;npv+=free/Math.pow(1+discount,year-1);if(payback==null&&oldCum<0&&cum>=0&&free>0)payback=year-1+(-oldCum)/free;if(disPayback==null&&last<0&&npv>=0)disPayback=year-1+(-last)/(npv-last);}
+  rows.push({year,occ,rent,stay,revenue:rev,fixed,variable,opex:op,capex:year===1?capex:0,depreciation:dep,fcf:free,cumulative:cum,npv:year===1?null:npv,irr:null});
+ }
+ for(let i=1;i<rows.length;i++)rows[i].irr=calcIrr(rows.slice(0,i+1).map(r=>r.fcf));
+ const at=rows.find(r=>r.irr!=null&&r.irr>discount&&r.npv>0);
+ const threshold=at?at.year:null;
+ const totalRev=at?rows.slice(0,threshold).reduce((a,r)=>a+r.revenue,0):null;
+ const totalCost=at?rows.slice(0,threshold).reduce((a,r)=>a+r.opex+r.capex,0):null;
+ const bc=at&&totalCost>0?totalRev/totalCost:null;
+ const breakeven=at&&totalRev-totalCost+capex>0?capex/(totalRev-totalCost+capex):null;
+ return {rows,at,threshold,payback,disPayback,bc,breakeven,irrAt:at?at.irr:null,npvAt:at?at.npv:null,realIrr:at?(1+at.irr)/(1+inflation)-1:null,irrFull:rows.at(-1).irr,npvFull:npv,incomeM,costM,inflation,discount,nominalIncome:baseIncome*incomeM,nominalRent:baseRent*incomeM,nominalStay:baseStay*incomeM};
+}
+const chevron='<svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>';
+function summaryMetric({label,value,unitLabel='',sub='',icon,color,english,scope='',negative=false,criterion=''}){
+ const tooltip=criterion?` title="${esc(criterion)}"`:'';
+ return `<div class="metric glass${negative?' negative':''}" style="--accent:${negative?'var(--red)':color}"${tooltip}><span class="metric-watermark" aria-hidden="true">${esc(english)}${scope?`<small class="scope">${esc(scope)}</small>`:''}</span><div class="metric-top"><span class="metric-label">${label}</span><span class="metric-icon" aria-hidden="true">${icon}</span></div><div class="metric-number">${value}${unitLabel?`<span class="u">${unitLabel}</span>`:''}</div><div class="metric-sub">${sub}</div></div>`;
+}
+function drawMetrics(m){
+ const tr=m.threshold?`سال ${fmt(m.threshold,0)} از آغاز پروژه`:'در افق انتخابی محقق نشده';
+ const irrFail=x=>x==null||!Number.isFinite(x)||x<m.discount-1e-10;
+ const npvFail=x=>x==null||!Number.isFinite(x)||x<=0;
+ const paybackFail=x=>x==null||!Number.isFinite(x)||x>state.horizon;
+ const irrCriterion=`معیار: IRR کمتر از نرخ تنزیل ${pct(m.discount,1)} نباشد.`;
+ const npvCriterion='معیار: خالص ارزش فعلی (NPV) بزرگ‌تر از صفر باشد.';
+ const pCriterion=`معیار: بازگشت سرمایه در افق ارزیابی ${fmt(state.horizon,0)} ساله محقق شود.`;
+ const arr=[
+  {label:'سرمایه‌گذاری ثابت',value:amount(capex),unitLabel:uName(),sub:'دوره بازسازی: ۱ سال',icon:'▣',color:'var(--cyan)',english:'CAPEX',criterion:'هزینه سرمایه‌گذاری ثابت؛ این کارت آستانه بازده ندارد.'},
+  {label:'درآمد سالانه ظرفیت اسمی',value:amount(m.nominalIncome),unitLabel:uName(),sub:'قیمت پایه؛ شامل ضریب استفاده تخت اضافه',icon:'↗',color:'var(--violet)',english:'REVENUE',criterion:'ظرفیت اسمی درآمد، بدون تعیین آستانه سودآوری.'},
+  {label:'نرخ بازده داخلی در آستانه',value:m.irrAt==null?'عدم تحقق':pct(m.irrAt),sub:`${tr} · معیار: ${pct(m.discount,1)}`,icon:'٪',color:'var(--cyan)',english:'IRR',scope:'THRESHOLD',negative:irrFail(m.irrAt),criterion:irrCriterion},
+  {label:'خالص ارزش فعلی در آستانه',value:m.npvAt==null?'عدم تحقق':amount(m.npvAt),unitLabel:m.npvAt!=null?uName():'',sub:`${tr} · معیار: مثبت`,icon:'◈',color:'var(--green)',english:'NPV',scope:'THRESHOLD',negative:npvFail(m.npvAt),criterion:npvCriterion},
+  {label:'بازگشت ساده سرمایه',value:m.payback==null?'عدم تحقق':fmt(m.payback,2),unitLabel:m.payback==null?'':'سال',sub:`بر مبنای جریان نقد · افق ${fmt(state.horizon,0)} سال`,icon:'◷',color:'var(--amber)',english:'PP',scope:'PAYBACK',negative:paybackFail(m.payback),criterion:pCriterion},
+  {label:'بازگشت تنزیلی',value:m.disPayback==null?'عدم تحقق':fmt(m.disPayback,2),unitLabel:m.disPayback==null?'':'سال',sub:`نرخ تنزیل ${pct(m.discount,1)} · افق ${fmt(state.horizon,0)} سال`,icon:'⌁',color:'var(--violet)',english:'DPP',scope:'DISCOUNTED',negative:paybackFail(m.disPayback),criterion:pCriterion},
+  {label:'نرخ بازده داخلی کل افق',value:m.irrFull==null?'عدم تحقق':pct(m.irrFull),sub:`افق ${fmt(state.horizon,0)} سال · معیار: ${pct(m.discount,1)}`,icon:'◎',color:'var(--cyan)',english:'IRR',scope:'HORIZON',negative:irrFail(m.irrFull),criterion:irrCriterion},
+  {label:'خالص ارزش فعلی کل افق',value:amount(m.npvFull),unitLabel:uName(),sub:`نرخ تنزیل ${pct(m.discount,1)} · معیار: مثبت`,icon:'✧',color:'var(--green)',english:'NPV',scope:'HORIZON',negative:npvFail(m.npvFull),criterion:npvCriterion}
+ ];
+ $('metrics').innerHTML=arr.map(summaryMetric).join('');
+ $('heroIRR').style.color=irrFail(m.irrAt)?'var(--red)':'';
+ $('heroStatus').style.color=irrFail(m.irrAt)?'var(--red)':'';
+ $('heroStatus').style.background=irrFail(m.irrAt)?'var(--metric-critical)':'';
+ $('heroIRR').textContent=pct(m.irrAt);$('heroYear').textContent=m.threshold?'سال '+fmt(m.threshold,0):'آستانه محقق نشده';$('heroDiscount').textContent=pct(m.discount,1);$('heroReal').textContent=pct(m.realIrr,2);$('heroGauge').style.width=clamp((m.irrAt||0)/Math.max(m.discount,0.01)*65,0,100)+'%';$('heroStatus').textContent=m.threshold?'آستانه مثبت':'آستانه نامحقق';$('heroNote').textContent=m.threshold?`NPV تجمعی در سال ${fmt(m.threshold,0)} مثبت می‌شود.`:'در افق انتخابی، شاخص آستانه محقق نمی‌شود.';
+ $('viewStatus').textContent=m.threshold?`سال آستانه: ${fmt(m.threshold,0)} · تنزیل: ${pct(m.discount,1)}`:'آستانه در افق فعلی محقق نشده';$('horizonPill').textContent=`افق ${fmt(state.horizon,0)} ساله`;
+}
+const REV_COLORS=['#18a8b5','#7770da','#43c6a9','#eba85f','#ae86db','#548cc7'];
+function drawDonut(id,parts,total,center,sub){const colors=parts.map(x=>x.color);const circ=2*Math.PI*74;let offset=0;const arcs=parts.map(p=>{const size=total?Math.max(0,p.value)/total:0;const s=`<circle cx="100" cy="100" r="74" fill="none" stroke="${p.color}" stroke-width="19" stroke-dasharray="${size*circ} ${circ-size*circ}" stroke-dashoffset="${-offset*circ}" transform="rotate(-90 100 100)"><title>${esc(p.name)}: ${pct(size,1)}</title></circle>`;offset+=size;return s;}).join('');$(id).innerHTML=`<svg viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="74" stroke="var(--fill)" stroke-width="19" fill="none"/>${arcs}</svg><div class="donut-center"><strong>${center}</strong><span>${sub}</span></div>`;}
+function drawRevenue(m){$('revTotal').textContent=amountWithUnit(m.nominalIncome);$('revBars').innerHTML=DATA.revenue.map((r,i)=>{const value=r.annual*m.incomeM;return `<div class="bar-entry"><div class="bar-row"><span>${esc(r.short)}</span><span class="value">${amount(value)} <small style="color:var(--muted);font-size:10px">(${pct(value/m.nominalIncome,1)})</small></span></div><div class="bar-track"><i style="--bar:${REV_COLORS[i]};width:${100*value/m.nominalIncome}%"></i></div></div>`}).join('');drawDonut('revenueDonut',[{name:'اقامتی',value:m.nominalStay,color:REV_COLORS[0]},{name:'اجاره‌ای',value:m.nominalRent,color:REV_COLORS[3]}],m.nominalIncome,'۶','ردیف درآمدی');$('revenueLegend').innerHTML=[{name:'درآمد اقامتی',v:m.nominalStay,color:REV_COLORS[0]},{name:'اجاره فضاهای مکمل',v:m.nominalRent,color:REV_COLORS[3]}].map(x=>`<div class="legend-item"><i class="legend-dot" style="background:${x.color}"></i><div class="legend-text"><b>${x.name}</b><small>سهم از ظرفیت اسمی ${pct(x.v/m.nominalIncome,1)}</small></div><span class="legend-val">${amount(x.v)}</span></div>`).join('');
+ const oldGroup=Array.from(document.querySelectorAll('#revenueAccordions>details')).filter(d=>d.open).map(x=>x.dataset.group);const oldItems=Array.from(document.querySelectorAll('.income-line[open]')).map(d=>Number(d.dataset.id));
+ $('revenueAccordions').innerHTML=['اقامتی','اجاره‌ای'].map((grp,g)=>{const items=DATA.revenue.filter(x=>x.group===grp);const sum=items.reduce((a,r)=>a+r.annual*m.incomeM,0);return `<details class="acc" data-group="${grp}" ${oldGroup.includes(grp)?'open':''}><summary><span class="acc-title"><span class="acc-ic">${g?'⌂':'◫'}</span><span class="acc-main"><b>${g?'فضاهای اجاره‌ای و مکمل':'واحدهای اقامتی و تخت اضافه'}</b><small>${items.length} ردیف درآمدی · ${pct(sum/m.nominalIncome,1)} از کل ظرفیت</small></span></span><span class="acc-right"><span class="acc-amount">${amount(sum)}<small>${uName()} در سال</small></span>${chevron}</span></summary><div class="acc-body">${items.map(r=>{const i=DATA.revenue.indexOf(r),v=r.annual*m.incomeM;return `<details class="income-line" data-id="${r.id}" ${oldItems.includes(r.id)?'open':''}><summary><span><span class="line-title">${esc(r.label)}</span><span class="line-sub">${fmt(r.quantity,0)} ${r.unit} · ${esc(r.rateUnit)}</span></span><span style="display:flex;gap:9px;align-items:center"><span class="line-amount">${amount(v)}<span class="tiny-bar"><span style="width:${100*v/m.nominalIncome}%;background:${REV_COLORS[i]}"></span></span></span>${chevron}</span></summary><div class="line-details"><div class="detail-tile"><small>تعداد / مساحت</small><b>${fmt(r.quantity,0)} ${r.unit}</b></div><div class="detail-tile"><small>نرخ پایه واحد</small><b>${fmt(r.rate,1)} میلیون ریال</b></div><div class="detail-tile"><small>تعداد دوره در سال</small><b>${fmt(r.cycles,0)} ${r.cycles===365?'روز':'ماه'}</b></div><div class="detail-tile"><small>ضریب استفاده</small><b>${pct(r.usage,0)}</b></div><div class="detail-tile"><small>سهم از کل درآمد</small><b>${pct(v/m.nominalIncome,2)}</b></div><div class="line-note">محاسبه: ${fmt(r.quantity,0)} × ${fmt(r.rate,1)} × ${fmt(r.cycles,0)} × ${fmt(r.usage,2)} × ضریب درآمد ${fmt(m.incomeM,2)} = <b>${amountWithUnit(v)}</b>. نرخ سناریویی در ارزش نهایی لحاظ شده است.</div></div></details>`}).join('')}</div></details>`}).join('');
+}
+function svgText(x,y,s,extra=''){return `<text x="${x}" y="${y}" ${extra}>${esc(s)}</text>`;}
+function graph(container,series,options={}){
+ const rows=options.rows||current.rows, W=680,H=290,p={top:18,right:15,bottom:37,left:70},w=W-p.left-p.right,h=H-p.top-p.bottom;
+ if(rows.length<2){$(container).innerHTML='';return;}
+ const xs=rows.map((r,i)=>p.left+i*w/(rows.length-1));const all=series.flatMap(s=>rows.map(r=>r[s.key]).filter(v=>v!=null&&Number.isFinite(v)));let min=Math.min(0,...all),max=Math.max(0,...all);if(max===min){max+=1;min-=1}let pad=(max-min)*.12;max+=pad;min-=pad;
+ const y=v=>p.top+h-(v-min)/(max-min)*h;let out=`<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="xMidYMid meet" role="img" aria-label="${esc(options.label||'نمودار تحلیل مالی')}">`;
+ for(let j=0;j<=4;j++){let v=min+(max-min)*j/4,yy=y(v);out+=`<path d="M${p.left} ${yy}H${p.left+w}" stroke="var(--grid)" stroke-dasharray="3 5"/>${svgText(p.left-10,yy+4,fmt(v/(unit==='toman'?10000:1),0),'fill="var(--chartText)" text-anchor="end" font-size="11" direction="ltr"')}`;}
+ const ticks=rows.length<=10?rows.map((r,i)=>i):rows.map((r,i)=>i).filter(i=>i===0||i===rows.length-1||i%3===0);
+ ticks.forEach(i=>out+=svgText(xs[i],H-15,fmt(rows[i].year,0),'fill="var(--chartText)" text-anchor="middle" font-size="11"'));
+ if(min<0&&max>0)out+=`<path d="M${p.left} ${y(0)}H${p.left+w}" stroke="var(--red)" stroke-width="1.25" stroke-dasharray="6 5" opacity=".65"/>`;
+ series.forEach(s=>{let points=rows.map((r,i)=>r[s.key]==null?null:[xs[i],y(r[s.key]),r]).filter(Boolean);if(!points.length)return;let d=points.map((v,i)=>(i?'L':'M')+v[0].toFixed(1)+' '+v[1].toFixed(1)).join(' ');out+=`<path d="${d}" fill="none" stroke="${s.color}" stroke-width="2.7" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"/>`;points.forEach(pt=>out+=`<circle cx="${pt[0]}" cy="${pt[1]}" r="3.1" fill="${s.color}" stroke="var(--panelSolid)" stroke-width="1.1"><title>سال ${fmt(pt[2].year,0)}، ${s.label}: ${amountWithUnit(pt[2][s.key])}</title></circle>`);});out+='</svg>';$(container).innerHTML=out;
+}
+function drawFinancial(m){let rowset=chartRange==='all'?m.rows:m.rows.slice(0,Math.min(m.rows.length,Math.max(9,(m.threshold||9)+1)));$('rangeSwitch').querySelectorAll('button').forEach(b=>b.classList.toggle('active',b.dataset.range===chartRange));graph('cashChart',[{key:'fcf',color:'var(--cyan)',label:'جریان نقد آزاد'},{key:'revenue',color:'var(--violet)',label:'درآمد'},{key:'opex',color:'var(--amber)',label:'هزینه جاری'}],{rows:rowset,label:'روند سالانه جریان نقد آزاد، درآمد و هزینه جاری'});graph('npvChart',[{key:'npv',color:'var(--green)',label:'NPV تجمعی'}],{rows:m.rows,label:'خالص ارزش فعلی تجمعی سالانه'});$('npvChartBadge').textContent=amountWithUnit(m.npvFull);}
+function drawCosts(m){$('capexTotal').textContent=amountWithUnit(capex);$('capexFooter').textContent=amountWithUnit(capex);$('capexLines').innerHTML=DATA.capex.filter(r=>r.amount!==0).map((r,i)=>`<div class="cost-line"><b>${esc(r.name)}</b><span class="thin"><i style="--bar:${REV_COLORS[i%6]};width:${100*r.amount/capex}%"></i></span><span class="val">${amount(r.amount)} <small style="font-size:9px;color:var(--muted)">${pct(r.amount/capex,1)}</small></span></div>`).join('');const opBase=(DATA.operatingTotal.fixed+DATA.operatingTotal.variable)*m.costM;const p=[{name:'هزینه ثابت',value:DATA.operatingTotal.fixed*m.costM,color:'var(--violet)'},{name:'هزینه متغیر',value:DATA.operatingTotal.variable*m.costM,color:'var(--cyan)'}];$('opexBars').innerHTML=p.map(x=>`<div class="opex-item"><div class="opex-label"><b>${x.name}</b><span>${amountWithUnit(x.value)}</span></div><div class="bar-track"><i style="--bar:${x.color};width:${100*x.value/opBase}%"></i></div></div>`).join('');$('opexKpis').innerHTML=`<div><small>کل هزینه جاری پایه</small><strong>${amountWithUnit(opBase)}</strong></div><div><small>استهلاک پایه (در هزینه ثابت)</small><strong>${amountWithUnit(DATA.operatingTotal.depreciation*m.costM)}</strong></div>`;$('opexDetails').innerHTML=DATA.operating.map(r=>`<div class="row"><span>${esc(r.type)} · ${esc(r.name)}</span><b>${amountWithUnit(r.amount*m.costM)}</b></div>`).join('');}
+function drawSensitivity(m){const focus=m.threshold||state.horizon;const deltas=[-20,-10,0,10,20];$('sensHorizon').textContent=m.threshold?`مبنای ماتریس: سال ${fmt(focus,0)} (آستانه)`:`مبنای ماتریس: سال ${fmt(focus,0)} (افق انتخابی)`;let html='<div class="matrix-head axis-title">هزینه ↓<br>درآمد ←</div>'+deltas.map(x=>`<div class="matrix-head">${x>0?'+':''}${fmt(x,0)}٪</div>`).join('');for(const dc of deltas){html+=`<div class="matrix-head">${dc>0?'+':''}${fmt(dc,0)}٪</div>`;for(const di of deltas){const t=model(state,di,dc),r=t.rows[focus-1],v=sensMetric==='npv'?r.npv:r.irr;const good=v!=null&&(sensMetric==='npv'?v>0:v>state.discount/100);const neutral=v!=null&&Math.abs(sensMetric==='npv'?v:v-state.discount/100)<1e-10;let cc=v==null?'mid':neutral?'mid':good?'pos':'neg';html+=`<div class="mcell ${cc} ${dc===0&&di===0?'center':''}" title="درآمد ${di>0?'+':''}${di}٪ / هزینه ${dc>0?'+':''}${dc}٪" aria-label="تغییر درآمد ${di} درصد و تغییر هزینه ${dc} درصد، ${sensMetric==='npv'?'NPV':'IRR'} ${sensMetric==='npv'?amountWithUnit(v):pct(v)}"><div>${sensMetric==='npv'?amount(v):pct(v,1)}${dc===0&&di===0?'<small>سناریوی فعال</small>':''}</div></div>`;}}$('sensitivityMatrix').innerHTML=html;$('sensSwitch').querySelectorAll('button').forEach(b=>b.classList.toggle('active',b.dataset.sens===sensMetric));}
+function drawAnnual(m){$('annualCount').textContent=`افق انتخابی: ${fmt(state.horizon,0)} سال`;$('annualBody').innerHTML=m.rows.map(r=>`<tr><td class="year">${fmt(r.year,0)}</td><td>${r.year===1?'—':pct(r.occ,0)}</td><td class="num">${amount(r.revenue)}</td><td class="num">${amount(r.opex)}</td><td class="num">${amount(r.capex)}</td><td class="num ${r.fcf<0?'neg':'pos'}">${amount(r.fcf)}</td><td class="num ${r.cumulative<0?'neg':'pos'}">${amount(r.cumulative)}</td><td class="num ${r.npv==null?'':r.npv<0?'neg':'pos'}">${amount(r.npv)}</td></tr>`).join('');document.querySelectorAll('.unit-name').forEach(x=>x.textContent=uName());}
+function drawPhysical(){const p=DATA.physical;const vals=[['واحد اقامتی',fmt(p.units,0)],['ظرفیت معمول',fmt(p.regularCapacity,0)+' نفر'],['ظرفیت با تخت اضافه',fmt(p.extraCapacity,0)+' نفر'],['مساحت اجاره‌ای',fmt(p.rentable,0)+' مترمربع']];$('physicalKpis').innerHTML=vals.map(x=>`<div><small>${x[0]}</small><strong>${x[1]}</strong></div>`).join('');$('physicalRows').innerHTML=p.floors.map(x=>`<tr><td>${esc(x.label)}</td><td style="white-space:normal;min-width:180px">${esc(x.usage)}</td><td class="num">${fmt(x.area,0)}</td><td class="num">${fmt(x.rentable,0)}</td></tr>`).join('');$('badgeUnits').textContent=fmt(p.units,0);$('badgeArea').textContent=fmt(p.gross,0);$('badgeRentable').textContent=fmt(p.rentable,0);}
+function render(options={}){current=model();drawMetrics(current);drawRevenue(current);drawFinancial(current);drawCosts(current);if(options.sensitivity!==false)drawSensitivity(current);drawAnnual(current);$('scenarioLabel').textContent=Object.keys(BASE).some(k=>state[k]!==BASE[k])?'سناریوی اصلاح‌شده':'سناریوی مبنا';$('controlState').textContent=$('scenarioLabel').textContent;$('unitBtnText').textContent=uName();}
+const controls=[{key:'income',name:'تغییر درآمدهای پایه',min:-30,max:30,step:1,help:'ضریب یکسان بر ارزش شش ردیف درآمدی.',fmt:v=>(v>0?'+':'')+fmt(v,0)+'٪'},
+ {key:'cost',name:'تغییر هزینه‌های جاری',min:-30,max:30,step:1,help:'ضریب هزینه‌های عملیاتی ثابت و متغیر و استهلاک متناظر.',fmt:v=>(v>0?'+':'')+fmt(v,0)+'٪'},
+ {key:'inflation',name:'نرخ تورم سالانه',min:0,max:65,step:.1,help:'بر نرخ‌های درآمدی، هزینه و استهلاک سالانه اعمال می‌شود.',fmt:v=>fmt(v,1)+'٪'},
+ {key:'discount',name:'نرخ تنزیل',min:0,max:70,step:.1,help:'بر NPV و بازگشت تنزیلی اثر می‌گذارد.',fmt:v=>fmt(v,1)+'٪'},
+ {key:'occ',name:'تحقق اقامت در نخستین سال بهره‌برداری',min:10,max:80,step:1,help:'تغییر نسبت به برنامه تحقق اقامت در تمام سنوات اعمال می‌شود.',fmt:v=>fmt(v,0)+'٪'},
+ {key:'horizon',name:'افق ارزیابی',min:5,max:20,step:1,help:'سال نخست بازسازی؛ مابقی سال‌های بهره‌برداری.',fmt:v=>fmt(v,0)+' سال'}];
+// At most one expensive redraw per animation frame; sensitivity grid recalculates after dragging.
+let liveFrame=0, matrixTimer=0;
+function scheduleLiveRender(){
+ if(!liveFrame)liveFrame=requestAnimationFrame(()=>{liveFrame=0;render({sensitivity:false});});
+ clearTimeout(matrixTimer);
+ matrixTimer=setTimeout(()=>{matrixTimer=0;if(liveFrame){cancelAnimationFrame(liveFrame);liveFrame=0;render({sensitivity:false});}drawSensitivity(current);},180);
+}
+function flushLiveRender(){
+ if(liveFrame){cancelAnimationFrame(liveFrame);liveFrame=0;}
+ if(matrixTimer){clearTimeout(matrixTimer);matrixTimer=0;}
+ render();
+}
+function makeControls(){
+ $('sliderBlocks').innerHTML=controls.map((c,i)=>`<div class="slider-block" style="--ctrl-color:${['var(--green)','var(--red)','var(--amber)','var(--violet)','var(--cyan)','var(--purple)'][i]}"><div class="slider-head"><label for="slider-${c.key}">${c.name}</label><output id="output-${c.key}" for="slider-${c.key}">${c.fmt(state[c.key])}</output></div><input class="slider" id="slider-${c.key}" type="range" min="${c.min}" max="${c.max}" step="${c.step}" value="${state[c.key]}" aria-label="${c.name}"><div class="slider-lims"><span>${c.fmt(c.min)}</span><span>${c.fmt(c.max)}</span></div><div class="slider-help">${c.help}</div></div>`).join('');
+ controls.forEach(c=>{const slider=$('slider-'+c.key);const refreshFill=()=>slider.style.setProperty('--progress',((Number(slider.value)-c.min)/(c.max-c.min))*100+'%');refreshFill();slider.addEventListener('input',e=>{state[c.key]=Number(e.target.value);$('output-'+c.key).textContent=c.fmt(state[c.key]);refreshFill();scheduleLiveRender();});slider.addEventListener('change',()=>{flushLiveRender();});});
+}
+function isSmallScreen(){return window.matchMedia('(max-width:720px)').matches;}
+function drawer(open){
+ if(!isSmallScreen()){
+  $('drawer').classList.remove('open');$('overlay').classList.remove('on');$('drawer').setAttribute('aria-hidden','false');document.body.style.overflow='';
+  if(open){$('controlPanel').scrollIntoView({behavior:'smooth',block:'start'});$('controlPanel').classList.add('attention');setTimeout(()=>$('controlPanel').classList.remove('attention'),1200);}
+  return;
+ }
+ $('drawer').classList.toggle('open',open);
+ $('overlay').classList.toggle('on',open);
+ $('drawer').setAttribute('aria-hidden',String(!open));
+ $('mobileFab').setAttribute('aria-expanded',String(open));
+ document.body.style.overflow=open?'hidden':'';
+ if(open){$('closeDrawer').focus();}else{$('mobileFab').focus();}
+}
+function updateControlMode(){
+ $('controlPanel').classList.toggle('compact',!isSmallScreen()&&window.scrollY>215);
+ if(!isSmallScreen()){
+  $('drawer').classList.remove('open');$('overlay').classList.remove('on');$('drawer').setAttribute('aria-hidden','false');$('mobileFab').setAttribute('aria-expanded','false');document.body.style.overflow='';
+ }else if(!$('drawer').classList.contains('open')){$('drawer').setAttribute('aria-hidden','true');}
+}
+let toastTimer=null;function notice(txt){$('toast').textContent=txt;$('toast').classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('toast').classList.remove('show'),2000);}
+function exportCSV(){const rows=[['سال','نرخ تحقق اقامت','درآمد (میلیون ریال)','هزینه جاری (میلیون ریال)','سرمایه‌گذاری (میلیون ریال)','جریان نقد آزاد (میلیون ریال)','جریان تجمعی (میلیون ریال)','NPV تجمعی (میلیون ریال)']];current.rows.forEach(r=>rows.push([r.year,r.occ,r.revenue,r.opex,r.capex,r.fcf,r.cumulative,r.npv==null?'':r.npv]));const csv='\uFEFF'+rows.map(r=>r.map(v=>'"'+String(v).replace(/"/g,'""')+'"').join(',')).join('\r\n');const blob=new Blob([csv],{type:'text/csv;charset=utf-8;'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='Mashhad_Hotel_Cashflow_Scenario.csv';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),3000);notice('فایل CSV بر اساس سناریوی فعال آماده شد.');}
+$('settingsBtn').onclick=()=>drawer(true);$('mobileFab').onclick=()=>drawer(true);$('closeDrawer').onclick=()=>drawer(false);$('overlay').onclick=()=>drawer(false);document.addEventListener('keydown',e=>{if(e.key==='Escape'&&$('drawer').classList.contains('open'))drawer(false);});window.addEventListener('scroll',updateControlMode,{passive:true});window.addEventListener('resize',updateControlMode);
+$('unitBtn').onclick=()=>{unit=unit==='toman'?'rial':'toman';render();notice('واحد نمایش تغییر کرد.');};$('themeBtn').onclick=()=>{theme=theme==='dark'?'light':'dark';document.documentElement.dataset.theme=theme;};$('printBtn').onclick=()=>window.print();$('csvBtn').onclick=exportCSV;
+$('resetBtn').onclick=()=>{if(liveFrame)cancelAnimationFrame(liveFrame);if(matrixTimer)clearTimeout(matrixTimer);liveFrame=0;matrixTimer=0;state={...BASE};makeControls();render();notice('فرضیات فایل اکسل بازیابی شد.');};$('rangeSwitch').addEventListener('click',e=>{const b=e.target.closest('[data-range]');if(b){chartRange=b.dataset.range;drawFinancial(current);}});$('sensSwitch').addEventListener('click',e=>{const b=e.target.closest('[data-sens]');if(b){sensMetric=b.dataset.sens;drawSensitivity(current);}});
+drawPhysical();makeControls();render();updateControlMode();
+window.__DASHBOARD_VERIFY__={DATA,BASE,model,capex,baseIncome};
+</script>
+</body>
+</html>
